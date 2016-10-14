@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="2a9dfb40-072d-4c2b-86b9-131b6d1ff7a5" name="Lifecycle" linkedPackageId="b25ad7d4-f2c1-48c9-b5c4-a1972cb6aeed" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="4c53c28a-70cf-4095-ac2a-24f6a2570715">
+      <profileInstance Id="9d3de500-2108-4d3d-86cf-53aa15cdfc20" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="86b7347f-8c0b-4e48-a541-580749d3e7f6">
+      <profileInstance Id="1d4c10c5-3561-4c3c-b6ae-e8de2dc25af8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="d60b0760-d8da-4508-808d-ee8c7fe9bb9c" name="Device" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d69bc796-6d11-43b4-82bd-98c95e04e976" />
+        <targetEnds>
+          <association Id="d886797d-a98d-413d-bd71-8eff3df77701" isDerived="false" sourceEndRoleName="Device" targetEndRoleName="Device Connected" isLeaf="false" name="Connecting" isAbstract="false">
+            <useCaseMoniker Id="10ab27aa-4aa6-4623-a415-8a67c24d45cb" LastKnownName="Device Connected" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="36cd2939-8d57-4a93-9b50-1b3b75991feb" name="Device" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca68a205-a269-4d81-ab70-aaea36e53713" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f0caeed2-aab0-427e-b870-c9adb6585c85" name="Device Connected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bf37babb-ebe8-452a-b22d-f91a7d363e93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0564a481-ed3b-488c-be60-97835a148082" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="10ab27aa-4aa6-4623-a415-8a67c24d45cb" name="Device Connected" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="379dbe96-21eb-4b81-8a72-6eebdadc2eff" />
+        <suppliersInternal>
+          <dependency Id="721dfd7c-dd05-4ff3-9183-3f010ed0ec4c">
+            <useCaseMoniker Id="8a919a00-6abb-471e-bc5a-00ca4f73619b" LastKnownName="Load Device Data" />
+            <elementDefinition Id="61c3beab-2772-4ab7-8f12-2f9459e6f8c2" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include Id="df67206e-a872-4c81-b00a-2afc14312188">
+            <useCaseMoniker Id="e51845bc-0640-4f45-97aa-146aecfa22df" LastKnownName="Menu Opened" />
+            <elementDefinition Id="a419a580-da5c-4a11-95dd-c53ff2465deb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e51845bc-0640-4f45-97aa-146aecfa22df" name="Menu Opened" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fd30ac1d-a691-4af0-9a37-36eee70c9749" />
+        <suppliersInternal>
+          <dependency Id="9a4d90bb-1547-4366-8a25-a57912815b74">
+            <useCaseMoniker Id="103cb2fc-1206-46de-99f4-8502a91ea19f" LastKnownName="Decide Local/Remote" />
+            <elementDefinition Id="d4c71721-b3df-4191-aed8-5417a2e54390" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include Id="ed0f220c-4f6d-4d5e-8b66-deda57a71711">
+            <useCaseMoniker Id="1c0c1d02-83f1-4500-b078-f5f2e58966e8" LastKnownName="Choose Pics" />
+            <elementDefinition Id="f0f17dcb-93c8-41da-968f-90fb56988c52" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1c0c1d02-83f1-4500-b078-f5f2e58966e8" name="Choose Pics" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf56d790-dde9-475f-be94-05ff3f5aca36" />
+        <additions>
+          <include Id="15778b12-b724-44bb-b35f-1e3b7cba992f">
+            <useCaseMoniker Id="e696ba0b-e211-4ac0-9b71-1168883eed11" LastKnownName="Store Pics" />
+            <elementDefinition Id="ab47c025-8996-4d1a-a044-8d6893dde217" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8a919a00-6abb-471e-bc5a-00ca4f73619b" name="Load Device Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a46bd78d-d05f-4a5b-b38a-cb09a38e500d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="103cb2fc-1206-46de-99f4-8502a91ea19f" name="Decide Local/Remote" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9fd3dd71-5f59-4dbf-b270-c39a84f2c483" />
+        <targetEnds>
+          <association Id="e8180ad8-53e3-45db-8e0c-b89d5ce36f7e" isDerived="false" sourceEndRoleName="Decide Local/Remote" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c8bca694-ffc0-48f6-9f29-7df85e573d44" LastKnownName="User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dfc1c459-514f-4735-bf0e-5c597e05a336" name="Decide Local/Remote" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1ce81a5a-e817-48bd-9fe9-e814588135c8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45667b37-dfcd-4d9e-9435-dae9dcd9e5dc" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b93d94ae-23c4-429f-b2e3-fd9b8406b3f4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2f5c7e21-6a58-4486-8a2d-489621612d8c" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e696ba0b-e211-4ac0-9b71-1168883eed11" name="Store Pics" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0a537081-8883-4717-9e04-d6afb7c44157" />
+        <additions>
+          <include Id="0630cd28-e36c-44c5-a324-cbc02e90bca1">
+            <useCaseMoniker Id="31d200f0-f394-4b28-b6c2-9ffcd325ebf1" LastKnownName="Delete Pics" />
+            <elementDefinition Id="c7791075-55b0-432f-8782-81064e9a29f7" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="c8bca694-ffc0-48f6-9f29-7df85e573d44" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f8d16ea4-88a4-4e33-a99d-9eeb8c5bf872" />
+        <targetEnds>
+          <association Id="08139a10-87a2-45db-9eda-d6975f02e079" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Menu Opened" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e51845bc-0640-4f45-97aa-146aecfa22df" LastKnownName="Menu Opened" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dfef93ee-53b1-4f66-bd47-d844f74f1478" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a5674948-3a7e-4c65-8b6d-160f05c3432d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04a69065-0135-49d4-b334-782ef6520b8e" name="Menu Opened" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="58013127-5a9a-4c2a-8149-5f95b6403c54" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e9567918-9aeb-4f87-874f-efadb755890e" />
+          </association>
+          <association Id="e9bc2fa8-5d9d-42ba-b7ea-557fd7bafbde" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Store Pics" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e696ba0b-e211-4ac0-9b71-1168883eed11" LastKnownName="Store Pics" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34eae970-2d32-4fca-8945-6b2ad5c314f2" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d919219b-5a11-44aa-b69e-06ab7913cc20" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="51b4069f-e8cb-4fcf-bb58-b1c812d8f02a" name="Store Pics" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3c145de3-11c1-4253-9f79-65d3981ce9bd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4316ae52-97c0-4b46-b724-2b9e6d3c50bb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="31d200f0-f394-4b28-b6c2-9ffcd325ebf1" name="Delete Pics" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd781c33-4ff8-4f90-8631-3294c5570cfc" />
+        <targetEnds>
+          <association Id="df1f3f0e-9fce-4c1d-bc63-e4395a382be4" isDerived="false" sourceEndRoleName="Delete Pics" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c8bca694-ffc0-48f6-9f29-7df85e573d44" LastKnownName="User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56ef4d0e-557b-4dde-b573-9537d35f9346" name="Delete Pics" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d955a2eb-c013-473b-9c05-2d28ef06c712" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52e7b484-dbbf-43ca-8a3e-d32face89cf4" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="425e4e13-a051-4043-883d-691f387c2735" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="87dd2b70-c47c-427e-b70c-c0071e0c3807" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b25ad7d4-f2c1-48c9-b5c4-a1972cb6aeed" name="PictureShare.Architecture">
+    <elementDefinition Id="0945e253-cb93-4b27-9e6f-8d342cc0d159" />
+  </package>
+</useCaseModelRoot>
