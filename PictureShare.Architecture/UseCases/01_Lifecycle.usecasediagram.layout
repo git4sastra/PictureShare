@@ -25,7 +25,7 @@
       <useCaseMoniker Id="e51845bc-0640-4f45-97aa-146aecfa22df" LastKnownName="Menu Opened" />
       <relativeChildShapes />
     </useCaseShape>
-    <includeConnector edgePoints="[(2.75 : 1.75); (2.75 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«Einschließen»">
+    <includeConnector edgePoints="[(2.75 : 1.75); (2.75 : 2.125)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black" useCaseStereotype="«Einschließen»">
       <includeMoniker Id="df67206e-a872-4c81-b00a-2afc14312188" />
       <relativeChildShapes />
       <nodes>
@@ -37,7 +37,7 @@
       <useCaseMoniker Id="1c0c1d02-83f1-4500-b078-f5f2e58966e8" LastKnownName="Choose Pics" />
       <relativeChildShapes />
     </useCaseShape>
-    <includeConnector edgePoints="[(2.75 : 2.625); (2.75 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«Einschließen»">
+    <includeConnector edgePoints="[(2.75 : 2.625); (2.75 : 3)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black" useCaseStereotype="«Einschließen»">
       <includeMoniker Id="ed0f220c-4f6d-4d5e-8b66-deda57a71711" />
       <relativeChildShapes />
       <nodes>
@@ -49,7 +49,7 @@
       <useCaseMoniker Id="8a919a00-6abb-471e-bc5a-00ca4f73619b" LastKnownName="Load Device Data" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseDependencyConnector edgePoints="[(3.23076197382041 : 1.43131971802566); (4.01923802617959 : 1.31868028197434)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+    <useCaseDependencyConnector edgePoints="[(3.23076197382041 : 1.43131971802566); (4.01923802617959 : 1.31868028197434)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
       <dependencyMoniker Id="721dfd7c-dd05-4ff3-9183-3f010ed0ec4c" />
       <relativeChildShapes />
       <nodes>
@@ -61,7 +61,7 @@
       <useCaseMoniker Id="103cb2fc-1206-46de-99f4-8502a91ea19f" LastKnownName="Decide Local/Remote" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseDependencyConnector edgePoints="[(3.24531056462174 : 2.34084065071574); (4.00298586597257 : 2.28858718165706)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+    <useCaseDependencyConnector edgePoints="[(3.24531056462174 : 2.34084065071574); (4.00298586597257 : 2.28858718165706)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
       <dependencyMoniker Id="9a4d90bb-1547-4366-8a25-a57912815b74" />
       <relativeChildShapes />
       <nodes>
@@ -73,7 +73,7 @@
       <useCaseMoniker Id="e696ba0b-e211-4ac0-9b71-1168883eed11" LastKnownName="Save / Upload Pics" />
       <relativeChildShapes />
     </useCaseShape>
-    <includeConnector edgePoints="[(2.75 : 3.5); (2.75 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«Einschließen»">
+    <includeConnector edgePoints="[(2.75 : 3.5); (2.75 : 3.875)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black" useCaseStereotype="«Einschließen»">
       <includeMoniker Id="15778b12-b724-44bb-b35f-1e3b7cba992f" />
       <relativeChildShapes />
       <nodes>
@@ -81,47 +81,11 @@
         <useCaseShapeMoniker Id="08173681-f3e7-4c92-914b-d678f7eed907" />
       </nodes>
     </includeConnector>
-    <actorShape Id="5e784b9c-6dac-4b65-b08c-411a2ffdcb14" absoluteBounds="6.125, 3.125, 0.5, 0.5" isReference="false" heightOffset="0">
-      <actorMoniker Id="c8bca694-ffc0-48f6-9f29-7df85e573d44" LastKnownName="User" />
-      <relativeChildShapes />
-    </actorShape>
-    <useCaseAssociationConnector edgePoints="[(4.97419036061763 : 2.50553194796957); (6.125 : 3.2198275862069)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
-      <associationMoniker Id="e8180ad8-53e3-45db-8e0c-b89d5ce36f7e" />
-      <relativeChildShapes />
-      <nodes>
-        <useCaseShapeMoniker Id="810b5461-ae6e-49a7-9901-1f1495020242" />
-        <actorShapeMoniker Id="5e784b9c-6dac-4b65-b08c-411a2ffdcb14" />
-      </nodes>
-    </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(6.125 : 3.3901776215022); (3.07898189614237 : 2.56326239136548)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
-      <associationMoniker Id="08139a10-87a2-45db-9eda-d6975f02e079" />
-      <relativeChildShapes />
-      <nodes>
-        <actorShapeMoniker Id="5e784b9c-6dac-4b65-b08c-411a2ffdcb14" />
-        <useCaseShapeMoniker Id="77f568ad-767f-4445-b81d-6df373076746" />
-      </nodes>
-    </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(6.41463400442788 : 3.625); (3.16521865603974 : 4.26427802022982)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
-      <associationMoniker Id="e9bc2fa8-5d9d-42ba-b7ea-557fd7bafbde" />
-      <relativeChildShapes />
-      <nodes>
-        <actorShapeMoniker Id="5e784b9c-6dac-4b65-b08c-411a2ffdcb14" />
-        <useCaseShapeMoniker Id="08173681-f3e7-4c92-914b-d678f7eed907" />
-      </nodes>
-    </useCaseAssociationConnector>
     <useCaseShape Id="183be360-9f37-4ad5-b977-5bb5c87e733d" absoluteBounds="3.875, 3.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
       <useCaseMoniker Id="31d200f0-f394-4b28-b6c2-9ffcd325ebf1" LastKnownName="Delete Pics" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(4.8678111425838 : 3.41724090951095); (6.125 : 3.52499983818669)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
-      <associationMoniker Id="df1f3f0e-9fce-4c1d-bc63-e4395a382be4" />
-      <relativeChildShapes />
-      <nodes>
-        <useCaseShapeMoniker Id="183be360-9f37-4ad5-b977-5bb5c87e733d" />
-        <actorShapeMoniker Id="5e784b9c-6dac-4b65-b08c-411a2ffdcb14" />
-      </nodes>
-    </useCaseAssociationConnector>
-    <includeConnector edgePoints="[(3.11740172231374 : 3.95542997431673); (4.00759827768626 : 3.54457002568327)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«Einschließen»">
+    <includeConnector edgePoints="[(3.11740172231374 : 3.95542997431673); (4.00759827768626 : 3.54457002568327)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black" useCaseStereotype="«Einschließen»">
       <includeMoniker Id="0630cd28-e36c-44c5-a324-cbc02e90bca1" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>

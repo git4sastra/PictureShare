@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="0945e253-cb93-4b27-9e6f-8d342cc0d159"
   name="PictureShare.Architecture" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -11,18 +11,90 @@
     <comment
       Id="e60f3b6e-b3c2-4e0b-9db9-a9e4371f4aa7">
       <body>Module für ext. Speicherung können diese Events nutzen, um sich im Menü anzuzeigen und die Upload Funktion bereit zu stellen</body>
-      <annotatedElements>
-        <sendSignalActionMoniker
-          Id="48e5b79f-7e05-4ff5-a68b-0aa7921566ad"
-          LastKnownName="OnMenuOpening"
-          LastKnownLocation="PictureShare.Architecture.uml" />
-        <sendSignalActionMoniker
-          Id="effdad5f-7066-49d5-b964-79a5ecf328d1"
-          LastKnownName="OnMenuOpened"
-          LastKnownLocation="PictureShare.Architecture.uml" />
-      </annotatedElements>
     </comment>
   </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="6fae3f1d-cce7-4d0a-a0aa-806874e735d9"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="068ec3f6-1442-4123-b4f5-eb617c7129d0">
+          <propertyInstance
+            Id="cb0f5f51-500c-4fb3-8fe3-292e3f95cff4"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="28cd7c8a-fa76-440a-8f0f-f99ab53decef">
+          <propertyInstance
+            Id="19f5d91c-da3c-47a6-be4e-6caf0fbcc837"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="17be3b97-97ea-4dee-b61d-61c9cfab9abd">
+          <propertyInstance
+            Id="7424dfb2-5434-4223-833e-f32419eab9c6"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="91dbea83-5c01-43a9-9092-f45b71631251"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="3f26d934-c9c5-4a84-9a45-9ca1779fe009">
+          <propertyInstance
+            Id="d939e618-3d3e-4279-88fc-9b13bb713a16"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="2b83dc5a-993e-4c5d-afb4-b81ea6bbff00">
+          <propertyInstance
+            Id="48a228f8-5d58-43b1-a258-174f0aed3de0"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="3d78e594-4580-4219-bedb-aa13fe522b2a">
+          <propertyInstance
+            Id="91a823d1-0526-481b-9cf0-a980f7b4c36b"
+            name="ProjectPath"
+            value="ClassTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj|EnumTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj|InterfaceTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj|StructTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="7d9b07cf-5174-40fe-a0f1-ad1fb7368196">
+          <propertyInstance
+            Id="d78e4620-20e4-417f-9ca8-f3374aeb2ec0"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b2a93be1-9c8c-4436-b6bd-d1d348ae30ed">
+          <propertyInstance
+            Id="e30dd18c-140b-4ff5-9256-ef02001792f3"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="7b7afa9a-5a56-4e9a-857c-94a153cb96fc">
+          <propertyInstance
+            Id="019b4b69-c5c2-4df3-b590-67028caf7ae0"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="40134546-8db9-4ba9-bd65-247703ac8ef8">
+          <propertyInstance
+            Id="8ed39558-961b-4e97-b819-0190b5f8fc08"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -36,1125 +108,20 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="a84bfb22-3649-44cb-9a19-761ccb91fa12">
+      <profileInstance
+        Id="436dd49e-07d1-46b4-a2f4-26f3343ff244"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="d0ba40bc-b3dc-49ed-82ef-b765b1be7dba">
+      <profileInstance
+        Id="5ae57a42-16e0-428d-9fa7-e2b21159c214"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
-    <packageHasNamedElement>
-      <activity
-        Id="1335cd3d-b9b3-479e-bf27-4d3b1d51fb3b"
-        name="DeviceConnected (alt)"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="1a92d34f-f9c5-4006-9720-c7a21b47c038"
-            name="Initial1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="6626ea13-d968-4ba4-a9f2-76e7b4c805c0"
-                isLeaf="false">
-                <acceptEventActionMoniker
-                  Id="9cdb2b1e-5f7b-4f1d-ac0d-6f0161e9e5ca"
-                  LastKnownName="DeviceAttached"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <decisionNode
-            Id="56d6b960-737d-4dfa-9254-221f0b60903a"
-            name="Load Pics?"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="053c5a24-4ff0-4b92-8010-64193e4c47a5"
-                guard="No"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="329934f4-0a35-4503-8fa6-c0bf1bce6b45"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="634f8d2b-bfc9-44ef-baaa-0df8ee7d5ec7"
-                guard="Yes"
-                isLeaf="false">
-                <callOperationActionMoniker
-                  Id="a8f130e9-fc23-408f-84cb-21a99cb4b375"
-                  LastKnownName="CheckDeviceExists"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="55cf973c-c070-4c8a-b1e9-745373898d15"
-            name="ChooseFolder"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="09d0608e-c406-4be8-9da6-e2d9ca8c3f1d"
-                guard="Folder chosen"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="1b31d550-869a-4230-abbf-d67bf68d5b12"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="809a81a6-2296-446c-b000-b1bcb467844a"
-                guard="Cancel"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="329934f4-0a35-4503-8fa6-c0bf1bce6b45"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <pins>
-              <opaqueActionHasInputValues>
-                <inputPin
-                  Id="02c3e595-d7ec-4734-9379-cf6ba9f05823"
-                  name="FolderPath"
-                  isLeaf="false"
-                  ordering="Unordered"
-                  isControlType="false"
-                  isControl="false">
-                  <upperBound>
-                    <literalInteger
-                      Id="04aabc3e-5ef3-4e1a-b656-7b15ed45cba6"
-                      name="2147483647"
-                      value="2147483647" />
-                  </upperBound>
-                </inputPin>
-              </opaqueActionHasInputValues>
-            </pins>
-          </opaqueAction>
-          <acceptEventAction
-            Id="9cdb2b1e-5f7b-4f1d-ac0d-6f0161e9e5ca"
-            name="DeviceAttached"
-            isLeaf="false"
-            isUnmarshall="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="5374168e-0261-4d68-a488-89647f10d08a"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="117497dd-7360-4caf-9516-15c7cd6782d9"
-                  LastKnownName="Dialog: StorePictures"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </acceptEventAction>
-          <opaqueAction
-            Id="117497dd-7360-4caf-9516-15c7cd6782d9"
-            name="Dialog: StorePictures"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="c24917ba-67d9-44c2-b154-e430e6c142ac"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="56d6b960-737d-4dfa-9254-221f0b60903a"
-                  LastKnownName="Load Pics?"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <pins>
-              <opaqueActionHasInputValues>
-                <inputPin
-                  Id="25c201ca-f44f-4165-bc5e-76de7d007495"
-                  name="Dialog Result"
-                  isLeaf="false"
-                  ordering="Unordered"
-                  isControlType="false"
-                  isControl="false">
-                  <upperBound>
-                    <literalInteger
-                      Id="917c8a5f-0ba2-49fd-8e11-5e3890e28cf3"
-                      name="2147483647"
-                      value="2147483647" />
-                  </upperBound>
-                </inputPin>
-              </opaqueActionHasInputValues>
-            </pins>
-          </opaqueAction>
-          <activityFinalNode
-            Id="329934f4-0a35-4503-8fa6-c0bf1bce6b45"
-            name="ActivityFinal1"
-            isLeaf="false" />
-          <callOperationAction
-            Id="a8f130e9-fc23-408f-84cb-21a99cb4b375"
-            name="CheckDeviceExists"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="f4a4cd2c-d350-436c-95a4-05395c56a51f"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="91c06a94-81d4-4906-b56f-2594f05e8d4c"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callOperationAction>
-          <decisionNode
-            Id="91c06a94-81d4-4906-b56f-2594f05e8d4c"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="35c9dc59-dc96-452f-adcd-193a4a85668d"
-                guard="No"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="67159888-d088-41c8-9a99-2971a919f6cf"
-                  LastKnownName="GuessPicFolder"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="e7b6ee06-0cf7-4a3a-8603-09de7262e8f0"
-                guard="Yes"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="80a5e329-5918-47ca-832c-9538296436bd"
-                  LastKnownName="LoadDeviceData"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <callBehaviorAction
-            Id="67159888-d088-41c8-9a99-2971a919f6cf"
-            name="GuessPicFolder"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="9c8d52cd-65c9-4e0b-ae6f-4a5e3889edd3"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="fdd3498a-e5ba-46ec-99fb-c8843dae8931"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callBehaviorAction>
-          <decisionNode
-            Id="fdd3498a-e5ba-46ec-99fb-c8843dae8931"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="51d959bf-0670-4bf3-b23d-8cb74171afc1"
-                guard="FolderNotFound"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="55cf973c-c070-4c8a-b1e9-745373898d15"
-                  LastKnownName="ChooseFolder"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="189b6831-cd84-45ac-bd39-f4cf180da8c5"
-                guard="Folder found"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="84c99f43-3009-458e-99c4-f0d73910d0db"
-                  LastKnownName="Dialog: Folder correct?"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="84c99f43-3009-458e-99c4-f0d73910d0db"
-            name="Dialog: Folder correct?"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="b27fd8d7-21be-4e1a-9fd5-7150fd747bac"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="3d4f8bfb-a235-4f50-90e4-8c0da1a2fc4f"
-                  LastKnownName="Decision3"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="3d4f8bfb-a235-4f50-90e4-8c0da1a2fc4f"
-            name="Decision3"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="69a70154-bdb8-4987-8178-9813daabb1e0"
-                guard="No"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="55cf973c-c070-4c8a-b1e9-745373898d15"
-                  LastKnownName="ChooseFolder"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="4cfa3c9d-9471-40b1-b2f5-63612846c111"
-                guard="Yes"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="1b31d550-869a-4230-abbf-d67bf68d5b12"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <mergeNode
-            Id="1b31d550-869a-4230-abbf-d67bf68d5b12"
-            name="Merge1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="f7a2894b-7a25-48cd-bfa8-34fbf1b94e36"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="d58c488a-064d-4e69-8cd5-e3e404fa2ae7"
-                  LastKnownName="Store device"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </mergeNode>
-          <opaqueAction
-            Id="d58c488a-064d-4e69-8cd5-e3e404fa2ae7"
-            name="Store device"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="475e0949-b2b5-4918-bf09-dbf012482738"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="80a5e329-5918-47ca-832c-9538296436bd"
-                  LastKnownName="LoadDeviceData"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <activityParameterNode
-            Id="cc2a6710-b8ff-4201-b27c-16bfd3c4098c"
-            name="Device Data"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="142635c5-7f37-4cb3-9182-adbc46fc8344"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <opaqueActionMoniker
-                  Id="d58c488a-064d-4e69-8cd5-e3e404fa2ae7"
-                  LastKnownName="Store device"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="2d2d95b4-a286-4d90-9211-082cdf7c1ddd"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </activityParameterNode>
-          <callBehaviorAction
-            Id="80a5e329-5918-47ca-832c-9538296436bd"
-            name="LoadDeviceData"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="3c7ac367-0645-42e3-8961-6917e7f5c7ea"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="58985623-a0af-4dc7-964b-7190bfa37725"
-                  LastKnownName="ShowMenu"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callBehaviorAction>
-          <callBehaviorAction
-            Id="58985623-a0af-4dc7-964b-7190bfa37725"
-            name="ShowMenu"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="5d59a856-bd83-4fe0-a6c9-91f229de631c"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="329934f4-0a35-4503-8fa6-c0bf1bce6b45"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="ba92f57b-ddb0-469e-a606-4823a5f52037"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="48e5b79f-7e05-4ff5-a68b-0aa7921566ad"
-                  LastKnownName="OnMenuOpening"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="92899297-6507-46db-8006-6bf4d71ecb44"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="effdad5f-7066-49d5-b964-79a5ecf328d1"
-                  LastKnownName="OnMenuOpened"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callBehaviorAction>
-          <sendSignalAction
-            Id="48e5b79f-7e05-4ff5-a68b-0aa7921566ad"
-            name="OnMenuOpening"
-            isLeaf="false" />
-          <sendSignalAction
-            Id="effdad5f-7066-49d5-b964-79a5ecf328d1"
-            name="OnMenuOpened"
-            isLeaf="false" />
-        </nodes>
-      </activity>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <activity
-        Id="a3c3ba77-e0d0-4a6c-b62e-f9263ff4baa8"
-        name="MenuOpened"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="380e95e9-49de-49d2-baed-aee80390ec12"
-            name="Initial1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="dd5b7ba3-7825-49b1-af1e-41d644e3cdda"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="41b8ba46-cb72-4019-910d-c1ad9d5d0293"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <decisionNode
-            Id="41b8ba46-cb72-4019-910d-c1ad9d5d0293"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="a85a9f50-8886-45c4-a63b-c4a2d2fcf7e1"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="0e410477-8ab7-400f-8d5c-13e40e971236"
-                  LastKnownName="ChooseLocal"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="e0f76112-4c30-4c25-b226-c6a4c8fd1b66"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="de839349-31dc-4d42-afe2-931a59781664"
-                  LastKnownName="ChooseRemote"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="0e410477-8ab7-400f-8d5c-13e40e971236"
-            name="ChooseLocal"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="6818aea2-ee85-4451-84ab-06676d455677"
-                isLeaf="false">
-                <callOperationActionMoniker
-                  Id="403c8c16-c0e5-4e05-9181-f33ee2d70471"
-                  LastKnownName="CheckSavePath"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="de839349-31dc-4d42-afe2-931a59781664"
-            name="ChooseRemote"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="9ed225c5-c1af-4a7f-b4b5-6b06d0856769"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="0f566f49-9dee-45c0-aa4f-5c6e8903a5d1"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="dca91e2e-63bd-4fb1-bb52-6ade9d12f7cd"
-            name="ChoosePics"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="87c79ef6-0e72-4d21-835c-707fa0e8a0bb"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="6c5d6752-a3d0-431d-b5ea-e0d4654e7d09"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <mergeNode
-            Id="0f566f49-9dee-45c0-aa4f-5c6e8903a5d1"
-            name="Merge1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="09e31053-3c7d-4173-b461-6ef26461c6e0"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="dca91e2e-63bd-4fb1-bb52-6ade9d12f7cd"
-                  LastKnownName="ChoosePics"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </mergeNode>
-          <callOperationAction
-            Id="403c8c16-c0e5-4e05-9181-f33ee2d70471"
-            name="CheckSavePath"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="197d5e04-ba47-4299-9154-5755ac284c49"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="4dc0f2de-dcdd-4f11-8cf6-616c678010f2"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callOperationAction>
-          <decisionNode
-            Id="4dc0f2de-dcdd-4f11-8cf6-616c678010f2"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="8a6872bc-5ea3-4a7f-a3ca-6f991bc4bb26"
-                guard="Doesn't exist"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="d862aff6-c738-45b8-bc2a-1418a32ec9af"
-                  LastKnownName="Dialog: ChoosePath"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="6a78c010-4499-407e-b814-0fcc05a59684"
-                guard="Exists"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="0f566f49-9dee-45c0-aa4f-5c6e8903a5d1"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="d862aff6-c738-45b8-bc2a-1418a32ec9af"
-            name="Dialog: ChoosePath"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="9486fbb3-b7db-4fd5-b1e6-c41d41db1496"
-                guard="Save"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="8c101fe9-aa49-42fa-b182-b9523899bd0f"
-                  LastKnownName="Save path in config"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="4a32b8f8-9391-41b3-a0b8-da198d4c49bb"
-                guard="Cancel"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="6c5d6752-a3d0-431d-b5ea-e0d4654e7d09"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <pins>
-              <opaqueActionHasInputValues>
-                <inputPin
-                  Id="eaef304c-0628-4e14-94bc-3a36483c2139"
-                  name="SavePath"
-                  isLeaf="false"
-                  ordering="Unordered"
-                  isControlType="false"
-                  isControl="false">
-                  <upperBound>
-                    <literalInteger
-                      Id="d4b1a44c-1bbd-42a6-aaa2-104c1dd322ce"
-                      name="2147483647"
-                      value="2147483647" />
-                  </upperBound>
-                </inputPin>
-              </opaqueActionHasInputValues>
-            </pins>
-          </opaqueAction>
-          <activityParameterNode
-            Id="f3b29beb-58ab-4129-bbbf-970205b04101"
-            name="SavePath"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="4f99fa1d-86b1-4515-96a4-ed08e3269b38"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <opaqueActionMoniker
-                  Id="d862aff6-c738-45b8-bc2a-1418a32ec9af"
-                  LastKnownName="Dialog: ChoosePath"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="367863c8-1f41-4f56-9d6f-2b5a7a08c4bd"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </activityParameterNode>
-          <opaqueAction
-            Id="8c101fe9-aa49-42fa-b182-b9523899bd0f"
-            name="Save path in config"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="5f3376a7-79ac-4984-9cd8-5e2bb1d3647d"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="0f566f49-9dee-45c0-aa4f-5c6e8903a5d1"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <activityFinalNode
-            Id="6c5d6752-a3d0-431d-b5ea-e0d4654e7d09"
-            name="ActivityFinal1"
-            isLeaf="false" />
-        </nodes>
-      </activity>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <activity
-        Id="ea267baf-a408-48bf-a4de-ea8fa1c168cd"
-        name="ChoosePics"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="fae52f6c-9b41-44d2-abf5-a7bd16b036b4"
-            name="Initial1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="938ffb2f-0d83-4682-8e10-d681e9b77cbc"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="47edb54d-d96e-472a-a207-0880369955eb"
-                  LastKnownName="Dialog: PicChooser"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <activityFinalNode
-            Id="0c54a61b-f4ce-479c-846f-4b26ced9bbf9"
-            name="ActivityFinal1"
-            isLeaf="false" />
-          <opaqueAction
-            Id="47edb54d-d96e-472a-a207-0880369955eb"
-            name="Dialog: PicChooser"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="f9b6ee5e-a128-44e6-9708-835072b03551"
-                isLeaf="false">
-                <forkNodeMoniker
-                  Id="82934138-926f-4624-9069-09f8cab4e759"
-                  LastKnownName="Fork1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <pins>
-              <opaqueActionHasOutputValues>
-                <outputPin
-                  Id="8222d217-f30e-4a91-8dc7-d7b93a095c9b"
-                  name="Out pics"
-                  isLeaf="false"
-                  ordering="Unordered"
-                  isControlType="false"
-                  isControl="false">
-                  <upperBound>
-                    <literalInteger
-                      Id="751fa18c-9e28-46de-b9b1-c26c0e7b04ab"
-                      name="2147483647"
-                      value="2147483647" />
-                  </upperBound>
-                </outputPin>
-              </opaqueActionHasOutputValues>
-              <opaqueActionHasInputValues>
-                <inputPin
-                  Id="7957eb35-250a-4942-a8aa-39f8feb661f9"
-                  name="In pics"
-                  isLeaf="false"
-                  ordering="Unordered"
-                  isControlType="false"
-                  isControl="false">
-                  <upperBound>
-                    <literalInteger
-                      Id="4db686cf-1d2e-48c5-8063-20ca23172d61"
-                      name="2147483647"
-                      value="2147483647" />
-                  </upperBound>
-                </inputPin>
-              </opaqueActionHasInputValues>
-            </pins>
-          </opaqueAction>
-          <forkNode
-            Id="82934138-926f-4624-9069-09f8cab4e759"
-            name="Fork1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="1cc54be6-e825-4903-9135-79e182594106"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="b4b28fbf-0745-4c67-a193-826bbf696805"
-                  LastKnownName="Dialog: Delete from device?"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="fed87264-8a15-4b57-8369-5fef8638188b"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="4b54a8fb-4ffc-4013-965f-4fdf7cbb74e4"
-                  LastKnownName="Load pics"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </forkNode>
-          <opaqueAction
-            Id="b4b28fbf-0745-4c67-a193-826bbf696805"
-            name="Dialog: Delete from device?"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="cf3c76c8-3830-4e21-b44a-63c9dcec508f"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="ee3ba106-7e4f-4528-9c72-5e410f118882"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <pins>
-              <opaqueActionHasInputValues>
-                <inputPin
-                  Id="cbf7bbb7-f5b1-46bf-81f6-28bfc43880b9"
-                  name="In yes/no"
-                  isLeaf="false"
-                  ordering="Unordered"
-                  isControlType="false"
-                  isControl="false">
-                  <upperBound>
-                    <literalInteger
-                      Id="4b0efe68-4bd8-4f6d-b1ed-ded2625e49aa"
-                      name="2147483647"
-                      value="2147483647" />
-                  </upperBound>
-                </inputPin>
-              </opaqueActionHasInputValues>
-            </pins>
-          </opaqueAction>
-          <decisionNode
-            Id="ee3ba106-7e4f-4528-9c72-5e410f118882"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="4dbf93b6-7b7f-4f2a-b3da-4c1ed9589e09"
-                guard="Yes"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="eb9fc3ff-3375-4999-921b-5bb3a2048e0f"
-                  LastKnownName="Delete pics"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="fdddf7dd-8811-4f13-ae7e-399d455db692"
-                guard="No"
-                isLeaf="false">
-                <joinNodeMoniker
-                  Id="01fadef0-08d2-4a34-9ad4-ae1f7b15c2b2"
-                  LastKnownName="Join1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="eb9fc3ff-3375-4999-921b-5bb3a2048e0f"
-            name="Delete pics"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="b2541c00-a827-44fc-954e-23fb4ee149f9"
-                isLeaf="false">
-                <joinNodeMoniker
-                  Id="01fadef0-08d2-4a34-9ad4-ae1f7b15c2b2"
-                  LastKnownName="Join1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="4b54a8fb-4ffc-4013-965f-4fdf7cbb74e4"
-            name="Load pics"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="dc7eea65-a042-4142-b97d-ec914621276a"
-                isLeaf="false">
-                <joinNodeMoniker
-                  Id="01fadef0-08d2-4a34-9ad4-ae1f7b15c2b2"
-                  LastKnownName="Join1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <joinNode
-            Id="01fadef0-08d2-4a34-9ad4-ae1f7b15c2b2"
-            name="Join1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="547d61ea-6a7a-469d-9cc5-9e7bc226b803"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="3f412068-3046-47d7-bdcb-8b9ca66d69b9"
-                  LastKnownName="OnPicsLoaded"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </joinNode>
-          <sendSignalAction
-            Id="3f412068-3046-47d7-bdcb-8b9ca66d69b9"
-            name="OnPicsLoaded"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="e65967e0-cb38-4ef8-9087-ef13f43980d9"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="fd8306e4-a8a0-4952-9763-1e73bda5a9dd"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </sendSignalAction>
-          <decisionNode
-            Id="fd8306e4-a8a0-4952-9763-1e73bda5a9dd"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="b3bd231a-c6a7-4b95-ab29-dd2e9686619f"
-                guard="Remote"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="b3e6f929-56d3-427c-bb3d-ca0722325dec"
-                  LastKnownName="Upload"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="2d894944-3d18-416d-bb52-b2d3db0d2ff1"
-                guard="Local"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="dc8fc5d4-c2c4-436e-85d5-b6373b3f5910"
-                  LastKnownName="Save"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="b3e6f929-56d3-427c-bb3d-ca0722325dec"
-            name="Upload"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="6072e575-73f0-4a2e-ba49-f2b44214f83e"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="430faf00-0d2f-4824-977e-c5bf3a8217bb"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="dc8fc5d4-c2c4-436e-85d5-b6373b3f5910"
-            name="Save"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="8b204c87-6822-42a0-9d68-9739d02015ed"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="430faf00-0d2f-4824-977e-c5bf3a8217bb"
-                  LastKnownName="Merge1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <mergeNode
-            Id="430faf00-0d2f-4824-977e-c5bf3a8217bb"
-            name="Merge1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="f5f4d2dd-7fb2-410d-a6db-7fe651068590"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="8be3768c-6ba3-47be-aaa2-6e5f06a22c74"
-                  LastKnownName="Show progress"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </mergeNode>
-          <opaqueAction
-            Id="8be3768c-6ba3-47be-aaa2-6e5f06a22c74"
-            name="Show progress"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="31943dd2-edcb-4914-9205-edc8e817b93d"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="0c54a61b-f4ce-479c-846f-4b26ced9bbf9"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-        </nodes>
-      </activity>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="379dbe96-21eb-4b81-8a72-6eebdadc2eff"
-        name="Device Connected"
-        isAbstract="false"
-        isLeaf="false">
-        <suppliersInternal>
-          <dependency
-            Id="61c3beab-2772-4ab7-8f12-2f9459e6f8c2">
-            <useCaseMoniker
-              Id="a46bd78d-d05f-4a5b-b38a-cb09a38e500d"
-              LastKnownName="Load Device Data"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-          </dependency>
-        </suppliersInternal>
-        <additions>
-          <include
-            Id="a419a580-da5c-4a11-95dd-c53ff2465deb">
-            <useCaseMoniker
-              Id="fd30ac1d-a691-4af0-9a37-36eee70c9749"
-              LastKnownName="Menu Opened"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-          </include>
-        </additions>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="fd30ac1d-a691-4af0-9a37-36eee70c9749"
-        name="Menu Opened"
-        isAbstract="false"
-        isLeaf="false">
-        <suppliersInternal>
-          <dependency
-            Id="d4c71721-b3df-4191-aed8-5417a2e54390">
-            <useCaseMoniker
-              Id="9fd3dd71-5f59-4dbf-b270-c39a84f2c483"
-              LastKnownName="Decide Local/Remote"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-          </dependency>
-        </suppliersInternal>
-        <additions>
-          <include
-            Id="f0f17dcb-93c8-41da-968f-90fb56988c52">
-            <useCaseMoniker
-              Id="cf56d790-dde9-475f-be94-05ff3f5aca36"
-              LastKnownName="Choose Pics"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-          </include>
-        </additions>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="cf56d790-dde9-475f-be94-05ff3f5aca36"
-        name="Choose Pics"
-        isAbstract="false"
-        isLeaf="false">
-        <additions>
-          <include
-            Id="ab47c025-8996-4d1a-a044-8d6893dde217">
-            <useCaseMoniker
-              Id="0a537081-8883-4717-9e04-d6afb7c44157"
-              LastKnownName="Save / Upload Pics"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-          </include>
-        </additions>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="a46bd78d-d05f-4a5b-b38a-cb09a38e500d"
-        name="Load Device Data"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="9fd3dd71-5f59-4dbf-b270-c39a84f2c483"
-        name="Decide Local/Remote"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="2f5c7e21-6a58-4486-8a2d-489621612d8c"
-            isDerived="false"
-            sourceEndRoleName="Decide Local/Remote"
-            targetEndRoleName="User"
-            isLeaf="false"
-            isAbstract="false">
-            <actorMoniker
-              Id="f8d16ea4-88a4-4e33-a99d-9eeb8c5bf872"
-              LastKnownName="User"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="1ce81a5a-e817-48bd-9fe9-e814588135c8"
-                  name="Decide Local/Remote"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b93d94ae-23c4-429f-b2e3-fd9b8406b3f4"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="0a537081-8883-4717-9e04-d6afb7c44157"
-        name="Save / Upload Pics"
-        isAbstract="false"
-        isLeaf="false">
-        <additions>
-          <include
-            Id="c7791075-55b0-432f-8782-81064e9a29f7">
-            <useCaseMoniker
-              Id="dd781c33-4ff8-4f90-8631-3294c5570cfc"
-              LastKnownName="Delete Pics"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-          </include>
-        </additions>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="dd781c33-4ff8-4f90-8631-3294c5570cfc"
-        name="Delete Pics"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="87dd2b70-c47c-427e-b70c-c0071e0c3807"
-            isDerived="false"
-            sourceEndRoleName="Delete Pics"
-            targetEndRoleName="User"
-            isLeaf="false"
-            isAbstract="false">
-            <actorMoniker
-              Id="f8d16ea4-88a4-4e33-a99d-9eeb8c5bf872"
-              LastKnownName="User"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d955a2eb-c013-473b-9c05-2d28ef06c712"
-                  name="Delete Pics"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="425e4e13-a051-4043-883d-691f387c2735"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </useCase>
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
         Id="7eecf563-529d-4dff-91d7-368e2060201d"
@@ -1174,1299 +141,908 @@
         LastKnownLocation="Package1_1303.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <actor
-        Id="d69bc796-6d11-43b4-82bd-98c95e04e976"
-        name="Device"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="0564a481-ed3b-488c-be60-97835a148082"
-            isDerived="false"
-            sourceEndRoleName="Device"
-            targetEndRoleName="Device Connected"
-            isLeaf="false"
-            name="Connecting"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="379dbe96-21eb-4b81-8a72-6eebdadc2eff"
-              LastKnownName="Device Connected"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ca68a205-a269-4d81-ab70-aaea36e53713"
-                  name="Device"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="bf37babb-ebe8-452a-b22d-f91a7d363e93"
-                  name="Device Connected"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </actor>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <actor
-        Id="f8d16ea4-88a4-4e33-a99d-9eeb8c5bf872"
-        name="User"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="e9567918-9aeb-4f87-874f-efadb755890e"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Menu Opened"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="fd30ac1d-a691-4af0-9a37-36eee70c9749"
-              LastKnownName="Menu Opened"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a5674948-3a7e-4c65-8b6d-160f05c3432d"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="58013127-5a9a-4c2a-8149-5f95b6403c54"
-                  name="Menu Opened"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="4316ae52-97c0-4b46-b724-2b9e6d3c50bb"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Store Pics"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="0a537081-8883-4717-9e04-d6afb7c44157"
-              LastKnownName="Save / Upload Pics"
-              LastKnownLocation="PictureShare.Architecture.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d919219b-5a11-44aa-b69e-06ab7913cc20"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3c145de3-11c1-4253-9f79-65d3981ce9bd"
-                  name="Store Pics"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </actor>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <activity
-        Id="56033f0e-27d0-4bd7-b1ba-e858945e5d6e"
-        name="DeviceConnected"
+      <component
+        Id="af27b6fc-4aa4-416e-adf4-8dec127cff21"
+        name="Gerät"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <acceptEventAction
-            Id="a631e8f8-37a2-48db-b0a6-2c3a5051b90b"
-            name="WMI Event &#xD;&#xA;Storage Attached"
+        isActiveClass="false">
+        <description>Handy, USB-Stick / -Platte</description>
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="e7072491-b411-4117-bed7-8a37df9ce961"
+            name="Port1"
             isLeaf="false"
-            isUnmarshall="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="07cef790-3608-40b0-9098-6ec754382d0f"
-                guard="(Dateien OR Ordner) &gt; 0"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="5c411f45-f93a-4abf-9f44-4a506b0017b8"
-                  LastKnownName="Gerät initialisieren"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </acceptEventAction>
-          <callBehaviorAction
-            Id="5c411f45-f93a-4abf-9f44-4a506b0017b8"
-            name="Gerät initialisieren"
-            isLeaf="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="091f9193-311e-4796-9fb7-455ffa8e6e12"
-                guard="Gerät ist initialisiert"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="74e5ff19-1922-4dfd-92fc-61ee9ad9c3d3"
-                  LastKnownName="Gerätedaten"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <behavior>
-              <activityMoniker
-                Id="ebd91144-6dac-4544-8182-58ebc1706850"
-                LastKnownName="DeviceInit"
-                LastKnownLocation="PictureShare.Architecture.uml" />
-            </behavior>
-          </callBehaviorAction>
-          <objectNode
-            Id="74e5ff19-1922-4dfd-92fc-61ee9ad9c3d3"
-            name="Gerätedaten"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="9d4b986c-5b1a-43c6-bdb7-7aa75daf8a64"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <callBehaviorActionMoniker
-                  Id="ef01f10f-45ae-4b83-b4a7-ced3f8610a97"
-                  LastKnownName="Auswahlmenü anzeigen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="9f72af9d-10a0-440a-aa4b-98edff93dd56"
-                name="1"
-                value="1" />
-            </upperBound>
-          </objectNode>
-          <callBehaviorAction
-            Id="ef01f10f-45ae-4b83-b4a7-ced3f8610a97"
-            name="Auswahlmenü anzeigen"
-            isLeaf="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="f54eb5de-9526-4a11-8461-288e5275c51c"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="f8f585d5-b7b6-4bf3-95f6-f3a56edb7399"
-                  LastKnownName="Auswahl des Speichertyps"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <behavior>
-              <activityMoniker
-                Id="4efd1873-2a2d-409c-b45e-cf980b5085d0"
-                LastKnownName="ShowMenu"
-                LastKnownLocation="PictureShare.Architecture.uml" />
-            </behavior>
-          </callBehaviorAction>
-          <objectNode
-            Id="f8f585d5-b7b6-4bf3-95f6-f3a56edb7399"
-            name="Auswahl des Speichertyps"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="e955c264-3535-4c4e-9ddf-c07b7941a0f3"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <decisionNodeMoniker
-                  Id="4a876d26-1f16-4d65-b969-e17f761732d1"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="81497909-f0b3-4ce2-b96e-f4ce42848453"
-                name="1"
-                value="1" />
-            </upperBound>
-          </objectNode>
-          <sendSignalAction
-            Id="965dcebf-b3cf-451e-8d0a-98b9bdb76895"
-            name="Benutzerabbruch"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="7ef6d477-6771-4e61-a056-88148530a7a9"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="0794bd1f-dce6-4f33-aa59-cdf78bd43e21"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </sendSignalAction>
-          <decisionNode
-            Id="4a876d26-1f16-4d65-b969-e17f761732d1"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="1f77be0a-c2fb-42eb-96d1-dadda211baf0"
-                guard="Benutzer wählt lokal speichern"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="915f900e-d940-41dd-b013-90d07f09d1d3"
-                  LastKnownName="Lokalen Speicherpfad prüfen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="79f27bf5-3fc8-46ea-96eb-52045790e8d7"
-                guard="Benutzer wählt remote speichern"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="10ddbb05-662f-4274-897f-e958c19239de"
-                  LastKnownName="Bildauswahl"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <callBehaviorAction
-            Id="915f900e-d940-41dd-b013-90d07f09d1d3"
-            name="Lokalen Speicherpfad prüfen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="971ec5da-45f1-4a53-970c-812855621948"
-                guard="Pfad existiert &amp;&amp; beschreibbar"
-                isLeaf="false">
-                <callBehaviorActionMoniker
-                  Id="10ddbb05-662f-4274-897f-e958c19239de"
-                  LastKnownName="Bildauswahl"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <behavior>
-              <activityMoniker
-                Id="a9a68d84-e82c-4754-9271-c14a94ffb5a4"
-                LastKnownName="CheckLocalPath"
-                LastKnownLocation="PictureShare.Architecture.uml" />
-            </behavior>
-          </callBehaviorAction>
-          <callBehaviorAction
-            Id="10ddbb05-662f-4274-897f-e958c19239de"
-            name="Bildauswahl"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="92139808-e945-4378-aa15-3bc645c18125"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="b4300de7-a9ab-443e-9a3b-286a2d13565f"
-                  LastKnownName="Decision3"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <behavior>
-              <activityMoniker
-                Id="ac565644-9ae7-42cc-9aee-6f284b058ae5"
-                LastKnownName="PicsSelection"
-                LastKnownLocation="PictureShare.Architecture.uml" />
-            </behavior>
-          </callBehaviorAction>
-          <opaqueAction
-            Id="44847278-997b-4556-8363-1a079e135340"
-            name="Speichern / Upload"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="06e6ea54-f3a1-4ec1-99ac-07b48160a66d"
-                guard="Speichern war erfolgreich"
-                isLeaf="false">
-                <callOperationActionMoniker
-                  Id="1dd436f6-a2a9-4c04-b109-3a234d1b2043"
-                  LastKnownName="Abfrage, ob Bilder gelöscht werden sollen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="b4300de7-a9ab-443e-9a3b-286a2d13565f"
-            name="Decision3"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="13b80664-ad0d-4c90-99e9-65c30c769934"
-                guard="Benutzer bricht ab"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="965dcebf-b3cf-451e-8d0a-98b9bdb76895"
-                  LastKnownName="Benutzerabbruch"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <objectFlowTargets>
-              <objectFlow
-                Id="13d266f1-5728-444f-86ea-394c09e60d85"
-                guard="Benutzer hat Bilder ausgewählt"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="77fdd0c4-42d1-42b1-bb9c-8b5a387238e9"
-                  LastKnownName="Ausgewählte Bilder"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </decisionNode>
-          <activityFinalNode
-            Id="0794bd1f-dce6-4f33-aa59-cdf78bd43e21"
-            name="ActivityFinal1"
-            isLeaf="false" />
-          <objectNode
-            Id="77fdd0c4-42d1-42b1-bb9c-8b5a387238e9"
-            name="Ausgewählte Bilder"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="f02dd640-07aa-468f-b94d-23c7f55910ba"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <opaqueActionMoniker
-                  Id="44847278-997b-4556-8363-1a079e135340"
-                  LastKnownName="Speichern / Upload"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="763c1ec9-6a20-46e2-9669-30eb4fca6835"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <callOperationAction
-            Id="1dd436f6-a2a9-4c04-b109-3a234d1b2043"
-            name="Abfrage, ob Bilder gelöscht werden sollen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="d03c5ba5-af1a-4975-9df9-7e775a1cdfa7"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="ec2ef948-5552-45e6-bbf1-8fd80b7ed8d2"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callOperationAction>
-          <decisionNode
-            Id="ec2ef948-5552-45e6-bbf1-8fd80b7ed8d2"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="37b42dbd-b864-4ce7-a196-d884e43708cf"
-                guard="Ja"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="7ccf0d39-a3de-468d-9e38-7d464ab9456a"
-                  LastKnownName="Bilder löschen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="8627f628-8055-4501-b7cc-219da84e6bfb"
-                guard="Nein"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="0794bd1f-dce6-4f33-aa59-cdf78bd43e21"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="7ccf0d39-a3de-468d-9e38-7d464ab9456a"
-            name="Bilder löschen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="2e6c1e22-7293-4cc3-a589-b71926113b45"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="0794bd1f-dce6-4f33-aa59-cdf78bd43e21"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-        </nodes>
-      </activity>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
-        Id="6afa13ee-4868-4830-85b4-be94ddc7ffe3"
-        name="System.Windows.Forms.DialogResult" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <activity
-        Id="ebd91144-6dac-4544-8182-58ebc1706850"
-        name="DeviceInit"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="b9f05d97-a844-49f9-aaf2-293e4ae25452"
-            name="StartDeviceInit"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="4149dd99-37a0-49eb-8aad-d8ac6301a5c6"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="87c0e851-ff30-4e3a-9851-cf98ef9842fa"
-                  LastKnownName="Prüfen ob Gerät bekannt"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <opaqueAction
-            Id="87c0e851-ff30-4e3a-9851-cf98ef9842fa"
-            name="Prüfen ob Gerät bekannt"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="34ae7334-30e1-4613-adeb-1bd7132fbdf7"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="08212e04-a3c5-4c3c-99dc-d2d46aba3dcf"
-                  LastKnownName="Decision4"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="08212e04-a3c5-4c3c-99dc-d2d46aba3dcf"
-            name="Decision4"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="5d3e3f5f-1b62-4184-b311-cde96ce5a140"
-                guard="Gerät bekannt"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="04b8667e-43bd-492e-8442-5dc01b796f7b"
-                  LastKnownName="Gerätedaten laden"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="ea63b194-72a6-438e-8e36-2b44f25effb1"
-                guard="Gerät unbekannt"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="62062c34-873d-43f5-a746-9c54e0d8dd61"
-                  LastKnownName="Bildordner finden"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="04b8667e-43bd-492e-8442-5dc01b796f7b"
-            name="Gerätedaten laden"
-            isLeaf="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="77a067f1-8984-4877-baf3-0caa45b95450"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="fb24a218-c985-41db-b94e-3dd8b4cb9676"
-                  LastKnownName="Gerätedaten"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </opaqueAction>
-          <objectNode
-            Id="fb24a218-c985-41db-b94e-3dd8b4cb9676"
-            name="Gerätedaten"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="014a96ea-f078-44b1-ad1f-0d04889a7293"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <opaqueAction
-            Id="62062c34-873d-43f5-a746-9c54e0d8dd61"
-            name="Bildordner finden"
-            isLeaf="false">
-            <description>Sucht nach dem Ordner mit den meisten JPG-Bildern</description>
-            <flowNodeTargets>
-              <controlFlow
-                Id="a28ad36f-674e-408e-980a-90db8c90d592"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="c2df7730-2389-4efc-8094-915b7abd275b"
-                  LastKnownName="Decision5"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="c2df7730-2389-4efc-8094-915b7abd275b"
-            name="Decision5"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="abc808b3-94d7-48a3-849a-7d9096e5d8d9"
-                guard="Ordner gefunden"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="80f93bad-de55-40bd-806e-02e31787c251"
-                  LastKnownName="Abfrage ob Bildordner korrekt"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="57fc60b3-ceff-49a1-8394-3a32edb0d4cb"
-                guard="Ordner nicht gefunden"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="cbb64d7d-aa97-4ac5-a5cf-f8fe7712b66c"
-                  LastKnownName="Dialog für Ordnerauswahl"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <opaqueAction
-            Id="80f93bad-de55-40bd-806e-02e31787c251"
-            name="Abfrage ob Bildordner korrekt"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="86353863-128e-43b9-bc7e-8de6aa3d7efa"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="ec3fc600-2b40-44eb-aa0c-32bed2a89c96"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="cbb64d7d-aa97-4ac5-a5cf-f8fe7712b66c"
-            name="Dialog für Ordnerauswahl"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="ac85d6a4-38e0-466c-a7eb-1e5ccc9839f0"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="bcdcb55b-931d-426c-90ab-3a831c249a47"
-                  LastKnownName="Merge2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="ec3fc600-2b40-44eb-aa0c-32bed2a89c96"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="93b0f845-6af6-4f47-ba50-b09c3f602999"
-                guard="Ordner nicht korrekt"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="cbb64d7d-aa97-4ac5-a5cf-f8fe7712b66c"
-                  LastKnownName="Dialog für Ordnerauswahl"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="bf5fb5c5-506c-4872-a420-c07fd0d76cb0"
-                guard="Ordner korrekt"
-                isLeaf="false">
-                <mergeNodeMoniker
-                  Id="bcdcb55b-931d-426c-90ab-3a831c249a47"
-                  LastKnownName="Merge2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <mergeNode
-            Id="bcdcb55b-931d-426c-90ab-3a831c249a47"
-            name="Merge2"
-            isLeaf="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="8ed7b13e-7a1b-42e1-a46f-88804e7039ff"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="70bc965e-588c-47a9-a8d5-acccb2ada323"
-                  LastKnownName="Ordnerpfad"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </mergeNode>
-          <objectNode
-            Id="70bc965e-588c-47a9-a8d5-acccb2ada323"
-            name="Ordnerpfad"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
+              <interfaceMoniker
+                Id="a266bb35-2ad4-48c0-b638-3c0095b8925c"
+                LastKnownName="Zugriff auf Bilder"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="d63eb5be-dfaa-4c57-835b-94033c83491e"
+        name="PC"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <part
+            Id="5c067bd1-2b56-4ae6-81db-8b81fba25054"
+            name="Dateisystem"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="668c36ad-c5d8-4d25-85eb-474d8c77bcaf"
+                LastKnownName="System.IO"
                 LastKnownLocation="PictureShare.Architecture.uml" />
             </type_NamedElement>
-            <objectFlowTargets>
-              <objectFlow
-                Id="adcccf32-5e16-4976-85ec-4ce0e92cce1b"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <opaqueActionMoniker
-                  Id="5963daef-9665-4452-b0ac-c7b94d617719"
-                  LastKnownName="Gerätedaten speichern"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="0d487a0d-fef1-43fd-9a37-909c90d3b578"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <opaqueAction
-            Id="5963daef-9665-4452-b0ac-c7b94d617719"
-            name="Gerätedaten speichern"
-            isLeaf="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="1d768be3-a0e3-4712-81b7-e8c63d99ba54"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="fb24a218-c985-41db-b94e-3dd8b4cb9676"
-                  LastKnownName="Gerätedaten"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </opaqueAction>
-        </nodes>
-      </activity>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <activity
-        Id="4efd1873-2a2d-409c-b45e-cf980b5085d0"
-        name="ShowMenu"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="03d35d96-05c6-41fd-b5a3-e9b0b3587caf"
-            name="StartShowMenu"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="ecf757dd-b31f-41a7-b79e-0054a870afbc"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="1166ca18-4136-4516-abed-dfb0b5b74838"
-                  LastKnownName="Module laden und registrieren"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <opaqueAction
-            Id="3ec21a91-1539-4739-b001-139f388b60d3"
-            name="Menüauswahl anzeigen"
-            isLeaf="false">
-            <description>Lädt die verfügbaren Module und zeigt sie anschließend zur Auswahl an.</description>
-            <flowNodeTargets>
-              <controlFlow
-                Id="5da605ea-b33b-4d15-beec-67097cb15994"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="a8224f9c-e0db-4bb4-a7a2-437481a3c5a7"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <objectNode
-            Id="b7aae151-5053-4256-a2ef-bcaa64ecb580"
-            name="Auswahl des Speichertyps"
+          </part>
+          <part
+            Id="2b745851-731d-488e-a08a-6b1f4644f131"
+            name="PictureShare"
             isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="606c80ee-e454-4db4-bde6-3f98fb393a4f"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <sendSignalAction
-            Id="b2bf11b6-60d5-4c8a-a888-0472b44706d8"
-            name="Benutzerabbruch"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="a005cfc9-3cc5-4a61-9ac2-33262adc1327"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </sendSignalAction>
-          <decisionNode
-            Id="a8224f9c-e0db-4bb4-a7a2-437481a3c5a7"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="873ae54d-980f-4b13-a97b-bc35d383a30e"
-                guard="Benutzer bricht ab"
-                isLeaf="false">
-                <forkNodeMoniker
-                  Id="8f9161e7-c0f0-4cc4-89ef-0ce33140b6a4"
-                  LastKnownName="Fork1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <objectFlowTargets>
-              <objectFlow
-                Id="d6b84933-8346-4d06-b244-3df5af81f5ac"
-                guard="Benutzer wählt Speichertyp"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <targetNamedElementsInternal>
+              <connector
+                Id="576d305b-865e-405c-85c9-c9eda671feea"
                 isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="b7aae151-5053-4256-a2ef-bcaa64ecb580"
-                  LastKnownName="Auswahl des Speichertyps"
+                isStatic="false">
+                <partMoniker
+                  Id="5c067bd1-2b56-4ae6-81db-8b81fba25054"
+                  LastKnownName="Dateisystem"
                   LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </decisionNode>
-          <forkNode
-            Id="8f9161e7-c0f0-4cc4-89ef-0ce33140b6a4"
-            name="Fork1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="4b21f76f-b329-45a3-a767-76acebf3fe55"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="b2bf11b6-60d5-4c8a-a888-0472b44706d8"
-                  LastKnownName="Benutzerabbruch"
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="1ab73ef9-f732-4879-8f67-0ad9a6160422">
+                      <portWithPart>
+                        <requiredInterfaceMoniker
+                          Id="ef82c895-8bb3-4f0f-b227-c5ee02613853"
+                          LastKnownName="PicsOut"
+                          LastKnownLocation="Package_1752.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="d9899ca5-388d-4f32-a2bb-aaee4741d6b7">
+                      <portWithPart>
+                        <providedInterfaceMoniker
+                          Id="5ea6a651-721d-4fc1-a302-2cf46e9da353"
+                          LastKnownName="Port1"
+                          LastKnownLocation="PictureShare.Architecture.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+              <connector
+                Id="7579b76b-f1d6-4645-b61c-b5c901b8844a"
+                isLeaf="false"
+                isStatic="false">
+                <partMoniker
+                  Id="5c067bd1-2b56-4ae6-81db-8b81fba25054"
+                  LastKnownName="Dateisystem"
                   LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="bccfe163-a3fe-4215-92f6-227f05d3c276"
-                guard="Benutzer hat Option gesetzt"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="3fd34b61-fa3d-4e15-aee7-c96f3032e0ec"
-                  LastKnownName="Menü nicht mehr automatisch anzeigen"
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="b7ea81ac-88e0-4139-bd75-62014b226777">
+                      <portWithPart>
+                        <requiredInterfaceMoniker
+                          Id="ef82c895-8bb3-4f0f-b227-c5ee02613853"
+                          LastKnownName="PicsOut"
+                          LastKnownLocation="Package_1752.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="3fd589ab-da1a-4608-913d-b86577bf0b00">
+                      <portWithPart>
+                        <providedInterfaceMoniker
+                          Id="6426ff43-5ebd-469c-bb49-60acb29366fb"
+                          LastKnownName="Port2"
+                          LastKnownLocation="PictureShare.Architecture.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+              <connector
+                Id="c4feeb5c-4bad-4cbe-80ef-14fbb3411574"
+                isLeaf="false"
+                isStatic="false">
+                <requiredInterfaceMoniker
+                  Id="d26a6803-b904-48f3-9c56-d65efa155756"
+                  LastKnownName="PicsIn"
                   LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </forkNode>
-          <opaqueAction
-            Id="3fd34b61-fa3d-4e15-aee7-c96f3032e0ec"
-            name="Menü nicht mehr automatisch anzeigen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="7176b090-c538-459a-98da-a1892720ef3c"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0"
-                  LastKnownName="ActivityFinal1"
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="f90f4469-4188-4198-9179-d67d24449663">
+                      <portWithPart>
+                        <requiredInterfaceMoniker
+                          Id="ca8c0681-21ae-4b0a-8aa6-768a130e33f0"
+                          LastKnownName="PicsIn"
+                          LastKnownLocation="Package_1752.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="f290a43b-21ac-4b5f-95c2-6aaf3a21e9b1" />
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+              <connector
+                Id="c1190953-8c6f-4df9-9406-bac22c692032"
+                isLeaf="false"
+                isStatic="false">
+                <requiredInterfaceMoniker
+                  Id="03aa2433-9789-43ef-9971-cbb3d28bdf04"
+                  LastKnownName="PicsOut"
                   LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <activityFinalNode
-            Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0"
-            name="ActivityFinal1"
-            isLeaf="false" />
-          <opaqueAction
-            Id="1166ca18-4136-4516-abed-dfb0b5b74838"
-            name="Module laden und registrieren"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="c87bb480-61df-4657-afe8-1a9cabe9989a"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="3ec21a91-1539-4739-b001-139f388b60d3"
-                  LastKnownName="Menüauswahl anzeigen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-        </nodes>
-      </activity>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
-        Id="b9cc28f5-ddfe-4a40-8e91-acb71a98943c"
-        name="DialogResult" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <activity
-        Id="a9a68d84-e82c-4754-9271-c14a94ffb5a4"
-        name="CheckLocalPath"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="21265699-5116-400d-a3a5-5c61331aaabf"
-            name="Initial1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="d8d5718c-7ac9-434d-a1c1-a3596f0afc43"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="4604ac4f-ba84-4d6b-b112-4e4d2329d69c"
-                  LastKnownName="Prüfen ob Pfad in Konfig gesetzt"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <opaqueAction
-            Id="4604ac4f-ba84-4d6b-b112-4e4d2329d69c"
-            name="Prüfen ob Pfad in Konfig gesetzt"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="a3ed35b5-ae7a-43c6-acf2-6ab7049d1b78"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="cb9638bf-a67b-4ed2-9cb1-f548b67c589c"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="cb9638bf-a67b-4ed2-9cb1-f548b67c589c"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="13b2cdb7-a716-4a19-9fce-feeea7c9839b"
-                guard="Pfad existiert"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="5f9ffd57-4dd3-4c97-a5e2-a61305073fcb"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="07b626f0-df7d-4341-be32-fdad6e6beedc"
-                guard="Pfad existiert nicht"
-                isLeaf="false">
-                <callOperationActionMoniker
-                  Id="a961e6e8-7567-4909-bdab-797d272048b4"
-                  LastKnownName="Dialog für Pfad anzeigen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <activityFinalNode
-            Id="5f9ffd57-4dd3-4c97-a5e2-a61305073fcb"
-            name="ActivityFinal1"
-            isLeaf="false" />
-          <callOperationAction
-            Id="a961e6e8-7567-4909-bdab-797d272048b4"
-            name="Dialog für Pfad anzeigen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="13cfb7de-242e-4b5c-b4b7-3fa4c33e2274"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="753f4b6d-c3f0-4a83-85c7-1ec7691dd833"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callOperationAction>
-          <objectNode
-            Id="2356d670-aa15-4c65-897e-c2a316b2c7b1"
-            name="Pfad"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="4e3451c5-ee5a-4f2e-8aa6-8422ee5b32db">
+                      <portWithPart>
+                        <requiredInterfaceMoniker
+                          Id="ef82c895-8bb3-4f0f-b227-c5ee02613853"
+                          LastKnownName="PicsOut"
+                          LastKnownLocation="Package_1752.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="d6aadc96-7736-40d7-9eae-971392a32de2" />
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+            </targetNamedElementsInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
+              <componentMoniker
+                Id="4c48ab75-4bed-4ee1-b36b-659304091785"
+                LastKnownName="PictureShare"
+                LastKnownLocation="Package_1752.uml" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface
+            Id="03aa2433-9789-43ef-9971-cbb3d28bdf04"
+            name="PicsOut"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="10b6361f-9577-4e2c-bfb5-e221ff5b4fd1">
+                <providedInterfaceMoniker
+                  Id="0fe51ce0-327f-468f-ad67-816f6dcd01b3"
+                  LastKnownName="Port1"
+                  LastKnownLocation="PictureShare.Architecture.uml" />
+              </dependency>
+              <dependency
+                Id="5ee33799-46d5-4053-8d57-ba1a35868358">
+                <providedInterfaceMoniker
+                  Id="ef63420e-923e-428c-bba2-4dc2fd65b834"
+                  LastKnownName="Port2"
+                  LastKnownLocation="PictureShare.Architecture.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="899bd7b3-29dd-4e25-9ea1-08fb18e85417"
+                LastKnownName="Bilder speichern"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface
+            Id="d26a6803-b904-48f3-9c56-d65efa155756"
+            name="PicsIn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="true"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="17f60bbd-9229-43d8-b690-0804b45252d6">
+                <providedInterfaceMoniker
+                  Id="e7072491-b411-4117-bed7-8a37df9ce961"
+                  LastKnownName="Port1"
+                  LastKnownLocation="PictureShare.Architecture.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c3305ccf-e95b-4113-a806-ae10e9567820"
+                LastKnownName="Bilder laden"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="a063c7a4-40ca-41ee-8988-a793b90b02fd"
+        name="Externes System"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="0fe51ce0-327f-468f-ad67-816f6dcd01b3"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="e5052549-e497-48e5-b03b-88764e83babf"
+                LastKnownName="Ordner erstellen"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface
+            Id="ef63420e-923e-428c-bba2-4dc2fd65b834"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="4f6ecb34-6cae-4c5d-b573-42953046981d"
+                LastKnownName="Datei hochladen"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="77f4bad7-d4ee-4092-b7e2-6e7cedfe2a1c"
+        name="MainComponents"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="78480adf-3122-444a-996e-26d4185d486a"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="4d15fa91-1321-4aff-8581-c63ecbe372a3"
+                LastKnownName="Das ext. Gerät : Gerät"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7b1dbc75-6751-4809-80e5-da2c5f519073"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="75e65f1d-b96d-4fea-9fd2-46b7ffbb4e33"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c2984ff8-5831-4dfb-944d-6be663681ce5"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ed7d1151-606c-4f76-a910-496019e2fb4a"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="75e65f1d-b96d-4fea-9fd2-46b7ffbb4e33"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="63122994-a5ab-4c59-a09f-970b5ca3ccda"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PictureShare.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="4d15fa91-1321-4aff-8581-c63ecbe372a3"
+                LastKnownName="Das ext. Gerät : Gerät"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2b341704-f610-43ea-89c9-44086b611461"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="ace82ed0-65f8-4027-8962-31b732c534f7"
+                LastKnownName="Benutzer PC : PC"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c2984ff8-5831-4dfb-944d-6be663681ce5"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="4d15fa91-1321-4aff-8581-c63ecbe372a3"
+                LastKnownName="Das ext. Gerät : Gerät"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ed7d1151-606c-4f76-a910-496019e2fb4a"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="4d15fa91-1321-4aff-8581-c63ecbe372a3"
+                LastKnownName="Das ext. Gerät : Gerät"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e31e8bcf-93db-41b5-b334-5a93c16202b5"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="ace82ed0-65f8-4027-8962-31b732c534f7"
+                LastKnownName="Benutzer PC : PC"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7b1dbc75-6751-4809-80e5-da2c5f519073"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="79638fff-3b39-4143-8d53-d21f7c3ddd3c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PictureShare.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="4d15fa91-1321-4aff-8581-c63ecbe372a3"
+                LastKnownName="Das ext. Gerät : Gerät"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="ace82ed0-65f8-4027-8962-31b732c534f7"
+            name="Benutzer PC : PC"
+            isActor="false"
+            lifelineDisplayName="Benutzer PC : PC">
+            <represents>
+              <propertyMoniker
+                Id="5ceac798-e340-4510-8d08-09dfbd12fa65"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b341704-f610-43ea-89c9-44086b611461"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e31e8bcf-93db-41b5-b334-5a93c16202b5"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="4d15fa91-1321-4aff-8581-c63ecbe372a3"
+            name="Das ext. Gerät : Gerät"
+            isActor="false"
+            lifelineDisplayName="Das ext. Gerät : Gerät">
+            <represents>
+              <propertyMoniker
+                Id="39042484-461f-44e9-be3b-67782d2cdc51"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="75e65f1d-b96d-4fea-9fd2-46b7ffbb4e33"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7b1dbc75-6751-4809-80e5-da2c5f519073"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="0b826d6a-be31-4285-9254-1b87acf29793"
+            name="externes System : Externes System"
+            isActor="false"
+            lifelineDisplayName="externes System : Externes System">
+            <represents>
+              <propertyMoniker
+                Id="da540231-dfb4-45c3-98b9-45e4ccb53faf"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="a67d31d7-8025-4016-b6ee-420ee4760617"
+            name="Bilder laden"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b341704-f610-43ea-89c9-44086b611461"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c2984ff8-5831-4dfb-944d-6be663681ce5"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ad899e83-c5b4-4bb9-9323-c66846c02c3c"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ed7d1151-606c-4f76-a910-496019e2fb4a"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e31e8bcf-93db-41b5-b334-5a93c16202b5"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="76cac502-55db-4ae4-8d48-b5377b43e7cd"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="af27b6fc-4aa4-416e-adf4-8dec127cff21"
+                LastKnownName="Gerät"
                 LastKnownLocation="PictureShare.Architecture.uml" />
             </type_NamedElement>
-            <objectFlowTargets>
-              <objectFlow
-                Id="42bca681-f9ba-4daa-8b93-0455f6256a45"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <opaqueActionMoniker
-                  Id="610abd7c-a7da-4841-a019-e94d4f4bdccb"
-                  LastKnownName="Pfad in Konfig speichern"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="e5930723-afeb-44a9-8765-6d967b94f1b6"
-                name="1"
-                value="1" />
-            </upperBound>
-          </objectNode>
-          <sendSignalAction
-            Id="7720e362-9cfb-4ddb-bb28-1c74a0cd8e0e"
-            name="Benutzerabbruch"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="7f2e4a69-d1d7-40c7-a370-e5ba17384ac2"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="b03ca180-12be-4157-8e54-57c1d2f01271"
-                  LastKnownName="ActivityFinal2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </sendSignalAction>
-          <decisionNode
-            Id="753f4b6d-c3f0-4a83-85c7-1ec7691dd833"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="6dbc4f2d-f9dd-40c0-8ebf-3f5502112f18"
-                guard="Benutzer bricht ab"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="7720e362-9cfb-4ddb-bb28-1c74a0cd8e0e"
-                  LastKnownName="Benutzerabbruch"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <objectFlowTargets>
-              <objectFlow
-                Id="600db72c-0cfa-4959-bd40-a9a5fa775425"
-                guard="Benutzer bestätigt"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="2356d670-aa15-4c65-897e-c2a316b2c7b1"
-                  LastKnownName="Pfad"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </decisionNode>
-          <activityFinalNode
-            Id="b03ca180-12be-4157-8e54-57c1d2f01271"
-            name="ActivityFinal2"
-            isLeaf="false" />
-          <opaqueAction
-            Id="610abd7c-a7da-4841-a019-e94d4f4bdccb"
-            name="Pfad in Konfig speichern"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="416ff2de-78bf-4cb6-8fda-50bfe0358b51"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="5f9ffd57-4dd3-4c97-a5e2-a61305073fcb"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-        </nodes>
-      </activity>
+          </property>
+          <property
+            Id="39042484-461f-44e9-be3b-67782d2cdc51"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="af27b6fc-4aa4-416e-adf4-8dec127cff21"
+                LastKnownName="Gerät"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5ceac798-e340-4510-8d08-09dfbd12fa65"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="d63eb5be-dfaa-4c57-835b-94033c83491e"
+                LastKnownName="PC"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="da540231-dfb4-45c3-98b9-45e4ccb53faf"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="a063c7a4-40ca-41ee-8988-a793b90b02fd"
+                LastKnownName="Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <activity
-        Id="d2eccc82-6615-44a0-ab4a-fe1a193e73fc"
-        name="ChoosePics"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="177b9ae1-c36e-43d3-b440-8cca0fa134e8"
-            name="Initial1"
-            isLeaf="false" />
-        </nodes>
-      </activity>
+      <executionEvent
+        Id="63122994-a5ab-4c59-a09f-970b5ca3ccda"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <activity
-        Id="ac565644-9ae7-42cc-9aee-6f284b058ae5"
-        name="PicsSelection"
+      <executionEvent
+        Id="79638fff-3b39-4143-8d53-d21f7c3ddd3c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="668c36ad-c5d8-4d25-85eb-474d8c77bcaf"
+        name="System.IO"
         isAbstract="false"
         isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="5ea6a651-721d-4fc1-a302-2cf46e9da353"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="99756927-c112-4fc5-8b1c-687c89b27974"
+                LastKnownName="Ordner erstellen"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface
+            Id="6426ff43-5ebd-469c-bb49-60acb29366fb"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="098a4d03-4416-4aff-b944-e12c03f5ed02"
+                LastKnownName="Datei erstellen"
+                LastKnownLocation="Package_1758.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5aff53e4-b8b7-4239-89c7-16d59a916070"
+        LastKnownName="PictureShare"
+        LastKnownLocation="Package_1752.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="d202b529-eb8f-47cc-86de-b68f9729a34c"
+        name="Speichern"
+        collapseFragmentsFlag="false"
         isActiveClass="false"
-        isReentrant="false"
-        isReadOnly="false"
-        isSingleExecution="false">
-        <nodes>
-          <initialNode
-            Id="0a8f7fd0-d608-426a-9b13-64333cc74774"
-            name="Initial1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="251fb2d3-a61e-4c07-a93f-b9b300afb1ce"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="0ab0fb4a-a653-495c-b041-004c401ed4e0"
-                  LastKnownName="Bilder von Gerät laden"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="0c0e9ece-78cb-49c9-a9d0-3978000b413d"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7bc75870-28a1-47f5-bf17-17b62d54fb59"
+                LastKnownName="externes System : Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c09905b5-e133-41e7-9bdc-b52ec0950189"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5ad9b76c-565a-454f-8070-43f55b62e026"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9da92634-d8b2-4b5a-a41a-f3a4198920a7"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f33e0c1c-9248-48b1-b524-894b68488035"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5ad9b76c-565a-454f-8070-43f55b62e026"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ebe26f7d-bf55-41f5-bd81-617aacc58a25"
+                  LastKnownName="ExecutionEvent"
                   LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <opaqueAction
-            Id="0ab0fb4a-a653-495c-b041-004c401ed4e0"
-            name="Bilder von Gerät laden"
-            isLeaf="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="c4b8af13-3f09-4f27-a92a-f281c9a855fd"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="d1e4f8c2-19bd-49f8-bc27-73db3370c609"
-                  LastKnownName="Bilder"
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7bc75870-28a1-47f5-bf17-17b62d54fb59"
+                LastKnownName="externes System : Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f6225eef-937e-410e-a540-db1b315a20a0"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="1ba8376a-b426-43ec-abed-7ef6c2e6dd9a"
+                LastKnownName="Benutzer PC : PC"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9da92634-d8b2-4b5a-a41a-f3a4198920a7"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="7bc75870-28a1-47f5-bf17-17b62d54fb59"
+                LastKnownName="externes System : Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f33e0c1c-9248-48b1-b524-894b68488035"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="7bc75870-28a1-47f5-bf17-17b62d54fb59"
+                LastKnownName="externes System : Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6a83f53a-b226-4e35-9685-5923c098b9af"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="1ba8376a-b426-43ec-abed-7ef6c2e6dd9a"
+                LastKnownName="Benutzer PC : PC"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c09905b5-e133-41e7-9bdc-b52ec0950189"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ceaea8b5-252b-4bb5-b1f6-b9737d86468b"
+                  LastKnownName="ExecutionEvent"
                   LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </opaqueAction>
-          <objectNode
-            Id="d1e4f8c2-19bd-49f8-bc27-73db3370c609"
-            name="Bilder"
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7bc75870-28a1-47f5-bf17-17b62d54fb59"
+                LastKnownName="externes System : Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="1ba8376a-b426-43ec-abed-7ef6c2e6dd9a"
+            name="Benutzer PC : PC"
+            isActor="false"
+            lifelineDisplayName="Benutzer PC : PC">
+            <represents>
+              <propertyMoniker
+                Id="a54ebdaf-3ddb-429b-87e1-5bae755985bb"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f6225eef-937e-410e-a540-db1b315a20a0"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6a83f53a-b226-4e35-9685-5923c098b9af"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="7bc75870-28a1-47f5-bf17-17b62d54fb59"
+            name="externes System : Externes System"
+            isActor="false"
+            lifelineDisplayName="externes System : Externes System">
+            <represents>
+              <propertyMoniker
+                Id="31dfccaf-c6f8-4a17-ac23-035d1e4a0537"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="5ad9b76c-565a-454f-8070-43f55b62e026"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c09905b5-e133-41e7-9bdc-b52ec0950189"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="35493752-05ad-48c5-aa09-f9bfb88d5eb9"
+            name="Speichern"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f6225eef-937e-410e-a540-db1b315a20a0"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9da92634-d8b2-4b5a-a41a-f3a4198920a7"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="40dfb87f-b93d-4190-88c6-eadaa3856d84"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f33e0c1c-9248-48b1-b524-894b68488035"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6a83f53a-b226-4e35-9685-5923c098b9af"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="a54ebdaf-3ddb-429b-87e1-5bae755985bb"
             isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <objectFlowTargets>
-              <objectFlow
-                Id="d1ce1090-95c5-42ca-b7bb-b8ad5716d9bc"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <callOperationActionMoniker
-                  Id="24cbd83c-41dd-4e9f-8bed-c9b9f6a644a7"
-                  LastKnownName="Bildauswahl anzeigen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-            <upperBound>
-              <literalInteger
-                Id="80096b53-a1ef-43f3-8524-fbf338f0474f"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <callOperationAction
-            Id="24cbd83c-41dd-4e9f-8bed-c9b9f6a644a7"
-            name="Bildauswahl anzeigen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="fc9f76e7-b150-414b-ac37-0073f3088985"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="f09878ef-7035-4a6f-a63e-9ba127e7d094"
-                  LastKnownName="Decision1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </callOperationAction>
-          <sendSignalAction
-            Id="a2e39e72-306b-45c0-82fa-60134499a7c8"
-            name="Benutzerabbruch"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="16c1190d-4f0e-4d41-9379-d8ff14dd6ac7"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="1493f0ee-dc37-423a-b6a5-5be727272a3e"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </sendSignalAction>
-          <decisionNode
-            Id="f09878ef-7035-4a6f-a63e-9ba127e7d094"
-            name="Decision1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="fe020fcc-f694-4071-b371-5c45dff9aba5"
-                guard="Benutzer bricht ab"
-                isLeaf="false">
-                <sendSignalActionMoniker
-                  Id="a2e39e72-306b-45c0-82fa-60134499a7c8"
-                  LastKnownName="Benutzerabbruch"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="f915deda-be90-4f0e-bad6-e7e154bf9b10"
-                guard="Benutzer bestätigt"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="575bab3f-e9dd-4330-a6ab-e31354622222"
-                  LastKnownName="Auswahl prüfen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </decisionNode>
-          <activityFinalNode
-            Id="1493f0ee-dc37-423a-b6a5-5be727272a3e"
-            name="ActivityFinal1"
-            isLeaf="false" />
-          <opaqueAction
-            Id="575bab3f-e9dd-4330-a6ab-e31354622222"
-            name="Auswahl prüfen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="b69c52c9-8421-469d-8080-7c3acdb9744d"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="4836cf5d-f869-47d6-94ab-2d12f488ef15"
-                  LastKnownName="Decision2"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <decisionNode
-            Id="4836cf5d-f869-47d6-94ab-2d12f488ef15"
-            name="Decision2"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="25d86838-7de7-449d-9c05-1a7906bb39e3"
-                guard="Keine Auswahl getroffen"
-                isLeaf="false">
-                <callOperationActionMoniker
-                  Id="24cbd83c-41dd-4e9f-8bed-c9b9f6a644a7"
-                  LastKnownName="Bildauswahl anzeigen"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-            <objectFlowTargets>
-              <objectFlow
-                Id="dd71e40e-ca8b-44a2-a017-dd019e448285"
-                guard="Auswahl vorhanden"
-                isLeaf="false"
-                isMulticast="false"
-                isMultireceive="false">
-                <objectNodeMoniker
-                  Id="16882de6-a88b-4b41-8692-6a732fc0ef22"
-                  LastKnownName="Ausgewählte Bilder"
-                  LastKnownLocation="PictureShare.Architecture.uml" />
-              </objectFlow>
-            </objectFlowTargets>
-          </decisionNode>
-          <objectNode
-            Id="16882de6-a88b-4b41-8692-6a732fc0ef22"
-            name="Ausgewählte Bilder"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="d63eb5be-dfaa-4c57-835b-94033c83491e"
+                LastKnownName="PC"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="31dfccaf-c6f8-4a17-ac23-035d1e4a0537"
             isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="b4698bf5-5ee1-4915-903c-267f79d2956d"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-        </nodes>
-      </activity>
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="a063c7a4-40ca-41ee-8988-a793b90b02fd"
+                LastKnownName="Externes System"
+                LastKnownLocation="PictureShare.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ebe26f7d-bf55-41f5-bd81-617aacc58a25"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ceaea8b5-252b-4bb5-b1f6-b9737d86468b"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

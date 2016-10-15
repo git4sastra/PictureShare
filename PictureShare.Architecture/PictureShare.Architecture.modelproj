@@ -57,6 +57,20 @@
       <SubType>Content</SubType>
       <DependentUpon>Activities\ShowMenu.activitydiagram</DependentUpon>
     </Content>
+    <Content Include="Components\PictureShare.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Components\PictureShare.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Components\PictureShare.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="Components\System.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Components\System.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Components\System.componentdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1303.uml">
       <SubType>Content</SubType>
     </Content>
@@ -64,6 +78,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1303.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1752.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1757.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1758.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UseCases\01_Lifecycle.usecasediagram">
@@ -78,6 +101,9 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="Activities" />
+    <Folder Include="Components" />
+    <Folder Include="Classes" />
+    <Folder Include="Sequenzen" />
     <Folder Include="UseCases" />
   </ItemGroup>
   <ItemGroup>

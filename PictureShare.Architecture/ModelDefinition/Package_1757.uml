@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="252175b5-0fdb-40c1-b442-c9f90e246156"
+  name="UseCases" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <useCase
+        Id="cf56d790-dde9-475f-be94-05ff3f5aca36"
+        name="Choose Pics"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ab47c025-8996-4d1a-a044-8d6893dde217">
+            <useCaseMoniker
+              Id="0a537081-8883-4717-9e04-d6afb7c44157"
+              LastKnownName="Save / Upload Pics"
+              LastKnownLocation="Package_1757.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9fd3dd71-5f59-4dbf-b270-c39a84f2c483"
+        name="Decide Local/Remote"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="d69bc796-6d11-43b4-82bd-98c95e04e976"
+        name="Device"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0564a481-ed3b-488c-be60-97835a148082"
+            isDerived="false"
+            sourceEndRoleName="Device"
+            targetEndRoleName="Device Connected"
+            isLeaf="false"
+            name="Connecting"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="379dbe96-21eb-4b81-8a72-6eebdadc2eff"
+              LastKnownName="Device Connected"
+              LastKnownLocation="Package_1757.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca68a205-a269-4d81-ab70-aaea36e53713"
+                  name="Device"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf37babb-ebe8-452a-b22d-f91a7d363e93"
+                  name="Device Connected"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dd781c33-4ff8-4f90-8631-3294c5570cfc"
+        name="Delete Pics"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="379dbe96-21eb-4b81-8a72-6eebdadc2eff"
+        name="Device Connected"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="61c3beab-2772-4ab7-8f12-2f9459e6f8c2">
+            <useCaseMoniker
+              Id="a46bd78d-d05f-4a5b-b38a-cb09a38e500d"
+              LastKnownName="Load Device Data"
+              LastKnownLocation="Package_1757.uml" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include
+            Id="a419a580-da5c-4a11-95dd-c53ff2465deb">
+            <useCaseMoniker
+              Id="fd30ac1d-a691-4af0-9a37-36eee70c9749"
+              LastKnownName="Menu Opened"
+              LastKnownLocation="Package_1757.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a46bd78d-d05f-4a5b-b38a-cb09a38e500d"
+        name="Load Device Data"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fd30ac1d-a691-4af0-9a37-36eee70c9749"
+        name="Menu Opened"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d4c71721-b3df-4191-aed8-5417a2e54390">
+            <useCaseMoniker
+              Id="9fd3dd71-5f59-4dbf-b270-c39a84f2c483"
+              LastKnownName="Decide Local/Remote"
+              LastKnownLocation="Package_1757.uml" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include
+            Id="f0f17dcb-93c8-41da-968f-90fb56988c52">
+            <useCaseMoniker
+              Id="cf56d790-dde9-475f-be94-05ff3f5aca36"
+              LastKnownName="Choose Pics"
+              LastKnownLocation="Package_1757.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0a537081-8883-4717-9e04-d6afb7c44157"
+        name="Save / Upload Pics"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c7791075-55b0-432f-8782-81064e9a29f7">
+            <useCaseMoniker
+              Id="dd781c33-4ff8-4f90-8631-3294c5570cfc"
+              LastKnownName="Delete Pics"
+              LastKnownLocation="Package_1757.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="b6a9abd4-3d0f-4496-aa10-8932c9c7f369" name="PictureShare" linkedPackageId="0f6c8fa4-f2a5-4678-867b-a930926804fe" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="5483338f-a0da-44fe-8ab4-6752e63c957a">
+      <profileInstance Id="346a0c22-5d8a-4858-b721-8b1eeaef7dcd" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e3341635-0476-42e9-838b-0bf61ff72a09">
+      <profileInstance Id="7c9a3c49-55ca-4ba6-9484-4707d6b7340b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="26861622-1f0d-4b20-9173-e988d0b18459" name="PictureShare" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4c48ab75-4bed-4ee1-b36b-659304091785" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="bd2b9154-599f-4111-9e66-81867248c23a" name="PicsOut" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ef82c895-8bb3-4f0f-b227-c5ee02613853" />
+            <type_NamedElement>
+              <interfaceMoniker Id="0fc48c65-1668-4346-81bf-13d350641419" LastKnownName="Bilder speichern" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="8ffad27a-0340-4b47-9d5a-b31d14a20417" name="PicsIn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ca8c0681-21ae-4b0a-8aa6-768a130e33f0" />
+            <type_NamedElement>
+              <interfaceMoniker Id="fae27717-1c39-4069-a0bf-a8a41e6e8f13" LastKnownName="Bilder laden" />
+            </type_NamedElement>
+          </requiredInterface>
+          <part Id="d0101b75-daa4-4088-97e4-70e24e8f12c5" name="PictureShare.Data" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="a0e34247-110b-44ed-b5cf-fc0bc5a516c2" />
+            <type_NamedElement>
+              <componentMoniker Id="486ae742-0ada-47e2-b1ba-c8e725055dd0" LastKnownName="PictureShare.Data" />
+            </type_NamedElement>
+          </part>
+          <part Id="ce4ab00a-add4-49f6-b08f-9d37180cb134" name="PictureShare.Lib" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="c94ef217-4a6b-4590-976b-a714d0c33e1a" />
+            <targetNamedElementsInternal>
+              <connector Id="9160fcd5-c3b7-4b5a-8c96-e9a046eb8559" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="8ffad27a-0340-4b47-9d5a-b31d14a20417" LastKnownName="PicsIn" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="dec65e75-5ea5-4a83-83e1-4b00e0ac96e4">
+                      <elementDefinition Id="bbb91f86-6138-480c-ab13-5b21f9d9cf28" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="ba440cee-38b4-43a9-a28b-f789544ce517" LastKnownName="PicsIn" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="e3061882-df44-42c4-b385-fcaa0fd1de1b">
+                      <elementDefinition Id="1b43533a-958e-4d02-9677-4cbfce20c482" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="4d4b212f-8d93-46bb-b1bb-8d9e5c08fcc1" />
+              </connector>
+              <connector Id="3fb06d45-65ec-4b44-ba85-9163cc17bfb4" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="bd2b9154-599f-4111-9e66-81867248c23a" LastKnownName="PicsOut" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="fe541321-15b6-4d7b-9820-71bcaa56d556">
+                      <elementDefinition Id="01ad78b1-d8d4-4db4-bd21-c8c3103f84ca" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="6c3d7409-603e-4437-a030-205772d3508c" LastKnownName="PicsOut" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="c7efdab3-0007-4c79-9bf4-53bfe3228bf1">
+                      <elementDefinition Id="aa11a49d-515f-433d-aedd-a170158bb18e" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="e8192538-bd85-443c-873c-468d61017ede" />
+              </connector>
+              <connector Id="9f708a02-0b93-42c9-b55a-46296bd2f482" isLeaf="false" isStatic="false">
+                <partMoniker Id="d0101b75-daa4-4088-97e4-70e24e8f12c5" LastKnownName="PictureShare.Data" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="b878f036-49c1-437a-92d4-9394e17480c3">
+                      <elementDefinition Id="67d5dd4b-a29f-4543-965c-eae67150b12e" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="ad052d01-0f30-43b3-9575-43f615923bb2">
+                      <elementDefinition Id="60a294b9-9421-4dc1-a9cf-c971e985c248" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="bd4c5091-f4be-4979-a11c-0ce8ed7e8ac6" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="cd170c4c-bf2a-4372-8001-22c4a5ed9069" LastKnownName="PictureShare.Lib" />
+            </type_NamedElement>
+          </part>
+          <part Id="d60d00cc-16e3-4efb-a979-a9381213d8f0" name="PictureShare.UI" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="7fc145e7-8b4c-4f8a-8979-ff9acab2fa65" />
+            <targetNamedElementsInternal>
+              <connector Id="38722bfb-6b12-4dc6-baae-9938af46e392" isLeaf="false" isStatic="false">
+                <partMoniker Id="ce4ab00a-add4-49f6-b08f-9d37180cb134" LastKnownName="PictureShare.Lib" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="35e6bd6c-ed14-4b63-9bff-00c97ff0efa8">
+                      <elementDefinition Id="d5682161-5bd0-4d2a-a239-e1893d6c249e" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="3d9b7855-bc47-4242-9998-fde731a742c1">
+                      <elementDefinition Id="6e820d2a-29d7-4164-a4c8-95e70f3cf1af" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="cf951eae-0a07-41ca-ada0-cdfc006a60a5" />
+              </connector>
+              <connector Id="9bc68f2a-e784-4464-bf68-dfabd40ef577" isLeaf="false" isStatic="false">
+                <partMoniker Id="d0101b75-daa4-4088-97e4-70e24e8f12c5" LastKnownName="PictureShare.Data" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="6d18f640-3fdc-4dff-ae94-71809e88b37f">
+                      <elementDefinition Id="dd8997d1-59c6-4a15-8836-c8d2406256dc" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="8afec702-12ac-4cba-8b48-93560b011c5e">
+                      <elementDefinition Id="4fa32e64-4d48-4b37-b83f-2a349182be4d" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="1063804d-8cac-4b42-afbe-3d391606caaa" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="2524b2c3-d603-4103-bc01-6aa510eb1774" LastKnownName="PictureShare.UI" />
+            </type_NamedElement>
+          </part>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="0fc48c65-1668-4346-81bf-13d350641419" name="Bilder speichern" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="899bd7b3-29dd-4e25-9ea1-08fb18e85417" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="fae27717-1c39-4069-a0bf-a8a41e6e8f13" name="Bilder laden" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3305ccf-e95b-4113-a806-ae10e9567820" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="486ae742-0ada-47e2-b1ba-c8e725055dd0" name="PictureShare.Data" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e594cbf2-11cb-43ba-8e37-f40426aa8aa3" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="cd170c4c-bf2a-4372-8001-22c4a5ed9069" name="PictureShare.Lib" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7fcc05b6-b3f4-4a01-a78f-13ad524d0062" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="ba440cee-38b4-43a9-a28b-f789544ce517" name="PicsIn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="c59b2cab-4711-40c8-b99b-0f4dc937a8f1" />
+            <type_NamedElement>
+              <interfaceMoniker Id="ac9750f7-49e9-4086-8251-2882e602b113" LastKnownName="Bilder laden" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="6c3d7409-603e-4437-a030-205772d3508c" name="PicsOut" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="f6bed539-1a75-4feb-b6bb-f571f40bd7cd" />
+            <type_NamedElement>
+              <interfaceMoniker Id="c7b5b20a-9fdc-4745-91f0-bba0f7c4705d" LastKnownName="Bilder speichern" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2524b2c3-d603-4103-bc01-6aa510eb1774" name="PictureShare.UI" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7d1458e8-dc8e-4b55-8844-9495434eeeac" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="ac9750f7-49e9-4086-8251-2882e602b113" name="Bilder laden" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3305ccf-e95b-4113-a806-ae10e9567820" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="c7b5b20a-9fdc-4745-91f0-bba0f7c4705d" name="Bilder speichern" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="899bd7b3-29dd-4e25-9ea1-08fb18e85417" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="0f6c8fa4-f2a5-4678-867b-a930926804fe" name="PictureShare.Architecture">
+    <elementDefinition Id="0945e253-cb93-4b27-9e6f-8d342cc0d159" />
+  </package>
+</componentModel>
