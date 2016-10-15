@@ -22,26 +22,49 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="Activities\01_1_DeviceConnected.activitydiagram">
+    <Content Include="Activities\CheckLocalPath.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activities\01_1_DeviceConnected.activitydiagram.layout">
+    <Content Include="Activities\CheckLocalPath.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activities\01_1_DeviceConnected.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\CheckLocalPath.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Activities\01_2_MenuOpened.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Activities\01_2_MenuOpened.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Activities\01_2_MenuOpened.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Activities\01_3_ChoosePics.activitydiagram">
+    <Content Include="Activities\DeviceConnected.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Activities\01_3_ChoosePics.activitydiagram.layout">
+    <Content Include="Activities\DeviceConnected.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Activities\01_3_ChoosePics.activitydiagram</DependentUpon>
+      <DependentUpon>Activities\DeviceConnected.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\DeviceInit.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\DeviceInit.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\DeviceInit.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\PicsSelection.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\PicsSelection.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\PicsSelection.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Activities\ShowMenu.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Activities\ShowMenu.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Activities\ShowMenu.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1303.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1302.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1303.uml">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="UseCases\01_Lifecycle.usecasediagram">
       <SubType>Content</SubType>
@@ -56,5 +79,18 @@
     </Content>
     <Folder Include="Activities" />
     <Folder Include="UseCases" />
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Ebenen.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Ebenen.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Ebenen.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Ebenen.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Ebenen.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>

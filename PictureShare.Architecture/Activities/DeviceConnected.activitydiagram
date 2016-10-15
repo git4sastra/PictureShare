@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="94db02cf-e81d-425f-b9ea-7c54f3da88d3" name="DeviceConnected" linkedPackageId="ed1fef0f-8269-4506-a1d5-c8f21e2bf471" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="32d34997-3a94-43e1-9c10-c0e4e57f531e">
+      <profileInstance Id="7c32a30f-7dae-42c3-9bcc-f74799529062" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="97dfca73-3caf-478e-9e01-057489d7e594">
+      <profileInstance Id="e9a3ee2f-37cb-4baf-b2c3-6a860ac26cb8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="14855933-fb13-4429-94ed-7bc0090863ba" name="DeviceConnected" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="56033f0e-27d0-4bd7-b1ba-e858945e5d6e" />
+        <nodes>
+          <acceptEventAction Id="1c532b7f-da40-4a82-94f5-cadc303da922" name="WMI Event &#xD;&#xA;Storage Attached" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="a631e8f8-37a2-48db-b0a6-2c3a5051b90b" />
+            <flowNodeTargets>
+              <controlFlow Id="bf4a640f-9830-4c60-aa9a-ab5046a0d5f6" guard="(Dateien OR Ordner) &gt; 0" isLeaf="false">
+                <callBehaviorActionMoniker Id="acef4887-1ca1-4245-9e77-7b9e89c626d2" LastKnownName="Gerät initialisieren" />
+                <elementDefinition Id="07cef790-3608-40b0-9098-6ec754382d0f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <callBehaviorAction Id="acef4887-1ca1-4245-9e77-7b9e89c626d2" name="Gerät initialisieren" isLeaf="false">
+            <elementDefinition Id="5c411f45-f93a-4abf-9f44-4a506b0017b8" />
+            <objectFlowTargets>
+              <objectFlow Id="8b6e1103-d519-4679-a3bc-6a60dbedc562" guard="Gerät ist initialisiert" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="02d044b5-655c-4738-bbab-039b849f8805" LastKnownName="Gerätedaten" />
+                <elementDefinition Id="091f9193-311e-4796-9fb7-455ffa8e6e12" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callBehaviorAction>
+          <objectNode Id="02d044b5-655c-4738-bbab-039b849f8805" name="Gerätedaten" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="74e5ff19-1922-4dfd-92fc-61ee9ad9c3d3" />
+            <objectFlowTargets>
+              <objectFlow Id="85c07422-7024-4bc5-a318-9695dc4422ad" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <callBehaviorActionMoniker Id="46716df8-fbef-4846-a80d-d5df888645cd" LastKnownName="Auswahlmenü anzeigen" />
+                <elementDefinition Id="9d4b986c-5b1a-43c6-bdb7-7aa75daf8a64" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="776f8ddb-b8db-40ae-9329-3f9ccce958b2" name="1" value="1">
+                <elementDefinition Id="9f72af9d-10a0-440a-aa4b-98edff93dd56" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callBehaviorAction Id="46716df8-fbef-4846-a80d-d5df888645cd" name="Auswahlmenü anzeigen" isLeaf="false">
+            <elementDefinition Id="ef01f10f-45ae-4b83-b4a7-ced3f8610a97" />
+            <objectFlowTargets>
+              <objectFlow Id="52261312-142a-4022-8851-e0da95cf0497" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="c7723a7b-4ef4-438e-8ede-8e6cca5fdf5d" LastKnownName="Auswahl des Speichertyps" />
+                <elementDefinition Id="f54eb5de-9526-4a11-8461-288e5275c51c" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callBehaviorAction>
+          <objectNode Id="c7723a7b-4ef4-438e-8ede-8e6cca5fdf5d" name="Auswahl des Speichertyps" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="f8f585d5-b7b6-4bf3-95f6-f3a56edb7399" />
+            <objectFlowTargets>
+              <objectFlow Id="8cd809ca-e9f8-4155-acab-8d4e16aef99e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="df262a14-7503-4cbb-b852-25eaf020f94a" LastKnownName="Decision2" />
+                <elementDefinition Id="e955c264-3535-4c4e-9ddf-c07b7941a0f3" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="e7ff345e-6e57-4759-bcdf-7f854154bdb8" name="1" value="1">
+                <elementDefinition Id="81497909-f0b3-4ce2-b96e-f4ce42848453" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <sendSignalAction Id="42b034e5-7713-44fd-9574-2a5890aa59bb" name="Benutzerabbruch" isLeaf="false">
+            <elementDefinition Id="965dcebf-b3cf-451e-8d0a-98b9bdb76895" />
+            <flowNodeTargets>
+              <controlFlow Id="b593b74d-c27b-438d-bd82-eb207210615f" isLeaf="false">
+                <activityFinalNodeMoniker Id="e83b1b23-baf1-45f7-949e-047b19248efe" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7ef6d477-6771-4e61-a056-88148530a7a9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <decisionNode Id="df262a14-7503-4cbb-b852-25eaf020f94a" name="Decision2" isLeaf="false">
+            <elementDefinition Id="4a876d26-1f16-4d65-b969-e17f761732d1" />
+            <flowNodeTargets>
+              <controlFlow Id="fe71b6e6-9c4c-4d49-b76c-3e4aeff358bc" guard="Benutzer wählt lokal speichern" isLeaf="false">
+                <callBehaviorActionMoniker Id="ca689d79-f87b-451c-b7ab-f4f28a0e030d" LastKnownName="Lokalen Speicherpfad prüfen" />
+                <elementDefinition Id="1f77be0a-c2fb-42eb-96d1-dadda211baf0" />
+              </controlFlow>
+              <controlFlow Id="a50340a2-9750-4629-a0d0-109996c7c552" guard="Benutzer wählt remote speichern" isLeaf="false">
+                <callBehaviorActionMoniker Id="58e999db-53fd-4131-982f-6b3cc52a4e6d" LastKnownName="Bildauswahl" />
+                <elementDefinition Id="79f27bf5-3fc8-46ea-96eb-52045790e8d7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <callBehaviorAction Id="ca689d79-f87b-451c-b7ab-f4f28a0e030d" name="Lokalen Speicherpfad prüfen" isLeaf="false">
+            <elementDefinition Id="915f900e-d940-41dd-b013-90d07f09d1d3" />
+            <flowNodeTargets>
+              <controlFlow Id="afbe27da-15f8-4e92-b367-2f9928e61329" guard="Pfad existiert &amp;&amp; beschreibbar" isLeaf="false">
+                <callBehaviorActionMoniker Id="58e999db-53fd-4131-982f-6b3cc52a4e6d" LastKnownName="Bildauswahl" />
+                <elementDefinition Id="971ec5da-45f1-4a53-970c-812855621948" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callBehaviorAction>
+          <callBehaviorAction Id="58e999db-53fd-4131-982f-6b3cc52a4e6d" name="Bildauswahl" isLeaf="false">
+            <elementDefinition Id="10ddbb05-662f-4274-897f-e958c19239de" />
+            <flowNodeTargets>
+              <controlFlow Id="88bef456-10e7-4212-8375-3c3bfda5e30e" isLeaf="false">
+                <decisionNodeMoniker Id="d6a19a8d-35f8-4e68-9c41-ba504d9de2f2" LastKnownName="Decision3" />
+                <elementDefinition Id="92139808-e945-4378-aa15-3bc645c18125" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callBehaviorAction>
+          <opaqueAction Id="8edb235f-5697-40c4-8d11-951776738d13" name="Speichern / Upload" isLeaf="false">
+            <elementDefinition Id="44847278-997b-4556-8363-1a079e135340" />
+            <flowNodeTargets>
+              <controlFlow Id="00ab7a9b-813e-4cc2-b707-537a76423b4e" guard="Speichern war erfolgreich" isLeaf="false">
+                <callOperationActionMoniker Id="48a8192a-ecd6-45dd-b6ca-db6a179a600a" LastKnownName="Abfrage, ob Bilder gelöscht werden sollen" />
+                <elementDefinition Id="06e6ea54-f3a1-4ec1-99ac-07b48160a66d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="d6a19a8d-35f8-4e68-9c41-ba504d9de2f2" name="Decision3" isLeaf="false">
+            <elementDefinition Id="b4300de7-a9ab-443e-9a3b-286a2d13565f" />
+            <flowNodeTargets>
+              <controlFlow Id="07d83e14-f097-4d31-b4b6-6ebdf362b2e3" guard="Benutzer bricht ab" isLeaf="false">
+                <sendSignalActionMoniker Id="42b034e5-7713-44fd-9574-2a5890aa59bb" LastKnownName="Benutzerabbruch" />
+                <elementDefinition Id="13b80664-ad0d-4c90-99e9-65c30c769934" />
+              </controlFlow>
+            </flowNodeTargets>
+            <objectFlowTargets>
+              <objectFlow Id="98ab0c5b-65f7-4b84-9864-cfdb24e9e540" guard="Benutzer hat Bilder ausgewählt" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="fa2e9b5b-f337-48dc-b9ac-ef5d0a74c041" LastKnownName="Ausgewählte Bilder" />
+                <elementDefinition Id="13d266f1-5728-444f-86ea-394c09e60d85" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <activityFinalNode Id="e83b1b23-baf1-45f7-949e-047b19248efe" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="0794bd1f-dce6-4f33-aa59-cdf78bd43e21" />
+          </activityFinalNode>
+          <objectNode Id="fa2e9b5b-f337-48dc-b9ac-ef5d0a74c041" name="Ausgewählte Bilder" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="77fdd0c4-42d1-42b1-bb9c-8b5a387238e9" />
+            <objectFlowTargets>
+              <objectFlow Id="bbeff485-1212-4e9f-8c06-49c8ce453802" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="8edb235f-5697-40c4-8d11-951776738d13" LastKnownName="Speichern / Upload" />
+                <elementDefinition Id="f02dd640-07aa-468f-b94d-23c7f55910ba" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="40867832-2ebc-4725-a4b5-9f307aa67c7f" name="2147483647" value="2147483647">
+                <elementDefinition Id="763c1ec9-6a20-46e2-9669-30eb4fca6835" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="48a8192a-ecd6-45dd-b6ca-db6a179a600a" name="Abfrage, ob Bilder gelöscht werden sollen" isLeaf="false">
+            <elementDefinition Id="1dd436f6-a2a9-4c04-b109-3a234d1b2043" />
+            <flowNodeTargets>
+              <controlFlow Id="baceb451-3bd7-4ebd-8e0f-4407add87422" isLeaf="false">
+                <decisionNodeMoniker Id="4ffd6144-b48f-4fa7-96f3-75b14ab00fe2" LastKnownName="Decision1" />
+                <elementDefinition Id="d03c5ba5-af1a-4975-9df9-7e775a1cdfa7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <decisionNode Id="4ffd6144-b48f-4fa7-96f3-75b14ab00fe2" name="Decision1" isLeaf="false">
+            <elementDefinition Id="ec2ef948-5552-45e6-bbf1-8fd80b7ed8d2" />
+            <flowNodeTargets>
+              <controlFlow Id="a8e2be80-fcb4-4971-ac72-3223f4640403" guard="Ja" isLeaf="false">
+                <opaqueActionMoniker Id="b92fa1a7-5899-46a8-92d6-e417b0f9195f" LastKnownName="Bilder löschen" />
+                <elementDefinition Id="37b42dbd-b864-4ce7-a196-d884e43708cf" />
+              </controlFlow>
+              <controlFlow Id="f99ca25a-a8a3-4199-a5f8-4bc7ee20f393" guard="Nein" isLeaf="false">
+                <activityFinalNodeMoniker Id="e83b1b23-baf1-45f7-949e-047b19248efe" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="8627f628-8055-4501-b7cc-219da84e6bfb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="b92fa1a7-5899-46a8-92d6-e417b0f9195f" name="Bilder löschen" isLeaf="false">
+            <elementDefinition Id="7ccf0d39-a3de-468d-9e38-7d464ab9456a" />
+            <flowNodeTargets>
+              <controlFlow Id="5a28af3c-1b22-49fd-8bbc-ada14102182b" isLeaf="false">
+                <activityFinalNodeMoniker Id="e83b1b23-baf1-45f7-949e-047b19248efe" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="2e6c1e22-7293-4cc3-a589-b71926113b45" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="ed1fef0f-8269-4506-a1d5-c8f21e2bf471" name="PictureShare.Architecture">
+    <elementDefinition Id="0945e253-cb93-4b27-9e6f-8d342cc0d159" />
+  </package>
+</activityRootModel>

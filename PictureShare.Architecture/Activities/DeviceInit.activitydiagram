@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="50bb424d-5b9b-4ca3-b96d-2d4c2d78de83" name="DeviceInit" linkedPackageId="1af71a30-cd49-43b2-ac14-3de7248a3ce0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7c11708f-f66c-490e-9d63-206b02696ad5">
+      <profileInstance Id="8ccc2bc1-c02e-400a-b5e2-351f542be4af" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="155650d5-e8a4-47ff-a2f4-23557396a68b">
+      <profileInstance Id="b1d5c525-bfa1-4048-a9e4-1b0064992d1d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="449ff327-f113-4104-98c9-83c1bc99cd5a" name="DeviceInit" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="ebd91144-6dac-4544-8182-58ebc1706850" />
+        <nodes>
+          <initialNode Id="e4bcaf6a-448d-467d-a267-e46778f10e75" name="StartDeviceInit" isLeaf="false">
+            <elementDefinition Id="b9f05d97-a844-49f9-aaf2-293e4ae25452" />
+            <flowNodeTargets>
+              <controlFlow Id="89d65d96-f603-44b6-830f-6721299a7d0b" isLeaf="false">
+                <opaqueActionMoniker Id="33aea496-05fe-4cab-b8f2-74ab42be8183" LastKnownName="Prüfen ob Gerät bekannt" />
+                <elementDefinition Id="4149dd99-37a0-49eb-8aad-d8ac6301a5c6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="33aea496-05fe-4cab-b8f2-74ab42be8183" name="Prüfen ob Gerät bekannt" isLeaf="false">
+            <elementDefinition Id="87c0e851-ff30-4e3a-9851-cf98ef9842fa" />
+            <flowNodeTargets>
+              <controlFlow Id="af4ab0bb-408d-40f7-9035-f92c311da1e2" isLeaf="false">
+                <decisionNodeMoniker Id="142b5080-26d8-4b24-8178-bc87d9919821" LastKnownName="Decision4" />
+                <elementDefinition Id="34ae7334-30e1-4613-adeb-1bd7132fbdf7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="142b5080-26d8-4b24-8178-bc87d9919821" name="Decision4" isLeaf="false">
+            <elementDefinition Id="08212e04-a3c5-4c3c-99dc-d2d46aba3dcf" />
+            <flowNodeTargets>
+              <controlFlow Id="6ff85ea7-be4d-4074-a85d-54f3ef07c362" guard="Gerät bekannt" isLeaf="false">
+                <opaqueActionMoniker Id="7fbd5e88-54ff-4cb2-b92f-55d289e4d5ba" LastKnownName="Gerätedaten laden" />
+                <elementDefinition Id="5d3e3f5f-1b62-4184-b311-cde96ce5a140" />
+              </controlFlow>
+              <controlFlow Id="1578fb9b-6d98-4caf-a7e2-2e51132fae66" guard="Gerät unbekannt" isLeaf="false">
+                <opaqueActionMoniker Id="d217b406-2b9c-4255-94b7-2caa180b9b32" LastKnownName="Bildordner finden" />
+                <elementDefinition Id="ea63b194-72a6-438e-8e36-2b44f25effb1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="7fbd5e88-54ff-4cb2-b92f-55d289e4d5ba" name="Gerätedaten laden" isLeaf="false">
+            <elementDefinition Id="04b8667e-43bd-492e-8442-5dc01b796f7b" />
+            <objectFlowTargets>
+              <objectFlow Id="eb36e002-b7c4-4c2a-a4c1-5effdbdca43f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="9d203df4-502c-4211-b466-bbf7bb43c23e" LastKnownName="Gerätedaten" />
+                <elementDefinition Id="77a067f1-8984-4877-baf3-0caa45b95450" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="9d203df4-502c-4211-b466-bbf7bb43c23e" name="Gerätedaten" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="fb24a218-c985-41db-b94e-3dd8b4cb9676" />
+            <upperBound>
+              <literalInteger Id="95d51e21-e36a-42bc-9ee6-dd6d1af93508" name="2147483647" value="2147483647">
+                <elementDefinition Id="014a96ea-f078-44b1-ad1f-0d04889a7293" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="d217b406-2b9c-4255-94b7-2caa180b9b32" name="Bildordner finden" isLeaf="false">
+            <description>Sucht nach dem Ordner mit den meisten JPG-Bildern</description>
+            <elementDefinition Id="62062c34-873d-43f5-a746-9c54e0d8dd61" />
+            <flowNodeTargets>
+              <controlFlow Id="61bb87d6-ad81-41ae-b503-d825b593913f" isLeaf="false">
+                <decisionNodeMoniker Id="002ce508-c730-42ac-b096-7439cb07e2c8" LastKnownName="Decision5" />
+                <elementDefinition Id="a28ad36f-674e-408e-980a-90db8c90d592" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="002ce508-c730-42ac-b096-7439cb07e2c8" name="Decision5" isLeaf="false">
+            <elementDefinition Id="c2df7730-2389-4efc-8094-915b7abd275b" />
+            <flowNodeTargets>
+              <controlFlow Id="87e91fb6-f9e4-468c-b12c-7181bb13fa91" guard="Ordner gefunden" isLeaf="false">
+                <opaqueActionMoniker Id="3e536150-fbe2-4eaa-9042-ad4b7df4b9b0" LastKnownName="Abfrage ob Bildordner korrekt" />
+                <elementDefinition Id="abc808b3-94d7-48a3-849a-7d9096e5d8d9" />
+              </controlFlow>
+              <controlFlow Id="ca9f9186-2bd7-427b-91b8-955975e09176" guard="Ordner nicht gefunden" isLeaf="false">
+                <opaqueActionMoniker Id="c484355e-2a12-4896-8203-2336c0aeef61" LastKnownName="Dialog für Ordnerauswahl" />
+                <elementDefinition Id="57fc60b3-ceff-49a1-8394-3a32edb0d4cb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="3e536150-fbe2-4eaa-9042-ad4b7df4b9b0" name="Abfrage ob Bildordner korrekt" isLeaf="false">
+            <elementDefinition Id="80f93bad-de55-40bd-806e-02e31787c251" />
+            <flowNodeTargets>
+              <controlFlow Id="ee386ad7-57e4-4a10-926f-7490e6ed4304" isLeaf="false">
+                <decisionNodeMoniker Id="8f1a1637-4227-4f56-885c-32dc86cb9f44" LastKnownName="Decision2" />
+                <elementDefinition Id="86353863-128e-43b9-bc7e-8de6aa3d7efa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c484355e-2a12-4896-8203-2336c0aeef61" name="Dialog für Ordnerauswahl" isLeaf="false">
+            <elementDefinition Id="cbb64d7d-aa97-4ac5-a5cf-f8fe7712b66c" />
+            <flowNodeTargets>
+              <controlFlow Id="3d12e754-68fd-4cec-a61f-0f69d646dd09" isLeaf="false">
+                <mergeNodeMoniker Id="43c55044-d4a0-4a8e-b7fb-984a3880bd87" LastKnownName="Merge2" />
+                <elementDefinition Id="ac85d6a4-38e0-466c-a7eb-1e5ccc9839f0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="8f1a1637-4227-4f56-885c-32dc86cb9f44" name="Decision2" isLeaf="false">
+            <elementDefinition Id="ec3fc600-2b40-44eb-aa0c-32bed2a89c96" />
+            <flowNodeTargets>
+              <controlFlow Id="6aabfde0-71b0-4706-8aaf-d54777efdb55" guard="Ordner nicht korrekt" isLeaf="false">
+                <opaqueActionMoniker Id="c484355e-2a12-4896-8203-2336c0aeef61" LastKnownName="Dialog für Ordnerauswahl" />
+                <elementDefinition Id="93b0f845-6af6-4f47-ba50-b09c3f602999" />
+              </controlFlow>
+              <controlFlow Id="45480fa3-ac3b-4468-9bde-3017686ac674" guard="Ordner korrekt" isLeaf="false">
+                <mergeNodeMoniker Id="43c55044-d4a0-4a8e-b7fb-984a3880bd87" LastKnownName="Merge2" />
+                <elementDefinition Id="bf5fb5c5-506c-4872-a420-c07fd0d76cb0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="43c55044-d4a0-4a8e-b7fb-984a3880bd87" name="Merge2" isLeaf="false">
+            <elementDefinition Id="bcdcb55b-931d-426c-90ab-3a831c249a47" />
+            <objectFlowTargets>
+              <objectFlow Id="fa0e5454-d70f-4fb9-8d3b-0359327b4dc4" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="15aa3827-1022-4134-96ba-dda4add693d8" LastKnownName="Ordnerpfad" />
+                <elementDefinition Id="8ed7b13e-7a1b-42e1-a46f-88804e7039ff" />
+              </objectFlow>
+            </objectFlowTargets>
+          </mergeNode>
+          <objectNode Id="15aa3827-1022-4134-96ba-dda4add693d8" name="Ordnerpfad" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="70bc965e-588c-47a9-a8d5-acccb2ada323" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="06475dae-983e-4a0a-bdf4-750718487a96" LastKnownName="String" />
+            </type_NamedElement>
+            <objectFlowTargets>
+              <objectFlow Id="493a9f67-31d6-4dc3-86a3-3ffc89576d89" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="113f458d-0fc6-48be-a875-95f19460eaec" LastKnownName="Gerätedaten speichern" />
+                <elementDefinition Id="adcccf32-5e16-4976-85ec-4ce0e92cce1b" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="dc9f3038-8cad-410c-a79a-d21817d38ff9" name="2147483647" value="2147483647">
+                <elementDefinition Id="0d487a0d-fef1-43fd-9a37-909c90d3b578" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="113f458d-0fc6-48be-a875-95f19460eaec" name="Gerätedaten speichern" isLeaf="false">
+            <elementDefinition Id="5963daef-9665-4452-b0ac-c7b94d617719" />
+            <objectFlowTargets>
+              <objectFlow Id="005e0212-129f-437d-88da-297a94ed6ef5" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="9d203df4-502c-4211-b466-bbf7bb43c23e" LastKnownName="Gerätedaten" />
+                <elementDefinition Id="1d768be3-a0e3-4712-81b7-e8c63d99ba54" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+    <packageHasNamedElement>
+      <referencedType Id="06475dae-983e-4a0a-bdf4-750718487a96" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="1af71a30-cd49-43b2-ac14-3de7248a3ce0" name="PictureShare.Architecture">
+    <elementDefinition Id="0945e253-cb93-4b27-9e6f-8d342cc0d159" />
+  </package>
+</activityRootModel>

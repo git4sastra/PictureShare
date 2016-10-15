@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="fa4c1d2c-e65d-4fbf-9458-e19d61702d9b" name="ShowMenu" linkedPackageId="c32cfc6e-acbf-4ce7-b605-c9d67f31c5ca" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4672161c-ce5c-48d0-833c-01fe515f3316" name="ShowMenu" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="4efd1873-2a2d-409c-b45e-cf980b5085d0" />
+        <nodes>
+          <initialNode Id="0378289d-4308-405c-b2f4-1b096daa51f1" name="StartShowMenu" isLeaf="false">
+            <elementDefinition Id="03d35d96-05c6-41fd-b5a3-e9b0b3587caf" />
+            <flowNodeTargets>
+              <controlFlow Id="c162049d-888a-475b-b5b2-37d62f9b4982" isLeaf="false">
+                <opaqueActionMoniker Id="ff706a60-8797-405a-bfe8-4b7d655df72e" LastKnownName="Module laden und registrieren" />
+                <elementDefinition Id="ecf757dd-b31f-41a7-b79e-0054a870afbc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="a3fadf4c-8c87-4ddd-ab44-a9ef7563b7a0" name="Menüauswahl anzeigen" isLeaf="false">
+            <description>Lädt die verfügbaren Module und zeigt sie anschließend zur Auswahl an.</description>
+            <elementDefinition Id="3ec21a91-1539-4739-b001-139f388b60d3" />
+            <flowNodeTargets>
+              <controlFlow Id="3d52c2c4-9add-4a49-8d99-440c97c9976c" isLeaf="false">
+                <decisionNodeMoniker Id="849b3027-7ec2-4090-afa5-77fc652af8b7" LastKnownName="Decision1" />
+                <elementDefinition Id="5da605ea-b33b-4d15-beec-67097cb15994" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="88b387d0-eccd-458a-8de3-a8b3edb76a10" name="Auswahl des Speichertyps" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b7aae151-5053-4256-a2ef-bcaa64ecb580" />
+            <upperBound>
+              <literalInteger Id="3049a988-6eb8-434e-bc80-aba2967e2eda" name="2147483647" value="2147483647">
+                <elementDefinition Id="606c80ee-e454-4db4-bde6-3f98fb393a4f" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <sendSignalAction Id="d9fc8823-c098-4a72-9d07-75cfa44727aa" name="Benutzerabbruch" isLeaf="false">
+            <elementDefinition Id="b2bf11b6-60d5-4c8a-a888-0472b44706d8" />
+            <flowNodeTargets>
+              <controlFlow Id="a6c8d17c-148f-4f4a-91ce-075ac2940aaf" isLeaf="false">
+                <activityFinalNodeMoniker Id="e85f1c54-a8ad-4ea4-b621-ecb9e6b95815" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="a005cfc9-3cc5-4a61-9ac2-33262adc1327" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <decisionNode Id="849b3027-7ec2-4090-afa5-77fc652af8b7" name="Decision1" isLeaf="false">
+            <elementDefinition Id="a8224f9c-e0db-4bb4-a7a2-437481a3c5a7" />
+            <flowNodeTargets>
+              <controlFlow Id="a73bae15-684d-4dde-8479-2426e590306f" guard="Benutzer bricht ab" isLeaf="false">
+                <forkNodeMoniker Id="9fdb506c-aa65-4a75-97db-9cb1e6867079" LastKnownName="Fork1" />
+                <elementDefinition Id="873ae54d-980f-4b13-a97b-bc35d383a30e" />
+              </controlFlow>
+            </flowNodeTargets>
+            <objectFlowTargets>
+              <objectFlow Id="2c02d905-aa52-4b2d-9477-37e81e9574a8" guard="Benutzer wählt Speichertyp" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="88b387d0-eccd-458a-8de3-a8b3edb76a10" LastKnownName="Auswahl des Speichertyps" />
+                <elementDefinition Id="d6b84933-8346-4d06-b244-3df5af81f5ac" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <forkNode Id="9fdb506c-aa65-4a75-97db-9cb1e6867079" name="Fork1" isLeaf="false">
+            <elementDefinition Id="8f9161e7-c0f0-4cc4-89ef-0ce33140b6a4" />
+            <flowNodeTargets>
+              <controlFlow Id="50139c06-3328-4ddc-b559-af7e12dab453" isLeaf="false">
+                <sendSignalActionMoniker Id="d9fc8823-c098-4a72-9d07-75cfa44727aa" LastKnownName="Benutzerabbruch" />
+                <elementDefinition Id="4b21f76f-b329-45a3-a767-76acebf3fe55" />
+              </controlFlow>
+              <controlFlow Id="afa15eb2-1a1d-4946-84d0-26751a5c5056" guard="Benutzer hat Option gesetzt" isLeaf="false">
+                <opaqueActionMoniker Id="ca2c4664-6ed3-4a8b-bfa3-961a2d0e0732" LastKnownName="Menü nicht mehr automatisch anzeigen" />
+                <elementDefinition Id="bccfe163-a3fe-4215-92f6-227f05d3c276" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="ca2c4664-6ed3-4a8b-bfa3-961a2d0e0732" name="Menü nicht mehr automatisch anzeigen" isLeaf="false">
+            <elementDefinition Id="3fd34b61-fa3d-4e15-aee7-c96f3032e0ec" />
+            <flowNodeTargets>
+              <controlFlow Id="398033c5-ac72-4a23-8ac8-f3a539d2396f" isLeaf="false">
+                <activityFinalNodeMoniker Id="e85f1c54-a8ad-4ea4-b621-ecb9e6b95815" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7176b090-c538-459a-98da-a1892720ef3c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="e85f1c54-a8ad-4ea4-b621-ecb9e6b95815" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0" />
+          </activityFinalNode>
+          <opaqueAction Id="ff706a60-8797-405a-bfe8-4b7d655df72e" name="Module laden und registrieren" isLeaf="false">
+            <elementDefinition Id="1166ca18-4136-4516-abed-dfb0b5b74838" />
+            <flowNodeTargets>
+              <controlFlow Id="295fa2dc-3c4a-4a02-bcaa-ad86dc788f7b" isLeaf="false">
+                <opaqueActionMoniker Id="a3fadf4c-8c87-4ddd-ab44-a9ef7563b7a0" LastKnownName="Menüauswahl anzeigen" />
+                <elementDefinition Id="c87bb480-61df-4657-afe8-1a9cabe9989a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="c32cfc6e-acbf-4ce7-b605-c9d67f31c5ca" name="PictureShare.Architecture">
+    <elementDefinition Id="0945e253-cb93-4b27-9e6f-8d342cc0d159" />
+    <profileInstances>
+      <packageHasProfileInstances Id="88705426-27fe-43ea-8c41-9ae5bce098ba">
+        <profileInstance Id="4108fdd8-a993-4b49-bcd7-6b7f360c6277" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="56e76679-66c8-4c5c-b7ca-90bf32ae04d2">
+        <profileInstance Id="052846b4-65f9-422a-b02a-4192bf1b78d7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>
