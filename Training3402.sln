@@ -5,11 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{7F99CCF9-55E3-45FA-A674-5CFDCBE53352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureShare.Lib", "PictureShare.Lib\PictureShare.Lib.csproj", "{B2A6F5B7-807C-4CCC-8DB8-C8526DAAC0D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureShare", "PictureShare.Lib\PictureShare.csproj", "{B2A6F5B7-807C-4CCC-8DB8-C8526DAAC0D4}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PictureShare.Architecture", "PictureShare.Architecture\PictureShare.Architecture.modelproj", "{FC5E7137-88F4-40AE-85CD-DB1641F08DA1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureShare.ArchitectureLib", "PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj", "{F55C98CA-C604-414F-9EEA-40431A55651C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{FC5E7137-88F4-40AE-85CD-DB1641F08DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC5E7137-88F4-40AE-85CD-DB1641F08DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC5E7137-88F4-40AE-85CD-DB1641F08DA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F55C98CA-C604-414F-9EEA-40431A55651C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F55C98CA-C604-414F-9EEA-40431A55651C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F55C98CA-C604-414F-9EEA-40431A55651C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F55C98CA-C604-414F-9EEA-40431A55651C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

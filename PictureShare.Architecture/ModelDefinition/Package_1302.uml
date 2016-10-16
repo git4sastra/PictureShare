@@ -2,7 +2,7 @@
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="7eecf563-529d-4dff-91d7-368e2060201d"
-  name="PictureShare.Lib" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  name="Lib" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <appliedStereotypesInternal>
     <stereotypeInstance
       Id="ff00e67b-71f2-4592-856b-0d67e1ae730c"
@@ -628,6 +628,12 @@
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac"
+                LastKnownName="DeviceEntity"
+                LastKnownLocation="Package1_1303.uml" />
+            </type_NamedElement>
             <objectFlowTargets>
               <objectFlow
                 Id="9d4b986c-5b1a-43c6-bdb7-7aa75daf8a64"

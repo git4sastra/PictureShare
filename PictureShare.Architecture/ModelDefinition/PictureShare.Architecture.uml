@@ -63,14 +63,14 @@
           <propertyInstance
             Id="91a823d1-0526-481b-9cf0-a980f7b4c36b"
             name="ProjectPath"
-            value="ClassTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj|EnumTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj|InterfaceTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj|StructTemplate=..\PictureShare.ArchitectureLib\PictureShare.ArchitectureLib.csproj" />
+            value="ClassTemplate=..\PictureShare\PictureShare.csproj|EnumTemplate=..\PictureShare\PictureShare.csproj|InterfaceTemplate=..\PictureShare\PictureShare.csproj|StructTemplate=..\PictureShare\PictureShare.csproj" />
         </stereotypeInstanceHasPropertyInstances>
         <stereotypeInstanceHasPropertyInstances
           Id="7d9b07cf-5174-40fe-a0f1-ad1fb7368196">
           <propertyInstance
             Id="d78e4620-20e4-417f-9ca8-f3374aeb2ec0"
             name="TargetDirectory"
-            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+            value="ClassTemplate={PackageStructure}|EnumTemplate={PackageStructure}|InterfaceTemplate={PackageStructure}|StructTemplate={PackageStructure}" />
         </stereotypeInstanceHasPropertyInstances>
         <stereotypeInstanceHasPropertyInstances
           Id="b2a93be1-9c8c-4436-b6bd-d1d348ae30ed">
@@ -122,24 +122,6 @@
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="7eecf563-529d-4dff-91d7-368e2060201d"
-        LastKnownName="PictureShare.Lib"
-        LastKnownLocation="Package_1302.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="12eb621d-1508-4d44-b59a-2686f7e22388"
-        LastKnownName="PictureShare.UI"
-        LastKnownLocation="Package_1303.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="4f9dc330-9049-44ff-a923-eeeb8ec9486c"
-        LastKnownName="PictureShare.Data"
-        LastKnownLocation="Package1_1303.uml" />
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <component
         Id="af27b6fc-4aa4-416e-adf4-8dec127cff21"
@@ -223,7 +205,7 @@
                         <requiredInterfaceMoniker
                           Id="ef82c895-8bb3-4f0f-b227-c5ee02613853"
                           LastKnownName="PicsOut"
-                          LastKnownLocation="Package_1752.uml" />
+                          LastKnownLocation="Package_1226.uml" />
                       </portWithPart>
                     </connectorEnd>
                   </connectorHasConnectorEnds>
@@ -256,7 +238,7 @@
                         <requiredInterfaceMoniker
                           Id="ef82c895-8bb3-4f0f-b227-c5ee02613853"
                           LastKnownName="PicsOut"
-                          LastKnownLocation="Package_1752.uml" />
+                          LastKnownLocation="Package_1226.uml" />
                       </portWithPart>
                     </connectorEnd>
                   </connectorHasConnectorEnds>
@@ -289,7 +271,7 @@
                         <requiredInterfaceMoniker
                           Id="ca8c0681-21ae-4b0a-8aa6-768a130e33f0"
                           LastKnownName="PicsIn"
-                          LastKnownLocation="Package_1752.uml" />
+                          LastKnownLocation="Package_1226.uml" />
                       </portWithPart>
                     </connectorEnd>
                   </connectorHasConnectorEnds>
@@ -315,7 +297,7 @@
                         <requiredInterfaceMoniker
                           Id="ef82c895-8bb3-4f0f-b227-c5ee02613853"
                           LastKnownName="PicsOut"
-                          LastKnownLocation="Package_1752.uml" />
+                          LastKnownLocation="Package_1226.uml" />
                       </portWithPart>
                     </connectorEnd>
                   </connectorHasConnectorEnds>
@@ -330,7 +312,7 @@
               <componentMoniker
                 Id="4c48ab75-4bed-4ee1-b36b-659304091785"
                 LastKnownName="PictureShare"
-                LastKnownLocation="Package_1752.uml" />
+                LastKnownLocation="Package_1226.uml" />
             </type_NamedElement>
           </part>
           <requiredInterface
@@ -792,7 +774,7 @@
     <packageHasNamedElement>
       <packageMoniker
         Id="5aff53e4-b8b7-4239-89c7-16d59a916070"
-        LastKnownName="PictureShare"
+        LastKnownName="General"
         LastKnownLocation="Package_1752.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1043,6 +1025,24 @@
       <executionEvent
         Id="ceaea8b5-252b-4bb5-b1f6-b9737d86468b"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fc9d42e3-40d9-43a9-abc6-9d63a95bcc45"
+        LastKnownName="PictureShare"
+        LastKnownLocation="Package_1226.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5d70593f-9978-4442-994f-06764c5ec34f"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package_1758.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="252175b5-0fdb-40c1-b442-c9f90e246156"
+        LastKnownName="UseCases"
+        LastKnownLocation="Package_1757.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
