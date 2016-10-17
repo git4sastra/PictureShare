@@ -1,8 +1,4 @@
-﻿/*
- * (c) Copyright Thomas Ohms
- */
-
-//  Copyright (c) 2016 Thomas Ohms
+﻿//  Copyright (c) 2016 Thomas Ohms
 //
 //  This file is part of PictureShare.
 //

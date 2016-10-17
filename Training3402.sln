@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{7F99CCF9-55E3-45FA-A674-5CFDCBE53352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureShare", "PictureShare.Lib\PictureShare.csproj", "{B2A6F5B7-807C-4CCC-8DB8-C8526DAAC0D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureShare", "PictureShare\PictureShare.csproj", "{B2A6F5B7-807C-4CCC-8DB8-C8526DAAC0D4}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PictureShare.Architecture", "PictureShare.Architecture\PictureShare.Architecture.modelproj", "{FC5E7137-88F4-40AE-85CD-DB1641F08DA1}"
 EndProject

@@ -682,6 +682,12 @@
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="0642da55-1b09-4695-9e66-fa9667742aec"
+                LastKnownName="ModuleEntity"
+                LastKnownLocation="Package1_1303.uml" />
+            </type_NamedElement>
             <objectFlowTargets>
               <objectFlow
                 Id="e955c264-3535-4c4e-9ddf-c07b7941a0f3"
@@ -839,6 +845,12 @@
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="4daf6e82-d6c2-4196-aa6d-a19b06d13997"
+                LastKnownName="ImageEntity"
+                LastKnownLocation="Package1_1303.uml" />
+            </type_NamedElement>
             <objectFlowTargets>
               <objectFlow
                 Id="f02dd640-07aa-468f-b94d-23c7f55910ba"
@@ -1411,6 +1423,12 @@
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="0642da55-1b09-4695-9e66-fa9667742aec"
+                LastKnownName="ModuleEntity"
+                LastKnownLocation="Package1_1303.uml" />
+            </type_NamedElement>
             <upperBound>
               <literalInteger
                 Id="606c80ee-e454-4db4-bde6-3f98fb393a4f"
@@ -1476,31 +1494,15 @@
                   LastKnownLocation="Package_1302.uml" />
               </controlFlow>
               <controlFlow
-                Id="bccfe163-a3fe-4215-92f6-227f05d3c276"
-                guard="Benutzer hat Option gesetzt"
+                Id="06109065-8d30-4793-90e0-454731798baa"
                 isLeaf="false">
-                <opaqueActionMoniker
-                  Id="3fd34b61-fa3d-4e15-aee7-c96f3032e0ec"
+                <sendSignalActionMoniker
+                  Id="18876230-1e1e-4d10-9b3d-f3710848958b"
                   LastKnownName="Menü nicht mehr automatisch anzeigen"
                   LastKnownLocation="Package_1302.uml" />
               </controlFlow>
             </flowNodeTargets>
           </forkNode>
-          <opaqueAction
-            Id="3fd34b61-fa3d-4e15-aee7-c96f3032e0ec"
-            name="Menü nicht mehr automatisch anzeigen"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="7176b090-c538-459a-98da-a1892720ef3c"
-                isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0"
-                  LastKnownName="ActivityFinal1"
-                  LastKnownLocation="Package_1302.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
           <activityFinalNode
             Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0"
             name="ActivityFinal1"
@@ -1520,8 +1522,29 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <sendSignalAction
+            Id="18876230-1e1e-4d10-9b3d-f3710848958b"
+            name="Menü nicht mehr automatisch anzeigen"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3bc5d931-3314-455d-8041-8d60729439c4"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="a955c115-4b42-4b7b-bcb2-4d833ac1d4d0"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Package_1302.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c349042b-b2a3-4ca8-8556-c2bde6ddb8ce"
+        LastKnownName="Structure"
+        LastKnownLocation="Package_0837.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

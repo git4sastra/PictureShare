@@ -72,20 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="c68a6624-4568-4a8b-8562-f9c98e0e4e9c">
-      <profileInstance Id="81e90a96-1596-48ba-8146-467ad93acc34" name="CSharpProfile">
-        <elementDefinition Id="436dd49e-07d1-46b4-a2f4-26f3343ff244" />
-      </profileInstance>
-      <elementDefinition Id="a84bfb22-3649-44cb-9a19-761ccb91fa12" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ca26f41f-74de-44c7-84f5-c333b27cbda0">
-      <profileInstance Id="7825b074-a763-4e5c-a4be-f4516ebaa9f5" name="TextTemplateBindings">
-        <elementDefinition Id="5ae57a42-16e0-428d-9fa7-e2b21159c214" />
-      </profileInstance>
-      <elementDefinition Id="d0ba40bc-b3dc-49ed-82ef-b765b1be7dba" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="14855933-fb13-4429-94ed-7bc0090863ba" name="DeviceConnected" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -137,6 +123,9 @@
           </callBehaviorAction>
           <objectNode Id="c7723a7b-4ef4-438e-8ede-8e6cca5fdf5d" name="Auswahl des Speichertyps" isLeaf="false" ordering="Unordered" isControlType="false">
             <elementDefinition Id="f8f585d5-b7b6-4bf3-95f6-f3a56edb7399" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b903da6b-7842-41f9-8b4b-3f3e1f4745cb" LastKnownName="ModuleEntity" />
+            </type_NamedElement>
             <objectFlowTargets>
               <objectFlow Id="8cd809ca-e9f8-4155-acab-8d4e16aef99e" isLeaf="false" isMulticast="false" isMultireceive="false">
                 <decisionNodeMoniker Id="df262a14-7503-4cbb-b852-25eaf020f94a" LastKnownName="Decision2" />
@@ -218,6 +207,9 @@
           </activityFinalNode>
           <objectNode Id="fa2e9b5b-f337-48dc-b9ac-ef5d0a74c041" name="Ausgewählte Bilder" isLeaf="false" ordering="Unordered" isControlType="false">
             <elementDefinition Id="77fdd0c4-42d1-42b1-bb9c-8b5a387238e9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0d77f675-b93a-4346-bc5a-4d6ead44808b" LastKnownName="ImageEntity" />
+            </type_NamedElement>
             <objectFlowTargets>
               <objectFlow Id="bbeff485-1212-4e9f-8c06-49c8ce453802" isLeaf="false" isMulticast="false" isMultireceive="false">
                 <opaqueActionMoniker Id="8edb235f-5697-40c4-8d11-951776738d13" LastKnownName="Speichern / Upload" />
@@ -269,6 +261,16 @@
         <elementDefinition Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b903da6b-7842-41f9-8b4b-3f3e1f4745cb" name="ModuleEntity" isAbstract="false" isLeaf="false" cachedFullName="PictureShare.Architecture::Core::Data::ModuleEntity">
+        <elementDefinition Id="0642da55-1b09-4695-9e66-fa9667742aec" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d77f675-b93a-4346-bc5a-4d6ead44808b" name="ImageEntity" isAbstract="false" isLeaf="false" cachedFullName="PictureShare.Architecture::Core::Data::ImageEntity">
+        <elementDefinition Id="4daf6e82-d6c2-4196-aa6d-a19b06d13997" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="ed1fef0f-8269-4506-a1d5-c8f21e2bf471" name="PictureShare.Architecture">
     <elementDefinition Id="0945e253-cb93-4b27-9e6f-8d342cc0d159" />
@@ -284,6 +286,18 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c68a6624-4568-4a8b-8562-f9c98e0e4e9c">
+        <profileInstance Id="81e90a96-1596-48ba-8146-467ad93acc34" name="CSharpProfile">
+          <elementDefinition Id="436dd49e-07d1-46b4-a2f4-26f3343ff244" />
+        </profileInstance>
+        <elementDefinition Id="a84bfb22-3649-44cb-9a19-761ccb91fa12" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ca26f41f-74de-44c7-84f5-c333b27cbda0">
+        <profileInstance Id="7825b074-a763-4e5c-a4be-f4516ebaa9f5" name="TextTemplateBindings">
+          <elementDefinition Id="5ae57a42-16e0-428d-9fa7-e2b21159c214" />
+        </profileInstance>
+        <elementDefinition Id="d0ba40bc-b3dc-49ed-82ef-b765b1be7dba" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

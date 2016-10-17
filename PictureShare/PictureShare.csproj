@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2A6F5B7-807C-4CCC-8DB8-C8526DAAC0D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PictureShare</RootNamespace>
+    <AssemblyName>PictureShare</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Data\DeviceEntity.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/DeviceEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f6b916cf2-062d-48e2-aed6-d1ff75d2afac</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Data\ImageEntity.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/ImageEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f4daf6e82-d6c2-4196-aa6d-a19b06d13997</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Data\ModuleEntity.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/ModuleEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f0642da55-1b09-4695-9e66-fa9667742aec</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Data\Structure\BaseDeviceRepository.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/BaseDeviceRepository/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f818a4c57-17f9-455f-b729-8eaf7979e160</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Data\Structure\IDeviceRepository.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IDeviceRepository/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f257e6f81-6f20-4981-ad51-a99e8e6fdddd</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Lib\Structure\BaseMenuManager.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/BaseMenuManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252fdd53cb15-4f8a-421b-bb56-3df51d40782d</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Lib\Structure\IMenuManager.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IMenuManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252fbb7ae358-bbb7-4bf6-b8c9-cc6e88ebdbb8</SourceModelReference>
+    </Compile>
+    <Compile Include="Core\Lib\Structure\IMenuModule.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IMenuModule/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f0dcf9fb4-9661-44c7-b535-f6f02c5bf809</SourceModelReference>
+    </Compile>
+    <Compile Include="Lib\DefaultMenuManager.cs" />
+    <Compile Include="MenuModules\LocalFolder\LocalFolderMenuModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PictureShare.licenseheader" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
