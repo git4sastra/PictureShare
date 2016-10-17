@@ -1,11 +1,11 @@
-﻿using Core.Data;
+﻿using PictureShare.Core.Data;
 using PictureShare.Lib;
 using System;
 using System.Linq;
 
-namespace TestConsole
+namespace PictureShare.MenuManagers
 {
-    internal class ConsoleMenuManager : DefaultMenuManager
+    public sealed class ConsoleMenuManager : DefaultMenuManager
     {
         #region Public Constructors
 

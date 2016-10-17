@@ -4,19 +4,32 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Core.Lib.Structure
+namespace PictureShare.Core.Data
 {
-	using Core.Data;
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
 
-	public interface IMenuModule 
+	public struct DeviceEntity
 	{
-		void Register(BaseMenuManager menuManager);
+		public string ImageFolder
+		{
+			get;
+			set;
+		}
 
-		void SaveImages(IEnumerable<ImageEntity> images);
+		public string DeviceId
+		{
+			get;
+			set;
+		}
+
+		public int DeviceEntityId
+		{
+			get;
+			set;
+		}
 
 	}
 }

@@ -1,5 +1,5 @@
-﻿using Core.Data;
-using Core.Lib.Structure;
+﻿using PictureShare.Core.Data;
+using PictureShare.Core.Lib.Structure;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,11 +48,44 @@ namespace PictureShare.Lib
 
         protected override void RegisterModules()
         {
+            IEnumerable<Type> modules = GetModulesFromAssembly();
+            IEnumerable<ModuleEntity> availMods = GetAvailableModules(modules);
+
+            AvailableModules = availMods;
+        }
+
+        protected override void SaveImages()
+        {
+            Type module = GetSelectedModule();
+
+            if (module != null)
+            {
+                var modInstance = (IMenuModule)Activator.CreateInstance(module);
+                modInstance.SaveImages(Images);
+            }
+        }
+
+        protected override void DeleteImages()
+        {
+            for (int i = 0, max = Images.Count(); i < max; i++)
+                File.Delete(Images.ElementAt(i).Path);
+        }
+
+        #endregion Protected Methods
+
+        #region Private Methods
+
+        private static IEnumerable<Type> GetModulesFromAssembly()
+        {
             var allTypes = Assembly.GetExecutingAssembly().GetTypes();
             var modules = from t in allTypes
                           where t.GetInterfaces().Contains(typeof(IMenuModule))
                           select t;
+            return modules;
+        }
 
+        private List<ModuleEntity> GetAvailableModules(IEnumerable<Type> modules)
+        {
             var availMods = new List<ModuleEntity>();
 
             for (int i = 0, max = modules.Count(); i < max; i++)
@@ -69,28 +102,16 @@ namespace PictureShare.Lib
                 availMods.Add(modData);
             }
 
-            AvailableModules = availMods;
+            return availMods;
         }
 
-        protected override void SaveImages()
+        private Type GetSelectedModule()
         {
-            var module = (from t in Assembly.GetExecutingAssembly().GetTypes()
-                          where t.FullName == SelectedModule.FullName
-                          select t).First();
-
-            if (module != null)
-            {
-                var modInstance = (IMenuModule)Activator.CreateInstance(module);
-                modInstance.SaveImages(Images);
-            }
+            return (from t in Assembly.GetExecutingAssembly().GetTypes()
+                    where t.FullName == SelectedModule.FullName
+                    select t).First();
         }
 
-        protected override void DeleteImages()
-        {
-            for (int i = 0, max = Images.Count(); i < max; i++)
-                File.Delete(Images.ElementAt(i).Path);
-        }
-
-        #endregion Protected Methods
+        #endregion Private Methods
     }
 }

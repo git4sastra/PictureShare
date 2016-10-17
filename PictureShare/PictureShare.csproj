@@ -40,32 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Data\DeviceEntity.cs">
+    <Compile Include="Lib\DefaultMenuManager.cs" />
+    <Compile Include="MenuManagers\ConsoleMenuManager.cs" />
+    <Compile Include="MenuModules\LocalFolder\LocalFolderMenuModule.cs" />
+    <Compile Include="PictureShare.Core\Data\DeviceEntity.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/DeviceEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f6b916cf2-062d-48e2-aed6-d1ff75d2afac</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Data\ImageEntity.cs">
+    <Compile Include="PictureShare.Core\Data\ImageEntity.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/ImageEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f4daf6e82-d6c2-4196-aa6d-a19b06d13997</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Data\ModuleEntity.cs">
+    <Compile Include="PictureShare.Core\Data\ModuleEntity.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/ModuleEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f0642da55-1b09-4695-9e66-fa9667742aec</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Data\Structure\BaseDeviceRepository.cs">
+    <Compile Include="PictureShare.Core\Data\Structure\BaseDeviceRepository.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/BaseDeviceRepository/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f818a4c57-17f9-455f-b729-8eaf7979e160</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Data\Structure\IDeviceRepository.cs">
+    <Compile Include="PictureShare.Core\Data\Structure\IDeviceRepository.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IDeviceRepository/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f257e6f81-6f20-4981-ad51-a99e8e6fdddd</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Lib\Structure\BaseMenuManager.cs">
+    <Compile Include="PictureShare.Core\Lib\Structure\BaseMenuManager.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/BaseMenuManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252fdd53cb15-4f8a-421b-bb56-3df51d40782d</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Lib\Structure\IMenuManager.cs">
+    <Compile Include="PictureShare.Core\Lib\Structure\IMenuManager.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IMenuManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252fbb7ae358-bbb7-4bf6-b8c9-cc6e88ebdbb8</SourceModelReference>
     </Compile>
-    <Compile Include="Core\Lib\Structure\IMenuModule.cs">
+    <Compile Include="PictureShare.Core\Lib\Structure\IMenuModule.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IMenuModule/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f0dcf9fb4-9661-44c7-b535-f6f02c5bf809</SourceModelReference>
     </Compile>
-    <Compile Include="Lib\DefaultMenuManager.cs" />
-    <Compile Include="MenuModules\LocalFolder\LocalFolderMenuModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

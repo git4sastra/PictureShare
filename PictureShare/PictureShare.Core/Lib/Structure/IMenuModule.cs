@@ -4,31 +4,19 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Core.Data.Structure
+namespace PictureShare.Core.Lib.Structure
 {
-	using Core.Data;
+	using PictureShare.Core.Data;
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
 
-	public interface IDeviceRepository 
+	public interface IMenuModule 
 	{
-		DeviceEntity GetDevice(int id);
+		void Register(BaseMenuManager menuManager);
 
-		void AddDevice(DeviceEntity device);
-
-		void DeleteDevice(DeviceEntity device);
-
-		IEnumerable<DeviceEntity> GetAll();
-
-		DeviceEntity GetDevice(string deviceId);
-
-		string GetImagePath(int id);
-
-		DeviceEntity GetImagePath(string deviceId);
-
-		void UpdateDevice(DeviceEntity device);
+		void SaveImages(IEnumerable<ImageEntity> images);
 
 	}
 }

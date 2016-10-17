@@ -3,7 +3,7 @@
   <logicalClassDesignerModelMoniker Id="8a8ed8b4-313a-4f04-8b92-51154fbc2185" />
   <nestedChildShapes>
     <packageShape Id="44e26ed5-e4e2-4d44-9662-f12e6e176794" absoluteBounds="0.5, 0.5, 12.625, 11" customColor="255, 249, 230" hideQualifiedName="false">
-      <packageMoniker Id="87111ed9-8755-4b9c-bd73-cc98c8a346cd" LastKnownName="Core" />
+      <packageMoniker Id="87111ed9-8755-4b9c-bd73-cc98c8a346cd" LastKnownName="PictureShare.Core" />
       <nestedChildShapes>
         <packageShape Id="e38a11f2-5d0b-4c18-a819-f670ddb94686" absoluteBounds="0.625, 1, 11, 5.25" customColor="255, 249, 230" hideQualifiedName="false">
           <packageMoniker Id="7aa93570-2c95-4770-8d1b-9760d83e0aeb" LastKnownName="Data" />

@@ -4,28 +4,28 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Core.Data
+namespace PictureShare.Core.Data
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
 
-	public struct DeviceEntity
+	public struct ImageEntity
 	{
-		public string ImageFolder
+		public string Path
 		{
 			get;
 			set;
 		}
 
-		public string DeviceId
+		public object Name
 		{
 			get;
 			set;
 		}
 
-		public int DeviceEntityId
+		public string Album
 		{
 			get;
 			set;

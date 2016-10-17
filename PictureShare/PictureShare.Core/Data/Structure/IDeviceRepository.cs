@@ -4,32 +4,31 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Core.Data
+namespace PictureShare.Core.Data.Structure
 {
+	using PictureShare.Core.Data;
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
 
-	public struct ImageEntity
+	public interface IDeviceRepository 
 	{
-		public string Path
-		{
-			get;
-			set;
-		}
+		DeviceEntity GetDevice(int id);
 
-		public object Name
-		{
-			get;
-			set;
-		}
+		void AddDevice(DeviceEntity device);
 
-		public string Album
-		{
-			get;
-			set;
-		}
+		void DeleteDevice(DeviceEntity device);
+
+		IEnumerable<DeviceEntity> GetAll();
+
+		DeviceEntity GetDevice(string deviceId);
+
+		string GetImagePath(int id);
+
+		DeviceEntity GetImagePath(string deviceId);
+
+		void UpdateDevice(DeviceEntity device);
 
 	}
 }

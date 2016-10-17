@@ -110,7 +110,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasPackages>
-      <package Id="87111ed9-8755-4b9c-bd73-cc98c8a346cd" name="Core">
+      <package Id="87111ed9-8755-4b9c-bd73-cc98c8a346cd" name="PictureShare.Core">
         <description>PictureShare Training Appp</description>
         <appliedStereotypesInternal>
           <stereotypeInstance Id="02b6b191-7f83-4a14-8d19-9155369be1e4" name="namespace" profile="CSharpProfile">
