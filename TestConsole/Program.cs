@@ -1,6 +1,5 @@
 ﻿using PictureShare.Core.Data;
 using PictureShare.MenuManagers;
-using System;
 using System.IO;
 using System.Reflection;
 
@@ -14,13 +13,14 @@ namespace TestConsole
         {
             DeviceEntity device = SimulateDeviceConnection();
 
-            var menu = new ConsoleMenuManager(device);
+            //var menu = new ConsoleMenuManager(device);
+            var menu = new FormsMenuManager(device);
 
             menu.ShowMenu();
 
-            Console.WriteLine();
-            Console.WriteLine("Taste zum Beenden druecken");
-            Console.ReadKey();
+            //Console.WriteLine();
+            //Console.WriteLine("Taste zum Beenden druecken");
+            //Console.ReadKey();
         }
 
         private static DeviceEntity SimulateDeviceConnection()

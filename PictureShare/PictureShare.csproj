@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +44,19 @@
   <ItemGroup>
     <Compile Include="Lib\DefaultMenuManager.cs" />
     <Compile Include="MenuManagers\ConsoleMenuManager.cs" />
+    <Compile Include="MenuManagers\FormsMenuManager.cs" />
+    <Compile Include="MenuManagers\Forms\FormsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManagers\Forms\FormsMenu.Designer.cs">
+      <DependentUpon>FormsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManagers\Forms\PicsSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManagers\Forms\PicsSelection.Designer.cs">
+      <DependentUpon>PicsSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuModules\LocalFolder\LocalFolderMenuModule.cs" />
     <Compile Include="PictureShare.Core\Data\DeviceEntity.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/DeviceEntity/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f6b916cf2-062d-48e2-aed6-d1ff75d2afac</SourceModelReference>
@@ -68,6 +83,11 @@
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IMenuModule/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f0dcf9fb4-9661-44c7-b535-f6f02c5bf809</SourceModelReference>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
@@ -75,7 +95,18 @@
   <ItemGroup>
     <None Include="PictureShare.licenseheader" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="MenuManagers\Forms\FormsMenu.resx">
+      <DependentUpon>FormsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuManagers\Forms\PicsSelection.resx">
+      <DependentUpon>PicsSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

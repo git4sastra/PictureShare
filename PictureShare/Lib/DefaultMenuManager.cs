@@ -10,6 +10,12 @@ namespace PictureShare.Lib
 {
     public abstract class DefaultMenuManager : BaseMenuManager
     {
+        #region Private Fields
+
+        private static object _lock = new object();
+
+        #endregion Private Fields
+
         #region Public Constructors
 
         public DefaultMenuManager(DeviceEntity device)
@@ -60,15 +66,27 @@ namespace PictureShare.Lib
 
             if (module != null)
             {
-                var modInstance = (IMenuModule)Activator.CreateInstance(module);
-                modInstance.SaveImages(Images);
+                lock (_lock)
+                {
+                    var modInstance = (IMenuModule)Activator.CreateInstance(module);
+                    modInstance.SaveImages(Images);
+                }
             }
         }
 
         protected override void DeleteImages()
         {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
             for (int i = 0, max = Images.Count(); i < max; i++)
-                File.Delete(Images.ElementAt(i).Path);
+            {
+                lock (_lock)
+                {
+                    var img = Images.ElementAt(i);
+                    File.Delete($"{img.Path}\\{img.Name}");
+                }
+            }
         }
 
         #endregion Protected Methods
