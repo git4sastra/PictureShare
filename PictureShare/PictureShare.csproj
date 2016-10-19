@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceManagers\FormsDeviceManager.cs" />
+    <Compile Include="DeviceRepositories\RegistryDeviceRepository.cs" />
+    <Compile Include="Lib\DefaultDeviceManager.cs" />
+    <Compile Include="Lib\DefaultDeviceRepository.cs" />
     <Compile Include="Lib\DefaultMenuManager.cs" />
     <Compile Include="MenuManagers\ConsoleMenuManager.cs" />
     <Compile Include="MenuManagers\FormsMenuManager.cs" />
@@ -73,8 +77,14 @@
     <Compile Include="PictureShare.Core\Data\Structure\IDeviceRepository.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IDeviceRepository/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f257e6f81-6f20-4981-ad51-a99e8e6fdddd</SourceModelReference>
     </Compile>
+    <Compile Include="PictureShare.Core\Lib\Structure\BaseDeviceManager.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/BaseDeviceManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f52e3080c-9432-4360-bfb6-9496236e039e</SourceModelReference>
+    </Compile>
     <Compile Include="PictureShare.Core\Lib\Structure\BaseMenuManager.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/BaseMenuManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252fdd53cb15-4f8a-421b-bb56-3df51d40782d</SourceModelReference>
+    </Compile>
+    <Compile Include="PictureShare.Core\Lib\Structure\IDeviceManager.cs">
+      <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IDeviceManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252f09f829ec-abb1-463d-ac28-37f2d8c73a9c</SourceModelReference>
     </Compile>
     <Compile Include="PictureShare.Core\Lib\Structure\IMenuManager.cs">
       <SourceModelReference>modelbus://ModelStoreAdapter.1.0/PictureShare.Architecture/IMenuManager/C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare.Architecture\PictureShare.Architecture.modelproj%252fbb7ae358-bbb7-4bf6-b8c9-cc6e88ebdbb8</SourceModelReference>
@@ -107,6 +117,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

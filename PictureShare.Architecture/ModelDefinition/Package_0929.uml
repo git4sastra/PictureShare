@@ -160,13 +160,88 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c9e861f5-6903-4fbc-9fe1-7b25789ad88f"
+            name="Devices"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e5780d5-aa79-40c1-88ca-90f0b9be79b2"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c29734c-0a59-4c5f-9e8a-a85c64fe1611">
+                    <propertyInstance
+                      Id="9880a639-ca43-4b87-903b-bbe58019304d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97a787d9-ed1e-4857-999c-20b22d3ccb1f">
+                    <propertyInstance
+                      Id="07fc3dee-1fa5-475e-a622-3419fb046114"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ce906d2-1086-4238-9dcb-959cef9de344">
+                    <propertyInstance
+                      Id="d8e339ea-efbf-41f9-8440-b58fe4f51087"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1165c1e5-6474-47f7-b7b1-a25e110b5666">
+                    <propertyInstance
+                      Id="bd5546cb-e202-440b-892c-1732e8b13e7f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40a2a3f6-138e-4e09-92b7-c253b3c7c03d">
+                    <propertyInstance
+                      Id="b0953fcb-fba5-4707-8bb7-76d9f33f8f0e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="2f87ffb9-2bf2-4641-9fed-47d0479f741e"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="ce594269-c8f4-4d09-85fa-74291e7f6afb"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac"
+                LastKnownName="DeviceEntity"
+                LastKnownLocation="Package1_1303.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="59f553f0-b74d-4001-b9ce-34ce7b5d63f0"
             name="GetDevice"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="true">
             <appliedStereotypesInternal>
@@ -493,7 +568,7 @@
             name="GetDevice"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="true">
             <appliedStereotypesInternal>
@@ -579,7 +654,7 @@
             name="GetImagePath"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="true">
             <appliedStereotypesInternal>
@@ -665,7 +740,7 @@
             name="GetImagePath"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="true">
             <appliedStereotypesInternal>
@@ -738,10 +813,10 @@
                   Id="f70e1f79-fdae-469a-b285-54e60ff8011f"
                   direction="Return">
                   <type_NamedElement>
-                    <classMoniker
-                      Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac"
-                      LastKnownName="DeviceEntity"
-                      LastKnownLocation="Package1_1303.uml" />
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PictureShare.Architecture.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -752,7 +827,7 @@
             name="UpdateDevice"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="false">
             <appliedStereotypesInternal>
@@ -821,6 +896,80 @@
                       Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac"
                       LastKnownName="DeviceEntity"
                       LastKnownLocation="Package1_1303.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="194b9673-7260-4a3d-a69a-ee71d59b7a5f"
+            name="SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e7b5eb4d-d995-4fab-b39b-fe92791d899a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="284e968c-7863-4615-a93e-0f09205c7f2d">
+                    <propertyInstance
+                      Id="8709292f-cb96-49ca-a5d1-5846a4d3801a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27cdc4ad-c2c5-4fae-81df-670324f37a31">
+                    <propertyInstance
+                      Id="55cc41aa-c922-4fea-b1a4-16d0aadbd44c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fb0d888-cb20-4be7-a694-6b86790c1ca9">
+                    <propertyInstance
+                      Id="135a8869-580e-478c-9510-a4a28f27459b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65824068-64e1-4ed6-ba9b-45495c8854cc">
+                    <propertyInstance
+                      Id="fe326545-75d9-48c9-9f9f-e34f7d6f32c7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e401725-d311-488c-8694-63aa7e347d55">
+                    <propertyInstance
+                      Id="6186ca35-6d3e-4087-a11f-bbd50336a0fd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51687d69-3c74-47b8-af9c-8457fc69213b">
+                    <propertyInstance
+                      Id="d5014fd1-dcd0-44c7-8c4e-595b621b38a2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a23af81e-cd79-4994-bfdd-50103d573c03"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="PictureShare.Architecture.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1441,10 +1590,10 @@
                   Id="54903f16-ca69-4956-972c-2e1d64ffb3df"
                   direction="Return">
                   <type_NamedElement>
-                    <classMoniker
-                      Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac"
-                      LastKnownName="DeviceEntity"
-                      LastKnownLocation="Package1_1303.uml" />
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PictureShare.Architecture.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

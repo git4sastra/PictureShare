@@ -4,7 +4,7 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace PictureShare.Core.Data.Structure
+namespace PictureShare.Core.Lib.Structure
 {
 	using PictureShare.Core.Data;
 	using System;
@@ -12,23 +12,23 @@ namespace PictureShare.Core.Data.Structure
 	using System.Linq;
 	using System.Text;
 
-	public interface IDeviceRepository 
+	public abstract class BaseDeviceManager : IDeviceManager
 	{
-		DeviceEntity GetDevice(int id);
+		protected string DriveLetter;
 
-		void AddDevice(DeviceEntity device);
+		public abstract DeviceEntity GetDevice(string deviceId);
 
-		void DeleteDevice(DeviceEntity device);
+		protected abstract string FindImageFolder();
 
-		IEnumerable<DeviceEntity> GetAll();
+		protected abstract bool AskAutoPathCorrect(string path);
 
-		DeviceEntity GetDevice(string deviceId);
+		protected abstract string AskForFolder();
 
-		string GetImagePath(int id);
+		protected abstract void AddDevice(DeviceEntity device);
 
-		string GetImagePath(string deviceId);
-
-		void UpdateDevice(DeviceEntity device);
+		public BaseDeviceManager(string driveLetter)
+		{
+		}
 
 	}
 }

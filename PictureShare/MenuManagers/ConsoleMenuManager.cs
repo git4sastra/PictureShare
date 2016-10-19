@@ -28,6 +28,10 @@ namespace PictureShare.MenuManagers
             SelectedModule = new ModuleEntity() { FullName = firstMod.FullName, Name = firstMod.Name };
 
             ShowPicsSelectionMenu();
+
+            Console.WriteLine();
+            Console.WriteLine("Taste zum Beenden druecken");
+            Console.ReadKey();
         }
 
         public override void ShowPicsSelectionMenu()

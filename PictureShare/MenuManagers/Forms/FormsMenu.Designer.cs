@@ -111,6 +111,7 @@
             this.Controls.Add(this.mainPanel);
             this.MaximizeBox = false;
             this.Name = "FormsMenu";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PictureShare Auswahl";
             this.TopMost = true;

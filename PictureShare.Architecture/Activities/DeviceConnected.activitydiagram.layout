@@ -8,11 +8,11 @@
     <callBehaviorActionShape Id="27733363-bee4-4608-83a4-d5cb0fda40f6" absoluteBounds="2.125, 1.625, 1.125, 0.625" customColor="161, 199, 231">
       <callBehaviorActionMoniker Id="acef4887-1ca1-4245-9e77-7b9e89c626d2" LastKnownName="Gerät initialisieren" />
     </callBehaviorActionShape>
-    <controlFlowConnector edgePoints="[(2.6875 : 1.125); (2.6875 : 1.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+    <controlFlowConnector edgePoints="[(2.6875 : 1.125); (2.6875 : 1.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
       <controlFlowMoniker Id="bf4a640f-9830-4c60-aa9a-ab5046a0d5f6" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="2, 1.3125, 1.3902270793914795, 0.14800345897674561" shapeFieldName="Guard" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="1.9999999999999991, 1.3125, 1.3902270793914795, 0.14800345897674561" shapeFieldName="Guard" />
       </moveableDecoratorHostShapes>
       <nodes>
         <acceptEventActionShapeMoniker Id="b22a3765-17a2-49d5-9e7d-7828a041df61" />

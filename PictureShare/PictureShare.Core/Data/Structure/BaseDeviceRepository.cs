@@ -16,10 +16,7 @@ namespace PictureShare.Core.Data.Structure
 	{
 		protected IEnumerable<DeviceEntity> Devices;
 
-		public virtual DeviceEntity GetDevice(int id)
-		{
-			throw new System.NotImplementedException();
-		}
+		public abstract DeviceEntity GetDevice(int id);
 
 		public abstract void AddDevice(DeviceEntity device);
 
@@ -27,25 +24,15 @@ namespace PictureShare.Core.Data.Structure
 
 		public abstract IEnumerable<DeviceEntity> GetAll();
 
-		public virtual DeviceEntity GetDevice(string deviceId)
-		{
-			throw new System.NotImplementedException();
-		}
+		public abstract DeviceEntity GetDevice(string deviceId);
 
-		public virtual string GetImagePath(int id)
-		{
-			throw new System.NotImplementedException();
-		}
+		public abstract string GetImagePath(int id);
 
-		public virtual DeviceEntity GetImagePath(string deviceId)
-		{
-			throw new System.NotImplementedException();
-		}
+		public abstract string GetImagePath(string deviceId);
 
-		public virtual void UpdateDevice(DeviceEntity device)
-		{
-			throw new System.NotImplementedException();
-		}
+		public abstract void UpdateDevice(DeviceEntity device);
+
+		public abstract bool SaveChanges();
 
 	}
 }
