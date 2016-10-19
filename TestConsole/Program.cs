@@ -1,6 +1,5 @@
 ﻿using PictureShare.Core.Data;
 using PictureShare.Lib;
-using PictureShare.MenuManagers;
 using System;
 using System.IO;
 using System.Reflection;
@@ -9,6 +8,31 @@ namespace TestConsole
 {
     internal class Program
     {
+        #region Main Program
+
+        private static void Main(string[] args)
+        {
+            //DeviceEntity device = SimulateDeviceConnection();
+
+            //var menu = new ConsoleMenuManager(device);
+            //var menu = new FormsMenuManager(device);
+
+            //menu.ShowMenu();
+
+            //ShowMenu(typeof(ConsoleMenuManager), device);
+            //ShowMenu(typeof(FormsMenuManager), device);
+
+            var svc = new PictureShareService();
+            svc.Start();
+
+            Console.WriteLine("Taste druecken zum Beenden ...");
+            Console.ReadKey();
+
+            svc.Stop();
+        }
+
+        #endregion Main Program
+
         #region Private Methods
 
         private static void CopySampleFiles(string folder, string samplesFolder, string[] sampleFiles)
@@ -22,19 +46,6 @@ namespace TestConsole
 
                 File.Copy(sampleFiles[i], newPath);
             }
-        }
-
-        private static void Main(string[] args)
-        {
-            DeviceEntity device = SimulateDeviceConnection();
-
-            //var menu = new ConsoleMenuManager(device);
-            //var menu = new FormsMenuManager(device);
-
-            //menu.ShowMenu();
-
-            //ShowMenu(typeof(ConsoleMenuManager), device);
-            ShowMenu(typeof(FormsMenuManager), device);
         }
 
         private static void ShowMenu(Type menuManager, DeviceEntity device)
