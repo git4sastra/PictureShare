@@ -7,13 +7,25 @@ namespace PictureShare.Lib
 {
     public class PictureShareService : IPictureShareService
     {
+        #region Delegates
+
+        public delegate void OnVolumeChangedHandler(string driveLetter, string deviceId);
+
+        #endregion Delegates
+
+        #region Events
+
+        public event OnVolumeChangedHandler VolumeChanged;
+
+        #endregion Events
+
         #region Fields
 
         private string _addedDevice = string.Empty;
         private List<string> _connectedDevices = new List<string>();
+        private object _lock = new object();
 
         private ManagementEventWatcher _watcher;
-        private ManagementEventWatcher _watcher2;
 
         #endregion Fields
 
@@ -27,68 +39,83 @@ namespace PictureShare.Lib
 
         public void Stop()
         {
-            _watcher2.Stop();
-            _watcher2.Dispose();
-            _watcher2 = null;
-
             _watcher.Stop();
             _watcher.Dispose();
             _watcher = null;
         }
 
-        private void OnDeviceChange(object sender, EventArrivedEventArgs e)
+        private static string RawStringToDeviceId(ManagementBaseObject usbDevice)
         {
-            UpdateConnectedDevices();
+            var props = usbDevice.Properties;
+            var fullVal = props["Dependent"].Value.ToString();
+            var pos = fullVal.IndexOf("DeviceID=") + 10;
+            var max = fullVal.Length - pos - 1;
+            var deviceId = fullVal.Substring(pos, max);
+
+            return deviceId;
         }
 
         private void OnVolumeChange(object sender, EventArrivedEventArgs e)
         {
+            UpdateConnectedDevices();
+
+            var eventType = int.Parse(e.NewEvent.Properties["EventType"].Value.ToString());
             var driveLetter = e.NewEvent.Properties["DriveName"].Value.ToString();
             var deviceId = _addedDevice;
 
-            if (string.IsNullOrWhiteSpace(driveLetter) || string.IsNullOrWhiteSpace(deviceId))
+            if (string.IsNullOrWhiteSpace(driveLetter) || string.IsNullOrWhiteSpace(deviceId) || eventType != 2)
                 return;
 
-            var debug = "dummy";
+            lock (_lock)
+                VolumeChanged?.Invoke(driveLetter, deviceId);
         }
 
         private void UpdateConnectedDevices()
         {
-            ManagementObjectCollection results;
-            var query = new WqlObjectQuery("SELECT * FROM Win32_USBControllerDevice");
-
-            using (var search = new ManagementObjectSearcher(query))
-                results = search.Get();
-
-            var resultsEnum = results.GetEnumerator();
-            var isFirstRun = _connectedDevices.Count == 0;
-
-            while (resultsEnum.MoveNext())
+            lock (_lock)
             {
-                var props = resultsEnum.Current.Properties;
-                var fullVal = props["Dependent"].Value.ToString();
-                var pos = fullVal.IndexOf("DeviceID=") + 10;
-                var max = fullVal.Length - pos - 1;
-                var deviceId = fullVal.Substring(pos, max);
+                ManagementObjectCollection results;
+                var query = new WqlObjectQuery("SELECT * FROM Win32_USBControllerDevice");
 
-                if (isFirstRun)
+                using (var search = new ManagementObjectSearcher(query))
+                    results = search.Get();
+
+                var resultsEnum = results.GetEnumerator();
+                var isFirstRun = _connectedDevices.Count == 0;
+                var deviceFound = false;
+
+                while (resultsEnum.MoveNext())
                 {
-                    _connectedDevices.Add(deviceId);
-                    continue;
+                    string deviceId = RawStringToDeviceId(resultsEnum.Current);
+
+                    if (isFirstRun)
+                    {
+                        _connectedDevices.Add(deviceId);
+                        deviceFound = true;
+                        continue;
+                    }
+
+                    if (_addedDevice == deviceId)
+                        deviceFound = true;
+
+                    var count = _connectedDevices.Count(cd => cd == deviceId);
+                    if (count == 0)
+                    {
+                        _connectedDevices.Add(deviceId);
+                        _addedDevice = deviceId;
+                        deviceFound = true;
+                    }
+                    else
+                    {
+                        _addedDevice = deviceId;
+                        deviceFound = true;
+                    }
                 }
 
-                if (_addedDevice == deviceId)
+                if (!deviceFound && !isFirstRun && !string.IsNullOrWhiteSpace(_addedDevice))
                 {
-                    _connectedDevices.Remove(deviceId);
+                    _connectedDevices.Remove(_addedDevice);
                     _addedDevice = string.Empty;
-                    continue;
-                }
-
-                var count = _connectedDevices.Count(cd => cd == deviceId);
-                if (count == 0)
-                {
-                    _connectedDevices.Add(deviceId);
-                    _addedDevice = deviceId;
                 }
             }
         }
@@ -96,17 +123,11 @@ namespace PictureShare.Lib
         private void WatchForVolumeChangedEvent()
         {
             _watcher = new ManagementEventWatcher();
-            _watcher2 = new ManagementEventWatcher();
-            var query = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent");
-            var query2 = new WqlEventQuery("SELECT * FROM Win32_VolumeChangeEvent");
+            var query = new WqlEventQuery("SELECT * FROM Win32_VolumeChangeEvent");
 
-            _watcher.EventArrived += OnDeviceChange;
+            _watcher.EventArrived += OnVolumeChange;
             _watcher.Query = query;
             _watcher.Start();
-
-            _watcher2.EventArrived += OnVolumeChange;
-            _watcher2.Query = query2;
-            _watcher2.Start();
         }
 
         #endregion Methods

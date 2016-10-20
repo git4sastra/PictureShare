@@ -10,9 +10,8 @@ namespace PictureShare.MenuManagers.Forms
     {
         #region Private Fields
 
-        private IEnumerable<ModuleEntity> _modules;
-
         private IEnumerable<Button> _buttons;
+        private IEnumerable<ModuleEntity> _modules;
 
         #endregion Private Fields
 
@@ -39,6 +38,29 @@ namespace PictureShare.MenuManagers.Forms
 
         #region Private Methods
 
+        private Button CreateButton(ModuleEntity module)
+        {
+            var button = new Button();
+
+            button.Text = module.Name;
+            button.Height = 50;
+            button.Width = mainPanel.Width - 1;
+            button.BackColor = Color.LightGray;
+            button.Cursor = Cursors.Hand;
+            button.Tag = module.FullName;
+            button.FlatStyle = FlatStyle.Popup;
+
+            button.Click += ModuleButton_Click;
+            button.MouseHover += ModuleButton_MouseHover;
+            button.MouseLeave += ModuleButton_MouseLeave;
+
+            var oldFont = button.Font;
+            var newFont = new Font(oldFont.FontFamily, 14, FontStyle.Regular);
+            button.Font = newFont;
+
+            return button;
+        }
+
         private void FormsMenu_Load(object sender, System.EventArgs e)
         {
             var buttons = new List<Button>();
@@ -46,19 +68,7 @@ namespace PictureShare.MenuManagers.Forms
             for (int i = 0, max = _modules.Count(); i < max; i++)
             {
                 var module = _modules.ElementAt(i);
-                var button = new Button();
-
-                button.Text = module.Name;
-                button.Height = 50;
-                button.Width = mainPanel.Width - 1;
-                button.BackColor = Color.CornflowerBlue;
-                button.Cursor = Cursors.Hand;
-                button.Tag = module.FullName;
-                button.FlatStyle = FlatStyle.Popup;
-
-                button.Click += ModuleButton_Click;
-                button.MouseHover += ModuleButton_MouseHover;
-                button.MouseLeave += ModuleButton_MouseLeave;
+                var button = CreateButton(module);
 
                 buttons.Add(button);
             }
@@ -66,20 +76,6 @@ namespace PictureShare.MenuManagers.Forms
             _buttons = buttons;
 
             mainPanel.Controls.AddRange(_buttons.ToArray());
-        }
-
-        private void ModuleButton_MouseLeave(object sender, System.EventArgs e)
-        {
-            var btn = sender as Button;
-
-            if (btn.Tag != Tag)
-                btn.BackColor = Color.CornflowerBlue;
-        }
-
-        private void ModuleButton_MouseHover(object sender, System.EventArgs e)
-        {
-            var btn = sender as Button;
-            btn.BackColor = Color.Coral;
         }
 
         private void ModuleButton_Click(object sender, System.EventArgs e)
@@ -98,11 +94,29 @@ namespace PictureShare.MenuManagers.Forms
             }
         }
 
+        private void ModuleButton_MouseHover(object sender, System.EventArgs e)
+        {
+            var btn = sender as Button;
+            btn.BackColor = Color.Coral;
+        }
+
+        private void ModuleButton_MouseLeave(object sender, System.EventArgs e)
+        {
+            var btn = sender as Button;
+
+            if (btn.Tag != Tag)
+                btn.BackColor = Color.LightGray;
+        }
+
         #endregion Private Methods
+
+        #region Methods
 
         private void btnLoad_Click(object sender, System.EventArgs e)
         {
             DontShowAgain = cbDontShow.Checked;
         }
+
+        #endregion Methods
     }
 }

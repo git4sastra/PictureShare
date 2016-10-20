@@ -1,7 +1,7 @@
-﻿using PictureShare.Core.Data;
+﻿using Microsoft.Win32;
+using PictureShare.Core.Data;
 using PictureShare.Lib;
 using PictureShare.MenuManagers.Forms;
-using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -26,14 +26,16 @@ namespace PictureShare.MenuManagers
                 var result = form.ShowDialog();
 
                 if (result != DialogResult.OK)
+                {
+                    SetDontShowAgainConfig(form.DontShowAgain);
                     return;
+                }
 
                 var selModTag = form.Tag.ToString();
 
                 SelectedModule = AvailableModules.FirstOrDefault(am => am.FullName == selModTag);
 
-                if (form.DontShowAgain)
-                    SetDontShowAgainConfig();
+                SetDontShowAgainConfig(form.DontShowAgain);
             }
 
             ShowPicsSelectionMenu();
@@ -71,10 +73,11 @@ namespace PictureShare.MenuManagers
             DeleteImages();
         }
 
-        private void SetDontShowAgainConfig()
+        private void SetDontShowAgainConfig(bool isChecked)
         {
-            // In Registrierung eintragen
-            throw new NotImplementedException();
+            var regKey = Registry.CurrentUser.OpenSubKey(@"Software\PictureShare", true);
+            var value = isChecked ? "0" : "1";
+            regKey.SetValue("AutoloadMenu", value, RegistryValueKind.String);
         }
 
         #endregion Private Methods

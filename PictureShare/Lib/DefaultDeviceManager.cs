@@ -39,8 +39,11 @@ namespace PictureShare.DeviceManagers
 
             if (result.DeviceEntityId == 0)
             {
+                result.DeviceId = deviceId;
                 result.ImageFolder = FindImageFolder();
+
                 AddDevice(result);
+
                 result = _repository.GetDevice(deviceId);
             }
 
@@ -61,7 +64,7 @@ namespace PictureShare.DeviceManagers
 
         protected override string FindImageFolder()
         {
-            string imgDir = GuessImageFolder(DriveLetter);
+            string imgDir = GuessImageFolder($"{DriveLetter}\\");
 
             if (string.IsNullOrWhiteSpace(imgDir) || AskAutoPathCorrect(imgDir) == false)
                 imgDir = AskForFolder();

@@ -34,10 +34,19 @@ namespace PictureShare.DeviceRepositories
             {
                 var dev = Devices.ElementAt(i);
 
-                _key.SetValue(dev.DeviceId, dev.ImageFolder);
+                if (dev.ImageFolder == null)
+                {
+                    var list = Devices.ToList();
+                    list.Remove(dev);
+                    Devices = list;
+                }
+                else
+                {
+                    _key.SetValue(dev.DeviceId, dev.ImageFolder);
+                }
             }
 
-            return Devices.Count() == _key.GetSubKeyNames().Length;
+            return Devices.Count() == _key.GetValueNames().Length;
         }
 
         private void InitKey()
@@ -57,6 +66,10 @@ namespace PictureShare.DeviceRepositories
             for (int i = 0; i < count; i++)
             {
                 var deviceId = regVals[i];
+
+                if (string.IsNullOrWhiteSpace(deviceId))
+                    continue;
+
                 var imgPath = (string)_key.GetValue(deviceId);
                 var id = i + 1;
                 var entity = new DeviceEntity()

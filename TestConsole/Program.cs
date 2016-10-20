@@ -1,5 +1,8 @@
 ﻿using PictureShare.Core.Data;
+using PictureShare.DeviceManagers;
+using PictureShare.DeviceRepositories;
 using PictureShare.Lib;
+using PictureShare.MenuManagers;
 using System;
 using System.IO;
 using System.Reflection;
@@ -10,6 +13,7 @@ namespace TestConsole
     {
         #region Main Program
 
+        [STAThread]
         private static void Main(string[] args)
         {
             //DeviceEntity device = SimulateDeviceConnection();
@@ -23,12 +27,27 @@ namespace TestConsole
             //ShowMenu(typeof(FormsMenuManager), device);
 
             var svc = new PictureShareService();
+
+            svc.VolumeChanged += Svc_VolumeChanged;
+
             svc.Start();
 
-            Console.WriteLine("Taste druecken zum Beenden ...");
+            Console.WriteLine("Taste zum Beenden drücken ...");
             Console.ReadKey();
 
             svc.Stop();
+        }
+
+        private static void Svc_VolumeChanged(string driveLetter, string deviceId)
+        {
+            var repository = new RegistryDeviceRepository();
+            var manager = new FormsDeviceManager(repository, driveLetter);
+            var device = manager.GetDevice(deviceId);
+
+            //var menu = new ConsoleMenuManager(device);
+            var menu = new FormsMenuManager(device);
+
+            menu.ShowMenu();
         }
 
         #endregion Main Program

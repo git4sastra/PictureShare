@@ -30,7 +30,7 @@ namespace PictureShare.MenuManagers
             ShowPicsSelectionMenu();
 
             Console.WriteLine();
-            Console.WriteLine("Taste zum Beenden druecken");
+            Console.WriteLine("Taste zum Beenden drücken ...");
             Console.ReadKey();
         }
 

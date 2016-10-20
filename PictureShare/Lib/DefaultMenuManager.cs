@@ -29,6 +29,22 @@ namespace PictureShare.Lib
 
         #region Protected Methods
 
+        protected override void DeleteImages()
+        {
+            // TODO: BUG: Ohne GC gibt's Zugriffsfehler, mit GC reicht die Zeit beim Schließen nicht aus
+            //            um alle Dateien zu löschen (nur 1 wird gelöscht).
+            //            Eventuell wird was nach der Bildauswahl nicht richtig Disposed oder nach dem Kopieren geschlossen,
+            //            denn die Bildauswahl ist das einzige Form, das die Bilder anrührt
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            for (int i = 0, max = Images.Count(); i < max; i++)
+            {
+                var img = Images.ElementAt(i);
+                File.Delete($"{img.Path}\\{img.Name}");
+            }
+        }
+
         protected override void LoadPicsFromDevice()
         {
             var imgs = Directory.GetFiles(ConnectedDevice.ImageFolder, "*.jp*g", SearchOption.AllDirectories);
@@ -70,21 +86,6 @@ namespace PictureShare.Lib
                 {
                     var modInstance = (IMenuModule)Activator.CreateInstance(module);
                     modInstance.SaveImages(Images);
-                }
-            }
-        }
-
-        protected override void DeleteImages()
-        {
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-
-            for (int i = 0, max = Images.Count(); i < max; i++)
-            {
-                lock (_lock)
-                {
-                    var img = Images.ElementAt(i);
-                    File.Delete($"{img.Path}\\{img.Name}");
                 }
             }
         }

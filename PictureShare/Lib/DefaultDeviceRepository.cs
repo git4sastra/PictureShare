@@ -43,7 +43,7 @@ namespace PictureShare.Lib
                          where d.DeviceId == deviceId
                          select d;
 
-            return result.First();
+            return result.FirstOrDefault();
         }
 
         public override DeviceEntity GetDevice(int id)
@@ -52,7 +52,7 @@ namespace PictureShare.Lib
                          where d.DeviceEntityId == id
                          select d;
 
-            return result.First();
+            return result.FirstOrDefault();
         }
 
         public override string GetImagePath(string deviceId)

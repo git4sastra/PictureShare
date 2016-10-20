@@ -1,16 +1,40 @@
 ﻿using PictureShare.Core.Data.Structure;
+using System.Threading;
 using System.Windows.Forms;
-using static System.Environment;
 
 namespace PictureShare.DeviceManagers
 {
     public sealed class FormsDeviceManager : DefaultDeviceManager
     {
+        #region Delegates
+
+        public delegate string AskForFolderHandler();
+
+        #endregion Delegates
+
+        #region Events
+
+        public event AskForFolderHandler OnAskForFolder;
+
+        #endregion Events
+
+        #region Fields
+
         private const string _TITLE = "Automatische Bildordner Erkennung";
+
+        private string _path = string.Empty;
+
+        #endregion Fields
+
+        #region Constructors
 
         public FormsDeviceManager(BaseDeviceRepository repository, string driveLetter) : base(repository, driveLetter)
         {
         }
+
+        #endregion Constructors
+
+        #region Methods
 
         protected override bool AskAutoPathCorrect(string path)
         {
@@ -24,37 +48,25 @@ namespace PictureShare.DeviceManagers
 
         protected override string AskForFolder()
         {
-            var result = string.Empty;
-            var msg = "Es konnte kein Ordner ermittelt werden.\n\n" +
-                      "Bitte klicken Sie auf 'OK' und wählen Sie anschließend\n" +
-                      "den Ordner auf dem Gerät aus, der die Bilder enthält.";
-            var btns = MessageBoxButtons.OK;
-            var symbol = MessageBoxIcon.Information;
-
-            MessageBox.Show(msg, _TITLE, btns, symbol);
-
-            result = GetPathFromDialog();
-
-            return result;
-        }
-
-        private string GetPathFromDialog()
-        {
             var path = string.Empty;
 
-            var dialog = new FolderBrowserDialog();
-            InitDialog(ref dialog);
+            var thread = new Thread(new ThreadStart(() =>
+            {
+                using (var form = new PictureShare.DeviceManagers.Forms.AskForFolder())
+                {
+                    Application.Run(form);
+                    _path = form.SelectedPath;
+                }
+            }));
 
-            path = dialog.SelectedPath;
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
 
-            return path;
-        }
+            while (thread.ThreadState == ThreadState.Running) { Thread.Sleep(1000); }
 
-        private void InitDialog(ref FolderBrowserDialog dialog)
-        {
-            dialog.Description = "Bildordner des externen Gerätes angeben";
-            dialog.ShowNewFolderButton = false;
-            dialog.RootFolder = SpecialFolder.MyComputer;
+            return _path;
         }
     }
+
+    #endregion Methods
 }
