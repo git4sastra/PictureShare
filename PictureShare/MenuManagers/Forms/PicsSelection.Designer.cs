@@ -99,7 +99,6 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAlbumName;
         private System.Windows.Forms.Button btnSave;

@@ -1,15 +1,16 @@
 ﻿using PictureShare.Core.Lib.Structure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management;
 
 namespace PictureShare.Lib
 {
-    public class PictureShareService : IPictureShareService
+    public class PictureShareService : IPictureShareService, IDisposable
     {
         #region Delegates
 
-        public delegate void OnVolumeChangedHandler(string driveLetter, string deviceId);
+        public delegate void OnVolumeChangedHandler(object sender, VolumeChangedEventArgs e);
 
         #endregion Delegates
 
@@ -23,8 +24,8 @@ namespace PictureShare.Lib
 
         private string _addedDevice = string.Empty;
         private List<string> _connectedDevices = new List<string>();
+        private bool _disposed = false;
         private object _lock = new object();
-
         private ManagementEventWatcher _watcher;
 
         #endregion Fields
@@ -39,10 +40,34 @@ namespace PictureShare.Lib
 
         public void Stop()
         {
+            if (_watcher == null)
+                return;
+
             _watcher.Stop();
             _watcher.Dispose();
             _watcher = null;
         }
+
+        #region IDisposable
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+                Stop();
+
+            _disposed = true;
+        }
+
+        #endregion IDisposable
 
         private static string RawStringToDeviceId(ManagementBaseObject usbDevice)
         {
@@ -66,8 +91,14 @@ namespace PictureShare.Lib
             if (string.IsNullOrWhiteSpace(driveLetter) || string.IsNullOrWhiteSpace(deviceId) || eventType != 2)
                 return;
 
+            var eventArgs = new VolumeChangedEventArgs()
+            {
+                DriveLetter = driveLetter,
+                DeviceId = deviceId
+            };
+
             lock (_lock)
-                VolumeChanged?.Invoke(driveLetter, deviceId);
+                VolumeChanged?.Invoke(this, eventArgs);
         }
 
         private void UpdateConnectedDevices()
@@ -131,5 +162,16 @@ namespace PictureShare.Lib
         }
 
         #endregion Methods
+    }
+
+    public sealed class VolumeChangedEventArgs : EventArgs
+    {
+        #region Properties
+
+        public string DeviceId { get; set; }
+
+        public string DriveLetter { get; set; }
+
+        #endregion Properties
     }
 }
