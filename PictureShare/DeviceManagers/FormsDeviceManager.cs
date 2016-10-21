@@ -1,4 +1,23 @@
-﻿using PictureShare.Core.Data.Structure;
+﻿//  Copyright (c) 2016 Thomas Ohms
+//
+//  This file is part of PictureShare.
+//
+//  Get the original code from https://github.com/thomas4U/PictureShare
+//
+//  PictureShare is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  Foobar is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+
+using PictureShare.Core.Data.Structure;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -6,18 +25,6 @@ namespace PictureShare.DeviceManagers
 {
     public sealed class FormsDeviceManager : DefaultDeviceManager
     {
-        #region Delegates
-
-        public delegate string AskForFolderHandler();
-
-        #endregion Delegates
-
-        #region Events
-
-        public event AskForFolderHandler OnAskForFolder;
-
-        #endregion Events
-
         #region Fields
 
         private const string _TITLE = "Automatische Bildordner Erkennung";

@@ -1,4 +1,23 @@
-﻿using PictureShare.Core.Data;
+﻿//  Copyright (c) 2016 Thomas Ohms
+//
+//  This file is part of PictureShare.
+//
+//  Get the original code from https://github.com/thomas4U/PictureShare
+//
+//  PictureShare is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  Foobar is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+
+using PictureShare.Core.Data;
 using PictureShare.Core.Lib.Structure;
 using System;
 using System.Collections.Generic;
@@ -10,13 +29,13 @@ namespace PictureShare.Lib
 {
     public abstract class DefaultMenuManager : BaseMenuManager
     {
-        #region Private Fields
+        #region Fields
 
         private static object _lock = new object();
 
-        #endregion Private Fields
+        #endregion Fields
 
-        #region Public Constructors
+        #region Constructors
 
         public DefaultMenuManager(DeviceEntity device)
         {
@@ -25,19 +44,12 @@ namespace PictureShare.Lib
             LoadPicsFromDevice();
         }
 
-        #endregion Public Constructors
+        #endregion Constructors
 
-        #region Protected Methods
+        #region Methods
 
         protected override void DeleteImages()
         {
-            // TODO: BUG: Ohne GC gibt's Zugriffsfehler, mit GC reicht die Zeit beim Schließen nicht aus
-            //            um alle Dateien zu löschen (nur 1 wird gelöscht).
-            //            Eventuell wird was nach der Bildauswahl nicht richtig Disposed oder nach dem Kopieren geschlossen,
-            //            denn die Bildauswahl ist das einzige Form, das die Bilder anrührt
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-
             for (int i = 0, max = Images.Count(); i < max; i++)
             {
                 var img = Images.ElementAt(i);
@@ -90,10 +102,6 @@ namespace PictureShare.Lib
             }
         }
 
-        #endregion Protected Methods
-
-        #region Private Methods
-
         private static IEnumerable<Type> GetModulesFromAssembly()
         {
             var allTypes = Assembly.GetExecutingAssembly().GetTypes();
@@ -131,6 +139,6 @@ namespace PictureShare.Lib
                     select t).First();
         }
 
-        #endregion Private Methods
+        #endregion Methods
     }
 }

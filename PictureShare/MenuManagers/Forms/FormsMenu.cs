@@ -1,4 +1,23 @@
-﻿using PictureShare.Core.Data;
+﻿//  Copyright (c) 2016 Thomas Ohms
+//
+//  This file is part of PictureShare.
+//
+//  Get the original code from https://github.com/thomas4U/PictureShare
+//
+//  PictureShare is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  Foobar is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+
+using PictureShare.Core.Data;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,14 +27,14 @@ namespace PictureShare.MenuManagers.Forms
 {
     public partial class FormsMenu : Form
     {
-        #region Private Fields
+        #region Fields
 
         private IEnumerable<Button> _buttons;
         private IEnumerable<ModuleEntity> _modules;
 
-        #endregion Private Fields
+        #endregion Fields
 
-        #region Public Constructors
+        #region Constructors
 
         public FormsMenu()
         {
@@ -28,15 +47,20 @@ namespace PictureShare.MenuManagers.Forms
             btnLoad.Enabled = false;
         }
 
-        #endregion Public Constructors
+        #endregion Constructors
 
-        #region Public Properties
+        #region Properties
 
         public bool DontShowAgain { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Private Methods
+        #region Methods
+
+        private void btnLoad_Click(object sender, System.EventArgs e)
+        {
+            DontShowAgain = cbDontShow.Checked;
+        }
 
         private Button CreateButton(ModuleEntity module)
         {
@@ -106,15 +130,6 @@ namespace PictureShare.MenuManagers.Forms
 
             if (btn.Tag != Tag)
                 btn.BackColor = Color.LightGray;
-        }
-
-        #endregion Private Methods
-
-        #region Methods
-
-        private void btnLoad_Click(object sender, System.EventArgs e)
-        {
-            DontShowAgain = cbDontShow.Checked;
         }
 
         #endregion Methods
