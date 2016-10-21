@@ -38,11 +38,11 @@ namespace TestConsole
             svc.Stop();
         }
 
-        private static void Svc_VolumeChanged(string driveLetter, string deviceId)
+        private static void Svc_VolumeChanged(object sender, VolumeChangedEventArgs e)
         {
             var repository = new RegistryDeviceRepository();
-            var manager = new FormsDeviceManager(repository, driveLetter);
-            var device = manager.GetDevice(deviceId);
+            var manager = new FormsDeviceManager(repository, e.DriveLetter);
+            var device = manager.GetDevice(e.DeviceId);
 
             //var menu = new ConsoleMenuManager(device);
             var menu = new FormsMenuManager(device);
