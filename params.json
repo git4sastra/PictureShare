@@ -1,0 +1,6 @@
+{
+  "name": "PictureShare",
+  "tagline": "Showcasing C#",
+  "body": "### Welcome to PictureShare.\r\nPictureShare is supposed to be a **simple** demo application for Windows with the posibility to upload pictures from an external HDD.\r\nMain purpose of this application is showcasing the possibilities of C# programming and **is not ready for production** and therefore without any warranty.\r\n\r\nPictureShare is thought to be an application that can be easily extended for uploading pictures to other places than local HDD (see source folder MenuModules).\r\nEven the surface is a module, therefore you can i.e. replace it with WPF.\r\nTestConsole shows examples of how to use it.\r\n\r\nPictureShare recognizes attached USB devices and stores information about them in registry. After that it pops up a menu for the user to choose where to upload the pictures to. An optional album name can be provided.\r\n\r\nLicense respected you can use it for what ever you like.\r\n\r\n### Authors and Contributors\r\n@thomas4U\r\n\r\n### Support or Contact\r\nIf you're having trouble, like to contribute or need help, please create a new issue.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
