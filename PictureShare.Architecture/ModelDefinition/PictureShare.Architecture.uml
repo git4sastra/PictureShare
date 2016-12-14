@@ -63,7 +63,7 @@
           <propertyInstance
             Id="91a823d1-0526-481b-9cf0-a980f7b4c36b"
             name="ProjectPath"
-            value="ClassTemplate=..\PictureShare\PictureShare.csproj|EnumTemplate=..\PictureShare\PictureShare.csproj|InterfaceTemplate=..\PictureShare\PictureShare.csproj|StructTemplate=..\PictureShare\PictureShare.csproj" />
+            value="ClassTemplate=..\PictureShare.csproj|EnumTemplate=..\PictureShare.csproj|InterfaceTemplate=..\PictureShare.csproj|StructTemplate=..\PictureShare.csproj" />
         </stereotypeInstanceHasPropertyInstances>
         <stereotypeInstanceHasPropertyInstances
           Id="7d9b07cf-5174-40fe-a0f1-ad1fb7368196">

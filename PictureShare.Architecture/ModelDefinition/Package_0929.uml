@@ -975,6 +975,29 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="96524e9b-66df-4b10-bc57-e7bfe8b58761"
+            name="SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="57913441-7b75-4372-93bb-44d30da6752b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="PictureShare.Architecture.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1669,6 +1692,79 @@
                       Id="6b916cf2-062d-48e2-aed6-d1ff75d2afac"
                       LastKnownName="DeviceEntity"
                       LastKnownLocation="Package1_1303.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6a87f424-5912-4910-8d66-0dccffba40b5"
+            name="SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4cac37f-8061-4025-9c31-edc961001d08"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="addb9ab2-2c59-4c0d-b6cd-4990059bde18">
+                    <propertyInstance
+                      Id="b51cd9ad-77a7-4737-ba52-691970bfa2ea"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47bad84b-594b-494e-9194-a2dc5b268511">
+                    <propertyInstance
+                      Id="a2b4c554-14bb-43d7-9244-ab387a7580bf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0e78826-f110-4ec3-89c0-b27f10214bf3">
+                    <propertyInstance
+                      Id="739b4bc7-d49c-4398-b6e1-2edb667ec949"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df0218ea-a4d8-4ee7-b0db-8e289c73aebf">
+                    <propertyInstance
+                      Id="4a396c2e-bd6a-40c9-a7b1-248ad3dfdcfc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da8aaaf7-2bfe-49dd-b737-1ba1662de4db">
+                    <propertyInstance
+                      Id="5ec34f00-6505-4713-a38d-9fce81ccfe7c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cab0c11d-7245-4f97-b305-015f428578a2">
+                    <propertyInstance
+                      Id="eb349146-56fa-4bfa-b73f-7aba95ab7622"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="21ccf326-a7bb-4ee2-aeea-b333cf5a94fa"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="PictureShare.Architecture.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

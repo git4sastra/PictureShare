@@ -6,15 +6,15 @@
   <MessageClass Name="Error" Label="Fehler" Option="Fehler anzeigen" />
   <MessageClass Name="Property" Label="Eigenschaft" Option="Metadaten anzeigen" />
   <MessageClass Name="Diagnostic" Label="Meldung" Option="Diagnosemeldungen anzeigen" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="High" Text="Die Codegenerierung oder Texttransformation wurde gestartet." />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="Überschreiben = True" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="ProjectPath = ..\PictureShare\PictureShare.csproj" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="TargetDirectory = {PackageStructure}" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
-  <Message Timestamp="2016-10-19T12:02:38" Importance="Medium" Text="Die Textvorlagenbindung von PictureShare.Architecture: 'InterfaceTemplate' wendet InterfaceTemplate.t4 an für: 'PictureShare.Architecture::PictureShare.Core::Lib::Structure::IPictureShareService' -  (Interface) " />
-  <Message Timestamp="2016-10-19T12:02:55" Importance="Medium" Text="'PictureShare.Architecture::PictureShare.Core::Lib::Structure::IPictureShareService' -  (Interface) : Erfolg (Datei erstellt) - C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare\PictureShare.Core\Lib\Structure\IPictureShareService.cs" />
-  <Message Timestamp="2016-10-19T12:02:55" Importance="High" Text="Die Codegenerierung ist abgeschlossen. Fehler: 0. Warnungen: 0." />
+  <Message Timestamp="2016-12-07T18:27:36" Importance="High" Text="Die Codegenerierung oder Texttransformation wurde gestartet." />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="ProjectPath = ..\PictureShare\PictureShare.csproj" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="TargetDirectory = {PackageStructure}" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2016-12-07T18:27:37" Importance="Medium" Text="Die Textvorlagenbindung von PictureShare.Architecture: 'InterfaceTemplate' wendet InterfaceTemplate.t4 an für: 'PictureShare.Architecture::PictureShare.Core::Data::Structure::IDeviceRepository' -  (Interface) " />
+  <Message Timestamp="2016-12-07T18:27:56" Importance="Medium" Text="'PictureShare.Architecture::PictureShare.Core::Data::Structure::IDeviceRepository' -  (Interface) : Erfolg (Datei ersetzt) - C:\Users\ThomasOhms\HiDrive\SASTRA\Kunden\Informa\Integrata\3402\VS_Solution\PictureShare\PictureShare.Core\Data\Structure\IDeviceRepository.cs" />
+  <Message Timestamp="2016-12-07T18:27:56" Importance="High" Text="Die Codegenerierung ist abgeschlossen. Fehler: 0. Warnungen: 0." />
 </Log>

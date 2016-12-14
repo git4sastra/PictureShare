@@ -55,6 +55,8 @@ namespace PictureShare.Lib
                 var img = Images.ElementAt(i);
                 File.Delete($"{img.Path}\\{img.Name}");
             }
+
+            Images = new List<ImageEntity>();
         }
 
         protected override void LoadPicsFromDevice()
@@ -65,8 +67,14 @@ namespace PictureShare.Lib
             for (int i = 0, max = imgs.Count(); i < max; i++)
             {
                 var fullPath = imgs.ElementAt(i);
-                var imgName = fullPath.Split('\\').Last();
-                var imgPath = fullPath.Replace($"\\{imgName}", "");
+
+                // Eine mögliche Variante
+                //var imgName = fullPath.Split('\\').Last();
+                //var imgPath = fullPath.Replace($"\\{imgName}", "");
+
+                // So geht's einfacher
+                var imgName = Path.GetFileName(fullPath);
+                var imgPath = Path.GetDirectoryName(fullPath);
 
                 var image = new ImageEntity()
                 {
@@ -136,7 +144,7 @@ namespace PictureShare.Lib
         {
             return (from t in Assembly.GetExecutingAssembly().GetTypes()
                     where t.FullName == SelectedModule.FullName
-                    select t).First();
+                    select t)?.First();
         }
 
         #endregion Methods

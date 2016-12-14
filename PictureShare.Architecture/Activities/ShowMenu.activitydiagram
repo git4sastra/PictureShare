@@ -40,7 +40,7 @@
           <elementDefinition Id="2b83dc5a-993e-4c5d-afb4-b81ea6bbff00" />
         </stereotypeInstanceHasPropertyInstances>
         <stereotypeInstanceHasPropertyInstances Id="ed28e0a1-830d-4a95-aeac-af348eb906dc">
-          <propertyInstance Id="4eeb599d-d9ae-46af-96d1-07cd63676bf3" name="ProjectPath" value="ClassTemplate=..\PictureShare\PictureShare.csproj|EnumTemplate=..\PictureShare\PictureShare.csproj|InterfaceTemplate=..\PictureShare\PictureShare.csproj|StructTemplate=..\PictureShare\PictureShare.csproj">
+          <propertyInstance Id="4eeb599d-d9ae-46af-96d1-07cd63676bf3" name="ProjectPath" value="ClassTemplate=..\PictureShare.csproj|EnumTemplate=..\PictureShare.csproj|InterfaceTemplate=..\PictureShare.csproj|StructTemplate=..\PictureShare.csproj">
             <elementDefinition Id="91a823d1-0526-481b-9cf0-a980f7b4c36b" />
           </propertyInstance>
           <elementDefinition Id="3d78e594-4580-4219-bedb-aa13fe522b2a" />

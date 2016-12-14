@@ -5,7 +5,6 @@ using PictureShare.Lib;
 using PictureShare.MenuManagers;
 using System;
 using System.IO;
-using System.Reflection;
 
 namespace TestConsole
 {
@@ -13,7 +12,6 @@ namespace TestConsole
     {
         #region Main Program
 
-        [STAThread]
         private static void Main(string[] args)
         {
             //DeviceEntity device = SimulateDeviceConnection();
@@ -40,7 +38,7 @@ namespace TestConsole
 
         private static void Svc_VolumeChanged(object sender, VolumeChangedEventArgs e)
         {
-            var repository = new RegistryDeviceRepository();
+            var repository = new XmlDeviceRepository(AppDomain.CurrentDomain.BaseDirectory); //RegistryDeviceRepository();
             var manager = new FormsDeviceManager(repository, e.DriveLetter);
             var device = manager.GetDevice(e.DeviceId);
 
@@ -54,13 +52,20 @@ namespace TestConsole
 
         #region Private Methods
 
-        private static void CopySampleFiles(string folder, string samplesFolder, string[] sampleFiles)
+        private static void CopySampleFiles(string folder, string samplesFolder)
         {
+            if (Directory.Exists(folder))
+                Directory.Delete(folder, true);
+
+            Directory.CreateDirectory(folder);
+
+            if (!Directory.Exists(samplesFolder))
+                Directory.CreateDirectory(samplesFolder);
+
+            var sampleFiles = Directory.GetFiles(samplesFolder);
+
             for (int i = 0, max = sampleFiles.Length; i < max; i++)
             {
-                if (Directory.Exists(folder))
-                    Directory.CreateDirectory(folder);
-
                 var newPath = sampleFiles[i].Replace(samplesFolder, folder);
 
                 File.Copy(sampleFiles[i], newPath);
@@ -75,20 +80,10 @@ namespace TestConsole
 
         private static DeviceEntity SimulateDeviceConnection()
         {
-            var folder = Assembly.GetExecutingAssembly().Location.Replace("TestConsole.exe", "") + "images";
+            var folder = AppDomain.CurrentDomain.BaseDirectory + "images";
             var samplesFolder = folder.Replace("images", "imageSamples");
 
-            if (Directory.Exists(folder))
-                Directory.Delete(folder, true);
-
-            Directory.CreateDirectory(folder);
-
-            if (!Directory.Exists(samplesFolder))
-                Directory.CreateDirectory(samplesFolder);
-
-            var sampleFiles = Directory.GetFiles(samplesFolder);
-
-            CopySampleFiles(folder, samplesFolder, sampleFiles);
+            CopySampleFiles(folder, samplesFolder);
 
             var device = new DeviceEntity() { DeviceEntityId = 1, DeviceId = "", ImageFolder = folder };
 

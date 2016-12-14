@@ -130,7 +130,7 @@ namespace PictureShare.MenuManagers.Forms
             SelectedImages = imgList;
         }
 
-        private Image DramThumbnailForBigImage(int width, Image img, Image thumb)
+        private Image DrawThumbnailForBigImage(int width, Image img, Image thumb)
         {
             var callback = new Image.GetThumbnailImageAbort(ThumbnailCallback);
             Image tmpImg = null;
@@ -177,7 +177,7 @@ namespace PictureShare.MenuManagers.Forms
             }
             else
             {
-                thumb = DramThumbnailForBigImage(width, img, thumb);
+                thumb = DrawThumbnailForBigImage(width, img, thumb);
             }
 
             using (var g = Graphics.FromImage(thumb))

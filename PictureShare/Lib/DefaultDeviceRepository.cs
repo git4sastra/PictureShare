@@ -95,7 +95,7 @@ namespace PictureShare.Lib
                 return;
             }
 
-            list.Remove(device);
+            list.Remove(item);
             list.Add(device);
 
             Devices = list;

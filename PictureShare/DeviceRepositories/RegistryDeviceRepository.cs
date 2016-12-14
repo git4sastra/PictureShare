@@ -20,16 +20,18 @@
 using Microsoft.Win32;
 using PictureShare.Core.Data;
 using PictureShare.Lib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace PictureShare.DeviceRepositories
 {
-    public class RegistryDeviceRepository : DefaultDeviceRepository
+    public sealed class RegistryDeviceRepository : DefaultDeviceRepository, IDisposable
     {
         #region Fields
 
         private const string _path = @"PictureShare\Devices";
+        private bool _disposed = false;
         private RegistryKey _key;
 
         #endregion Fields
@@ -46,6 +48,13 @@ namespace PictureShare.DeviceRepositories
         #endregion Constructors
 
         #region Methods
+
+        public void Dispose()
+        {
+            Dispose(true);
+
+            GC.SuppressFinalize(this);
+        }
 
         public override bool SaveChanges()
         {
@@ -66,6 +75,20 @@ namespace PictureShare.DeviceRepositories
             }
 
             return Devices.Count() == _key.GetValueNames().Length;
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing && _key != null)
+            {
+                _key.Dispose();
+                _key = null;
+            }
+
+            _disposed = true;
         }
 
         private void InitKey()

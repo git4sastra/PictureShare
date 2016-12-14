@@ -22,6 +22,7 @@ using PictureShare.Core.Data.Structure;
 using PictureShare.Core.Lib.Structure;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -56,17 +57,24 @@ namespace PictureShare.DeviceManagers
         {
             var result = _repository.GetDevice(deviceId);
 
-            if (result.DeviceEntityId == 0)
+            try
             {
-                result.DeviceId = deviceId;
-                result.ImageFolder = FindImageFolder();
+                if (result.DeviceEntityId == 0)
+                {
+                    result.DeviceId = deviceId;
+                    result.ImageFolder = FindImageFolder();
 
-                AddDevice(result);
+                    AddDevice(result);
 
-                result = _repository.GetDevice(deviceId);
+                    result = _repository.GetDevice(deviceId);
+                }
+
+                result = ReplaceDriveLetter(result);
             }
-
-            result = ReplaceDriveLetter(result);
+            catch (Exception e)
+            {
+                Trace.WriteLine(e.Message);
+            }
 
             return result;
         }
