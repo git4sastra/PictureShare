@@ -26,15 +26,15 @@ namespace PictureShare.MenuManagers
 {
     public sealed class ConsoleMenuManager : DefaultMenuManager
     {
-        #region Public Constructors
+        #region Constructors
 
         public ConsoleMenuManager(DeviceEntity device) : base(device)
         {
         }
 
-        #endregion Public Constructors
+        #endregion Constructors
 
-        #region Public Methods
+        #region Methods
 
         public override void ShowMenu()
         {
@@ -68,6 +68,6 @@ namespace PictureShare.MenuManagers
             Console.WriteLine();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

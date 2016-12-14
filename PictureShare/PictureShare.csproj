@@ -70,6 +70,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -86,6 +87,7 @@
     <Compile Include="DeviceManagers\Forms\AskForFolder.Designer.cs">
       <DependentUpon>AskForFolder.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeviceRepositories\XmlDeviceRepository.cs" />
     <Compile Include="DeviceRepositories\RegistryDeviceRepository.cs" />
     <Compile Include="Lib\DefaultDeviceManager.cs" />
     <Compile Include="Lib\DefaultDeviceRepository.cs" />

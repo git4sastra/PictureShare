@@ -38,7 +38,7 @@ namespace PictureShare.Core.Data
 			set;
 		}
 
-		public object Name
+		public string Name
 		{
 			get;
 			set;

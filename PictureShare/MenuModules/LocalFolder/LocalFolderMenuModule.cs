@@ -24,28 +24,30 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using System.Security.AccessControl;
 
 namespace PictureShare.MenuModules.LocalFolder
 {
     public sealed class LocalFolderMenuModule : IMenuModule
     {
-        #region Public Methods
+        #region Methods
 
         public RegistryKey GetRegKey()
         {
-            var hkcu = Registry.CurrentUser;
-            var swKey = hkcu.OpenSubKey("Software", RegistryKeyPermissionCheck.ReadWriteSubTree, RegistryRights.CreateSubKey);
-            var toolKey = swKey.OpenSubKey("PictureShare", true);
+            RegistryKey toolKey;
 
-            if (toolKey == null)
-                toolKey = swKey.CreateSubKey("PictureShare", true);
+            using (var hkcu = Registry.CurrentUser)
+            {
+                using (var swKey = hkcu.OpenSubKey("Software", RegistryKeyPermissionCheck.ReadWriteSubTree, RegistryRights.CreateSubKey))
+                {
+                    toolKey = swKey.CreateSubKey("PictureShare", true);
+                }
+            }
 
             return toolKey;
         }
 
-        public void Register(BaseMenuManager menuManager)
+        public void Register(IMenuManager menuManager)
         {
         }
 
@@ -75,13 +77,10 @@ namespace PictureShare.MenuModules.LocalFolder
             }
         }
 
-        #endregion Public Methods
-
-        #region Private Methods
-
         private static string GetImageLocalPath(ImageEntity img, long ticks, string albumPath)
         {
             string localFullPath = $"{albumPath}\\{img.Name}";
+
             if (File.Exists(localFullPath))
             {
                 img.Name = $"{ticks}__{img.Name}";
@@ -105,11 +104,11 @@ namespace PictureShare.MenuModules.LocalFolder
             var createYear = File.GetCreationTime(imgFullPath).Year;
             var ticks = File.GetCreationTime(imgFullPath).Ticks;
             img = CheckAlbum(img, createYear);
-            var albumPath = GetAlbumPath(localPath, ref img);
+            var albumPath = GetAlbumPath(localPath, img);
             localFullPath = GetImageLocalPath(img, ticks, albumPath);
         }
 
-        private string GetAlbumPath(string localPath, ref ImageEntity img)
+        private string GetAlbumPath(string localPath, ImageEntity img)
         {
             var albumPath = $"{localPath}\\{img.Album}";
 
@@ -121,19 +120,22 @@ namespace PictureShare.MenuModules.LocalFolder
 
         private string GetLocalPath()
         {
-            var toolKey = GetRegKey();
-            var asm = Assembly.GetExecutingAssembly();
-            var location = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            var defaultPath = $"{location}\\PictureShare";
+            string fullPath;
 
-            if (toolKey.GetValue("LocalPath") == null)
-                toolKey.SetValue("LocalPath", defaultPath, RegistryValueKind.String);
+            using (var toolKey = GetRegKey())
+            {
+                var location = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                var defaultPath = $"{location}\\PictureShare";
 
-            var fullPath = toolKey.GetValue("LocalPath").ToString();
+                if (toolKey.GetValue("LocalPath") == null)
+                    toolKey.SetValue("LocalPath", defaultPath, RegistryValueKind.String);
+
+                fullPath = toolKey.GetValue("LocalPath").ToString();
+            }
 
             return fullPath;
         }
 
-        #endregion Private Methods
+        #endregion Methods
     }
 }
